@@ -5,31 +5,58 @@
 
 # ModelFinder
 
-### ComfyUI All-in-One Launcher and Manager
+### Run ComfyUI workflows faster on Windows
 
-**One-click deployment · Workflow dependency analysis · Model matching · AI diagnosis · Batch rendering**
+**Batch workflow analysis · Missing resource downloads · Accelerated download workflows**
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/hu-haibin/ModelFinder-Releases/total?style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 
-[**Download Now**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**Stable Community Build**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Beta / Early Access**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
 ---
 
 </div>
 
-![ModelFinder main interface - dark theme, terminal console + floating action island](screenshots/home.png)
+![ModelFinder English interface - light theme home screen](screenshots/light-theme-english.png)
 
-## Why ModelFinder?
+## What It Solves
 
-ModelFinder is a Windows desktop launcher and management tool built specifically for **ComfyUI** users. Whether you are just getting started with AI image generation or managing multiple advanced workflows, ModelFinder makes your ComfyUI workflow simpler and faster.
+ModelFinder is a Windows launcher and workflow operations tool for **ComfyUI** users who need to move faster from workflow import to runnable output. It is built to help you batch-check workflows, find missing models and related resources, and complete large download flows without turning setup into manual cleanup work.
 
-> Skip black console windows, skip complex setup, skip "missing model" errors. From deployment to generation, one tool handles the full flow.
+> Instead of opening workflows one by one, chasing missing files manually, and juggling multiple ComfyUI environments by hand, you get one place to analyze, download, and launch.
 
 ---
 
-## Core Features
+## Release Paths
+
+| Track | Access | Release Type | Recommended For |
+|------|--------|--------------|-----------------|
+| **Stable Community Build** | Free | Standard GitHub release | Most users who want the recommended public build |
+| **Pro / Beta Early Access** | Paid beta | GitHub prerelease | Paid testers and power users who want earlier workflow tooling and faster iteration |
+
+### What Pro / Beta Currently Unlocks
+
+- **Batch workflow analysis** across multiple files and folders
+- **One-click download of missing resources**, including models and selected dependency-linked files
+- **Accelerated download workflows** for large fetch queues and repeated setup work
+- **Selected advanced automation features in active testing**, including higher-end workflow tooling and AI-assisted diagnosis
+
+### Beta Access
+
+ModelFinder keeps a free community path, but this repository also hosts a **paid beta track** for early adopters.
+
+- **Stable Community Build** remains the default recommendation for general users
+- **Pro / Beta Early Access** is for licensed testers who want earlier access to advanced workflow tooling and faster release cadence
+- Beta builds may ship unfinished features, UI changes, or temporary regressions before they are promoted to stable
+- Stable and beta builds are published from the same repository so downloads, release history, and upgrade paths stay unified
+
+Who should join: users who regularly deal with missing models, batch-check workflow folders, maintain multiple ComfyUI environments, or want early access to bulk analysis, missing-resource downloads, and advanced automation features.
+
+---
+
+## What You Can Do
 
 ### One-click ComfyUI Deployment
 
@@ -58,7 +85,7 @@ The core launcher page with game-launcher-inspired interaction:
 - **Quick folder access**: open models / output / custom_nodes / workflows and Python terminal from bottom toolbar
 - **Automatic environment checks**: validates Python, GPU, and runtime prerequisites before launch
 
-![English + Light Theme](screenshots/light-theme-english.png)
+![ModelFinder main interface - dark theme, terminal console + floating action island](screenshots/home.png)
 
 ---
 
@@ -245,7 +272,8 @@ ModelFinder follows **Windows Fluent Design** to provide a modern and immersive 
 
 ### Download and Run
 
-Two options are available from the [**latest release**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest):
+Stable community users can download the latest recommended build from [**latest release**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest).
+Early access users can use licensed **prerelease** builds published on the same [**Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) page.
 
 | Option | File | Notes |
 |--------|------|-------|
@@ -332,9 +360,14 @@ Currently only **Windows 10/11** is supported.
 </details>
 
 <details>
-<summary><b>Q: Is this tool free?</b></summary>
+<summary><b>Q: Is ModelFinder free, paid, or both?</b></summary>
 
-Yes. The current version of ModelFinder is free to use.
+ModelFinder now has two release tracks in this repository:
+
+- **Stable Community Build** is the free public path
+- **Pro / Beta Early Access** is a paid beta path for licensed testers
+
+If you want the general public build, use stable. If you want earlier access and accept beta risk, use the beta track.
 
 </details>
 
