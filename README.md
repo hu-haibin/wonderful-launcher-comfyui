@@ -10,8 +10,10 @@
 **Batch workflow analysis · Missing resource downloads · Accelerated download workflows**
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/hu-haibin/ModelFinder-Releases/total?style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+
+> Persistent cumulative downloads are refreshed every 15 minutes. Removing older releases later will not retroactively lower the recorded total.
 
 [**Stable Community Build**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Beta / Early Access**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 

@@ -1,0 +1,109 @@
+name: Update Cumulative Downloads
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cumulative-downloads
+  cancel-in-progress: false
+
+jobs:
+  update-download-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Refresh cumulative download stats
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: hu-haibin
+          REPO: ModelFinder-Releases
+          STATS_FILE: stats/downloads.json
+        run: |
+          $headers = @{
+            Accept = "application/vnd.github+json"
+            Authorization = "Bearer $env:GITHUB_TOKEN"
+            "X-GitHub-Api-Version" = "2022-11-28"
+            "User-Agent" = "ModelFinder-Releases-download-stats"
+          }
+
+          $perPage = 100
+          $page = 1
+          $releases = @()
+
+          while ($true) {
+            $uri = "https://api.github.com/repos/$env:OWNER/$env:REPO/releases?per_page=$perPage&page=$page"
+            $batch = @(Invoke-RestMethod -Uri $uri -Headers $headers)
+            if ($batch.Count -eq 0) {
+              break
+            }
+
+            $releases += $batch
+
+            if ($batch.Count -lt $perPage) {
+              break
+            }
+
+            $page += 1
+          }
+
+          $currentTotal = 0
+          $assetCount = 0
+
+          foreach ($release in $releases) {
+            foreach ($asset in $release.assets) {
+              $currentTotal += [int]$asset.download_count
+              $assetCount += 1
+            }
+          }
+
+          $state = @{
+            cumulative_downloads = $currentTotal
+            last_seen_current_total = $currentTotal
+          }
+
+          if (Test-Path $env:STATS_FILE) {
+            $state = Get-Content $env:STATS_FILE -Raw | ConvertFrom-Json -AsHashtable
+          }
+
+          $previousCurrent = [int]($state.last_seen_current_total ?? 0)
+          $previousCumulative = [int]($state.cumulative_downloads ?? 0)
+          $delta = $currentTotal - $previousCurrent
+
+          if ($delta -lt 0) {
+            $delta = 0
+          }
+
+          $updatedState = [ordered]@{
+            cumulative_downloads = $previousCumulative + $delta
+            last_seen_current_total = $currentTotal
+            current_total_downloads = $currentTotal
+            release_count = $releases.Count
+            asset_count = $assetCount
+            updated_at = [DateTime]::UtcNow.ToString("o")
+            source = "github-releases-assets"
+          }
+
+          $updatedState | ConvertTo-Json | Set-Content -Path $env:STATS_FILE -Encoding utf8
+
+      - name: Commit updated stats
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/downloads.json
+
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git commit -m "chore: update cumulative download stats"
+          git push

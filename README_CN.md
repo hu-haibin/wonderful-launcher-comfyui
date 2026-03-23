@@ -9,8 +9,10 @@
 **批量工作流分析 · 缺失资源下载 · 加速下载流程**
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=最新版本)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/hu-haibin/ModelFinder-Releases/total?style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+
+> 持久累计下载量每 15 分钟刷新一次。后续删除旧 release 时，已记录的历史累计值不会回退。
 
 [**📥 Stable 社区版**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**🧪 Beta / 抢先体验**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**📋 更新日志**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**🐛 反馈问题**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
