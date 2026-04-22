@@ -23,6 +23,10 @@ Every new ComfyUI workflow can mean missing models, missing plugins, broken depe
 
 ModelFinder puts **workflow analysis, resource downloads, environment management, and launching** in one place — so you spend time generating, not debugging setup.
 
+<div align="center">
+<img src="screenshots/home.png" width="80%" alt="Home — Launch and monitor ComfyUI with built-in terminal">
+</div>
+
 ---
 
 ## Getting Started
@@ -32,12 +36,13 @@ ModelFinder puts **workflow analysis, resource downloads, environment management
 1. Download the **Setup Installer** or **Portable ZIP** from [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 2. Launch ModelFinder — the deployment wizard walks you through installing ComfyUI (version, GPU acceleration, optional components)
 3. Or skip deployment and point ModelFinder at your existing ComfyUI portable package
+4. **Already using ComfyUI Desktop?** Just add your `Documents\ComfyUI` folder — ModelFinder auto-detects the Desktop installation
 
 No Python or .NET installation required. Everything is bundled.
 
 ### Daily Use
 
-Open ModelFinder → click **Start** on the Home page → ComfyUI launches with real-time logs in a built-in terminal → open the Web UI when ready.
+Open ModelFinder → click **Start** on the Home page → ComfyUI launches with real-time logs in a built-in terminal → open the Web UI directly inside the launcher or in your browser.
 
 That's it for basic use. The rest of ModelFinder is there when you need it.
 
@@ -45,19 +50,35 @@ That's it for basic use. The rest of ModelFinder is there when you need it.
 
 ## What You Can Do
 
-ModelFinder is organized around five main sections, plus settings and account at the bottom of the sidebar.
-
 ### Home — Launch and Monitor
 
-Your starting point. A full-size terminal console shows ComfyUI logs in real time. A floating action island in the bottom-right lets you start/stop ComfyUI, open the Web UI, or switch between instances. You can also configure launch parameters (port, GPU memory mode, custom arguments) and quickly open common folders (models, outputs, custom_nodes).
+Your starting point. A full-size terminal console shows ComfyUI logs in real time. A floating action island in the bottom-right lets you start/stop ComfyUI, open the Web UI, or switch between instances. The **built-in browser workspace** lets you use ComfyUI without leaving the launcher. You can also configure launch parameters (port, GPU memory mode, custom arguments) and quickly open common folders (models, outputs, custom_nodes).
 
 When something goes wrong, the **AI Diagnosis** feature can analyze your logs, suggest repair commands, execute them with your approval, and verify the fix — with rollback if needed.
+
+<details>
+<summary>Screenshots</summary>
+
+| AI Diagnosis | Hardware Monitor |
+|:---:|:---:|
+| <img src="screenshots/ai-diagnosis.png" width="400"> | <img src="screenshots/hardware-monitor.png" width="400"> |
+
+</details>
 
 ### Environments — Deploy and Manage Packages
 
 **Deploy** a fresh ComfyUI installation with version selection, GPU acceleration options (NVIDIA CUDA / AMD ROCm), and optional preinstalled components (ComfyUI-Manager, translation packs, popular nodes). Visual step-by-step progress with failure recovery.
 
-**Packages** lets you manage multiple ComfyUI installations side by side. See Python/PyTorch/ComfyUI versions and disk usage at a glance. Switch PyTorch/CUDA versions visually, upgrade or rollback ComfyUI core, export/import pip environments, and clean up pip cache. Hardware info (CPU, GPU, VRAM, disk) is available as a collapsible card.
+**Packages** lets you manage multiple ComfyUI installations side by side — including **ComfyUI Desktop** installations. See Python/PyTorch/ComfyUI versions and disk usage at a glance. Switch PyTorch/CUDA versions visually, upgrade or rollback ComfyUI core, export/import pip environments, and clean up pip cache.
+
+<details>
+<summary>Screenshots</summary>
+
+| Deployment Wizard | Package Manager | PyTorch Manager |
+|:---:|:---:|:---:|
+| <img src="screenshots/deployment.png" width="270"> | <img src="screenshots/package-manager.png" width="270"> | <img src="screenshots/pytorch-manager.png" width="270"> |
+
+</details>
 
 ### Workflows — Batch Tasks and Diagnosis
 
@@ -65,19 +86,63 @@ When something goes wrong, the **AI Diagnosis** feature can analyze your logs, s
 
 **Workflow Diagnosis** checks your workflows for issues before you run them.
 
+<details>
+<summary>Screenshots</summary>
+
+| Batch Queue | Dependency Analysis |
+|:---:|:---:|
+| <img src="screenshots/batch-queue.png" width="400"> | <img src="screenshots/dependency-analysis.png" width="400"> |
+
+</details>
+
 ### Plugins — Manage and Install
 
 Browse all installed custom nodes with Git info, size, and search. Switch plugin versions by commit, rollback, or manage Python dependencies.
 
 When you load a workflow that needs plugins you don't have, the **Install Missing Plugins** tab detects them and installs with one click (Git clone + pip dependencies).
 
+<details>
+<summary>Screenshot</summary>
+
+<img src="screenshots/plugin-management.png" width="80%">
+</details>
+
 ### Models — Library, Finder, and Downloads
 
 **Model Library** gives you a visual browser for your local model files with search and category filtering (checkpoint, LoRA, VAE, etc.).
 
-**Model Finder** is the core differentiator. Drop in a workflow (JSON or PNG), and it scans your local models, identifies what's missing, and automatically matches download sources from a built-in catalog of 1000+ models across HuggingFace, ModelScope, and Civitai. Accept matches and download all in one go. Supports batch analysis across multiple files or entire folders.
+**Model Finder** is the core differentiator. Drop in a workflow (JSON or PNG), and it scans your local models, identifies what's missing, and automatically matches download sources from a cloud catalog across HuggingFace, ModelScope, and Civitai. Accept matches and download all in one go. Supports batch analysis across multiple files or entire folders.
 
 **Downloads** is a unified download manager with live progress, pause/resume, and batch cleanup.
+
+<details>
+<summary>Screenshots</summary>
+
+| Model Finder | Model Library | Download Center |
+|:---:|:---:|:---:|
+| <img src="screenshots/model-finder.png" width="270"> | <img src="screenshots/model-management.png" width="270"> | <img src="screenshots/download-center.png" width="270"> |
+
+</details>
+
+---
+
+## Personalization
+
+- **Language**: English / Simplified Chinese / Follow system — instant switch, no restart
+- **Theme**: Dark / Light with synchronized ComfyUI theme
+- **Color schemes**: Multiple accent palettes
+- **UI density**: Comfortable / Compact
+- **Reduced motion**: Disable animations on low-end devices
+- Built with **Windows Fluent Design** for a modern, native feel
+
+<details>
+<summary>Screenshots</summary>
+
+| Dark Theme (Chinese) | Light Theme (English) | Settings |
+|:---:|:---:|:---:|
+| <img src="screenshots/home.png" width="270"> | <img src="screenshots/light-theme-english.png" width="270"> | <img src="screenshots/settings.png" width="270"> |
+
+</details>
 
 ---
 
@@ -89,17 +154,6 @@ When you load a workflow that needs plugins you don't have, the **Install Missin
 | **Beta** | Users who want early access to new features and accept occasional rough edges |
 
 All features are currently free. Beta builds ship from the same repository and may include unfinished features or temporary regressions before promotion to stable.
-
----
-
-## Personalization
-
-- **Language**: English / Simplified Chinese / Follow system
-- **Theme**: Dark / Light
-- **Color schemes**: Multiple accent palettes
-- **UI density**: Comfortable / Compact
-- **Reduced motion**: Disable animations on low-end devices
-- Built with **Windows Fluent Design** for a modern, native feel
 
 ---
 
@@ -126,6 +180,12 @@ No. ModelFinder is self-contained. ComfyUI's Python environment is set up by the
 <summary><b>Can it manage my existing ComfyUI installation?</b></summary>
 
 Yes. Go to Environments → Packages, add your existing ComfyUI portable folder. Your files are not modified.
+</details>
+
+<details>
+<summary><b>Can it take over ComfyUI Desktop?</b></summary>
+
+Yes. Add your `Documents\ComfyUI` folder and ModelFinder will auto-detect the Desktop installation, including its Python environment, custom nodes, and models. The Desktop app's files are never modified — ModelFinder only reads from them.
 </details>
 
 <details>
