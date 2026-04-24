@@ -5,7 +5,7 @@
 
 # ComfyUI Install Windows Download
 
-### A Windows launcher for ComfyUI that gets you from workflow to output, faster.
+### All-in-one ComfyUI launcher and manager — model downloader, custom nodes installer, environment manager, and workflow analyzer.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
@@ -19,9 +19,9 @@
 
 ## Why ModelFinder
 
-Every new ComfyUI workflow can mean missing models, missing plugins, broken dependencies. You end up chasing files across HuggingFace, Civitai, and GitHub before you can even hit "Queue Prompt".
+Every new ComfyUI workflow can mean missing models, missing custom nodes, broken dependencies. You end up chasing files across HuggingFace, Civitai, and GitHub before you can even hit "Queue Prompt".
 
-ModelFinder puts **workflow analysis, resource downloads, environment management, and launching** in one place — so you spend time generating, not debugging setup.
+ModelFinder is a **ComfyUI launcher and manager** that puts workflow analysis, model downloading, custom nodes installation, and environment management in one place — so you spend time generating, not debugging setup.
 
 ---
 
@@ -30,7 +30,7 @@ ModelFinder puts **workflow analysis, resource downloads, environment management
 ### First Time
 
 1. Download the **Setup Installer** or **Portable ZIP** from [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-2. Launch ModelFinder — the deployment wizard walks you through installing ComfyUI (version, GPU acceleration, optional components)
+2. Launch ModelFinder — the one-click installer walks you through deploying ComfyUI (version, GPU acceleration, optional components)
 3. Or skip deployment and point ModelFinder at your existing ComfyUI portable package
 4. **Already using ComfyUI Desktop?** Just add your `Documents\ComfyUI` folder — ModelFinder auto-detects the Desktop installation
 
@@ -38,7 +38,7 @@ No Python or .NET installation required. Everything is bundled.
 
 ### Daily Use
 
-Open ModelFinder → click **Start** on the Home page → ComfyUI launches with real-time logs in a built-in terminal → open the Web UI directly inside the launcher or in your browser.
+Open ModelFinder → click **Start** on the Home page → ComfyUI launches with real-time logs in the built-in terminal → open the Web UI in the embedded workspace or in your browser.
 
 That's it for basic use. The rest of ModelFinder is there when you need it.
 
@@ -48,35 +48,55 @@ That's it for basic use. The rest of ModelFinder is there when you need it.
 
 ### Home — Launch and Monitor
 
-Your starting point. A full-size terminal console shows ComfyUI logs in real time. A floating action island in the bottom-right lets you start/stop ComfyUI, open the Web UI, or switch between instances. The **built-in browser workspace** lets you use ComfyUI without leaving the launcher. You can also configure launch parameters (port, GPU memory mode, custom arguments) and quickly open common folders (models, outputs, custom_nodes).
+Your starting point. A capsule-shaped control button lets you start/stop ComfyUI with one click. When running, a built-in browser workspace opens ComfyUI's Web UI right inside the launcher — no need to switch windows.
 
-When something goes wrong, the **AI Diagnosis** feature can analyze your logs, suggest repair commands, execute them with your approval, and verify the fix — with rollback if needed.
+The bottom toolbar gives you quick access to common folders (Models, Output, Workflows, Custom Nodes, Python) and usage statistics (today's usage time, session duration, total launches, last used). A real-time terminal drawer at the bottom shows ComfyUI process logs.
 
-### Environments — Deploy and Manage Packages
+The workspace also detects issues with the current workflow — if custom nodes or models are missing, a notification bar appears with one-click actions to install nodes, download models, or restart ComfyUI.
 
-**Deploy** a fresh ComfyUI installation with version selection, GPU acceleration options (NVIDIA CUDA / AMD ROCm), and optional preinstalled components (ComfyUI-Manager, translation packs, popular nodes). Visual step-by-step progress with failure recovery.
+Hardware info (OS, CPU, Memory, GPU, VRAM, Motherboard) is displayed at a glance. Launch parameters — port, GPU mode (Auto / RTX fp16 / CPU), and custom arguments — are configurable from the gear button.
 
-**Packages** lets you manage multiple ComfyUI installations side by side — including **ComfyUI Desktop** installations. See Python/PyTorch/ComfyUI versions and disk usage at a glance. Switch PyTorch/CUDA versions visually, upgrade or rollback ComfyUI core, export/import pip environments, and clean up pip cache.
+### Environments — Deploy and Manage
 
-### Workflows — Batch Tasks and Diagnosis
+**Deploy** a fresh ComfyUI installation with version selection, GPU acceleration options (NVIDIA CUDA / AMD ROCm), and optional preinstalled components.
 
-**Batch Queue** automates large-scale generation through the ComfyUI API. Load a workflow, configure parameter replacements (supports batch prompts from files), set repeat count and random seed, define auto-restart intervals to avoid memory leaks, and resume from interruption.
+**Manage** multiple ComfyUI installations side by side — including **ComfyUI Desktop** installations. See Python, PyTorch, and ComfyUI versions at a glance. Switch ComfyUI core versions by tag, switch PyTorch/CUDA configurations visually, and install Python development headers when needed.
 
-**Workflow Diagnosis** checks your workflows for issues before you run them.
+A full **pip dependency table** lets you search, install, upgrade, switch versions, or batch-uninstall Python packages. You can also drag-and-drop `.txt` (requirements) or `.whl` (wheel) files to install them directly. Pip cache cleanup and pip self-upgrade are one click away.
 
-### Plugins — Manage and Install
+### Workflows — Model Finder and Downloader
 
-Browse all installed custom nodes with Git info, size, and search. Switch plugin versions by commit, rollback, or manage Python dependencies.
+> Requires sign-in to a ModelFinder account.
 
-When you load a workflow that needs plugins you don't have, the **Install Missing Plugins** tab detects them and installs with one click (Git clone + pip dependencies).
+Drop in a workflow file (JSON or PNG), and ModelFinder scans your local models, identifies what's missing, and automatically finds download links from a cloud catalog across **HuggingFace**, **ModelScope**, and **Civitai**. When a match is uncertain, you can pick from a list of candidates or reject false positives.
 
-### Models — Library, Finder, and Downloads
+Accept matches and download all missing models in one go — or copy the list to your clipboard for manual searching. Supports batch analysis across multiple workflow files or entire folders.
 
-**Model Library** gives you a visual browser for your local model files with search and category filtering (checkpoint, LoRA, VAE, etc.).
+### Plugins — Custom Nodes Installer and Manager
 
-**Model Finder** is the core differentiator. Drop in a workflow (JSON or PNG), and it scans your local models, identifies what's missing, and automatically matches download sources from a cloud catalog across HuggingFace, ModelScope, and Civitai. Accept matches and download all in one go. Supports batch analysis across multiple files or entire folders.
+Browse all installed custom nodes with status, Git info, and dependency indicators. Toggle plugins on/off, install Python dependencies (with pip mirror selection: PyPI / Tsinghua / Aliyun / Tencent / Douban), open GitHub repos, or delete plugins entirely.
 
-**Downloads** is a unified download manager with live progress, pause/resume, and batch cleanup.
+Install new custom nodes from any Git URL — ModelFinder clones the repository and auto-installs its Python dependencies. Bulk enable/disable and bulk dependency installation are available for managing large plugin sets.
+
+### Models — Model Library and Download Manager
+
+**Model Library** gives you a visual browser for all your local model files — checkpoints, LoRAs, VAEs, ControlNets, CLIP, and more — with category filtering and search. Open any model's folder or delete unused ones directly. Switch to **All Packages** mode to see models across every ComfyUI installation, with duplicate detection and reclaimable space estimates.
+
+**Download Manager** shows all active and completed downloads in one place. Active downloads show live progress, speed, and ETA with pause/resume/cancel controls. Completed downloads can be opened or cleared from the list.
+
+### AI Assistant
+
+A global chat panel accessible from the title bar. When something goes wrong, the AI can analyze your logs, suggest repair commands, execute them with your approval, and verify the fix. Suggested prompts help you get started: diagnose failures, check dependencies, or summarize recovery steps.
+
+AI features are managed server-side — sign in to your account to use them.
+
+### Settings
+
+- **Account**: Sign in/out, view subscription plan, credit balance, and billing
+- **General**: Language (English / Chinese / System), close behavior, shared model directory with junction linking
+- **Network**: HuggingFace mirror toggle, Aria2 multi-connection download accelerator
+- **AI**: Proxy configuration, raw log upload preference
+- **Advanced**: System dependency manager (Git, 7-Zip, VC Redist), log viewer, cache cleanup, update manager
 
 ---
 
@@ -85,8 +105,6 @@ When you load a workflow that needs plugins you don't have, the **Install Missin
 - **Language**: English / Simplified Chinese / Follow system — instant switch, no restart
 - **Theme**: Dark / Light with synchronized ComfyUI theme
 - **Color schemes**: Multiple accent palettes
-- **UI density**: Comfortable / Compact
-- **Reduced motion**: Disable animations on low-end devices
 - Built with **Windows Fluent Design** for a modern, native feel
 
 ---
@@ -98,7 +116,7 @@ When you load a workflow that needs plugins you don't have, the **Install Missin
 | **Stable** | Most users — the recommended public build |
 | **Beta** | Users who want early access to new features and accept occasional rough edges |
 
-All features are currently free. Beta builds ship from the same repository and may include unfinished features or temporary regressions before promotion to stable.
+Beta builds ship from the same repository and may include unfinished features or temporary regressions before promotion to stable.
 
 ---
 
@@ -124,7 +142,7 @@ No. ModelFinder is self-contained. ComfyUI's Python environment is set up by the
 <details>
 <summary><b>Can it manage my existing ComfyUI installation?</b></summary>
 
-Yes. Go to Environments → Packages, add your existing ComfyUI portable folder. Your files are not modified.
+Yes. Go to Environments, click "Add Directory", and select your existing ComfyUI portable folder. Your files are not modified.
 </details>
 
 <details>
@@ -140,9 +158,9 @@ Yes. Choose AMD ROCm during deployment, or import an existing AMD environment.
 </details>
 
 <details>
-<summary><b>How does AI Diagnosis work?</b></summary>
+<summary><b>How does the AI Assistant work?</b></summary>
 
-Configure an API key and endpoint in Settings → AI Settings. When ComfyUI fails, the AI analyzes your logs, generates repair commands, and executes them with your approval. You can rollback if the result isn't satisfactory.
+Sign in to your ModelFinder account. The AI Assistant panel is accessible from the title bar. When ComfyUI encounters issues, the AI analyzes your logs, generates repair commands, and executes them with your approval. You can also ask it questions directly in the chat interface.
 </details>
 
 <details>
