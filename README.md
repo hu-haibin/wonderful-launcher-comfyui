@@ -34,6 +34,31 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
+## Recent Highlights
+
+- **Live image generation progress**: image generation now surfaces queue, status, and progress feedback while a job is running.
+- **Stronger AI diagnosis**: the Assistant can work from launcher logs, startup failures, task terminal evidence, and selected-environment state before suggesting repairs.
+- **Local personalization controls**: when enabled, local preferences and project hints can make replies feel more familiar without changing permissions, billing, or safety rules.
+- **Safer update handling**: update checks are designed to avoid confusing downgrade or migration prompts when the installed build is already current or newer.
+
+---
+
+## Screenshots
+
+Real Windows app captures from the current WinUI release path:
+
+<p align="center">
+  <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder home launch surface" width="32%" />
+  <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder live startup logs" width="32%" />
+  <img src="assets/screenshots/embedded-webview-workspace.png" alt="ModelFinder embedded ComfyUI workspace" width="32%" />
+</p>
+
+- **Home**: pick an environment and launch ComfyUI from the main surface.
+- **Startup logs**: follow live colored logs, copy the full launch output, and stay on the main recovery path.
+- **Embedded workspace**: land directly in the built-in ComfyUI WebView after startup completes.
+
+---
+
 ## Core Capabilities
 
 | Area | What it does |
@@ -43,7 +68,8 @@ The goal is simple: spend less time fixing setup and more time running workflows
 | **Workflows** | Analyze workflow files, detect missing models, and resolve downloadable candidates from supported catalogs |
 | **Plugins** | Install custom nodes from Git URLs, manage plugin dependencies, bulk enable or disable plugins |
 | **Models** | Browse local model libraries, detect duplicates across packages, and manage downloads |
-| **AI Assistant** | Diagnose logs, explain failures, and execute approved repair actions inside the launcher |
+| **Image** | Generate images from prompts, follow live status/progress, and inspect generated outputs |
+| **AI Assistant** | Read launcher evidence, explain failures, and execute approved repair actions inside the launcher |
 | **Downloads** | Queue, track, pause, resume, and manage model downloads |
 
 ---
@@ -55,16 +81,20 @@ The AI Assistant is integrated into the desktop app as a chat panel.
 What it can do today:
 
 - inspect launcher-collected logs and environment state
-- explain startup failures and dependency errors
+- inspect startup failures, task terminal output, and selected-environment context
+- explain startup failures, dependency errors, and plugin install failures
 - suggest repair actions
 - execute launcher-native repair tools after your approval
 - continue multi-step repair flows inside the same conversation
+- use local preferences and project hints when personalization is enabled
 
 Important boundaries:
 
 - AI features require sign-in
 - usage is credit-based and managed server-side
 - current billing and pricing rules live on the official website, not in this release repo
+- local personalization does not bypass approvals, elevate tool permissions, or change billing behavior
+- local personalization memory is not treated as default cloud sync content
 
 ---
 
@@ -98,6 +128,7 @@ ModelFinder is meant to manage and inspect these environments, not overwrite the
 - **Release type**: this repository publishes public Windows builds
 - **Prereleases**: if beta or prerelease builds are available, they will be explicitly marked in GitHub Releases
 - **Cloud-backed features**: AI Assistant and some workflow matching capabilities rely on sign-in and server-side services
+- **Local data**: launcher configuration, logs, package state, and optional personalization data stay on the local machine unless a feature explicitly sends a request to the service
 
 ---
 
