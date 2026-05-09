@@ -43,19 +43,28 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## Screenshots
+## Feature Gallery
 
-Real Windows app captures from the current WinUI release path:
+Fresh real-app captures from the current WinUI public build:
 
 <p align="center">
-  <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder home launch surface" width="32%" />
-  <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder live startup logs" width="32%" />
-  <img src="assets/screenshots/embedded-webview-workspace.png" alt="ModelFinder embedded ComfyUI workspace" width="32%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="32%" />
+  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="32%" />
+  <img src="assets/screenshots/feature-plugin-manager.png" alt="ModelFinder plugin manager" width="32%" />
 </p>
 
-- **Home**: pick an environment and launch ComfyUI from the main surface.
-- **Startup logs**: follow live colored logs, copy the full launch output, and stay on the main recovery path.
-- **Embedded workspace**: land directly in the built-in ComfyUI WebView after startup completes.
+<p align="center">
+  <img src="assets/screenshots/feature-model-manager.png" alt="ModelFinder model manager" width="32%" />
+  <img src="assets/screenshots/feature-model-finder.png" alt="ModelFinder workflow model finder" width="32%" />
+  <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder download center" width="32%" />
+</p>
+
+- **Home**: start ComfyUI from the main launch surface and keep the launcher centered on the primary workflow.
+- **Environment**: inspect Python, PyTorch, ComfyUI, disk usage, and installed packages in one place.
+- **Plugin Manager**: enable, disable, install, and remove custom nodes from a dedicated plugin view.
+- **Model Manager**: browse local checkpoints and other model files across the active environment.
+- **Model Finder**: drop a workflow to scan for missing model references before execution.
+- **Download Center**: track queued and completed downloads from the launcher.
 
 ---
 

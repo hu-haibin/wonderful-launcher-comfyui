@@ -43,19 +43,28 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 界面预览
+## 功能图集
 
-下面这组截图来自当前 WinUI 发布链路的真实 Windows 实机 smoke：
+下面这组截图来自当前 WinUI 公共构建的真实桌面运行界面：
 
 <p align="center">
-  <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder 首页启动界面" width="32%" />
-  <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder 启动日志界面" width="32%" />
-  <img src="assets/screenshots/embedded-webview-workspace.png" alt="ModelFinder 内嵌 ComfyUI 工作区" width="32%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="32%" />
+  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="32%" />
+  <img src="assets/screenshots/feature-plugin-manager.png" alt="ModelFinder 插件管理页面" width="32%" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/feature-model-manager.png" alt="ModelFinder 模型管理页面" width="32%" />
+  <img src="assets/screenshots/feature-model-finder.png" alt="ModelFinder 模型查找页面" width="32%" />
+  <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder 下载中心页面" width="32%" />
 </p>
 
 - **首页启动面板**：在主界面选择环境并启动 ComfyUI。
-- **启动日志**：查看实时彩色日志、复制完整启动输出，并保持在主恢复路径里排障。
-- **内嵌工作区**：启动完成后直接进入内置的 ComfyUI WebView 工作区。
+- **运行环境**：集中查看 Python、PyTorch、ComfyUI、磁盘占用和已安装包。
+- **插件管理**：在独立页面里启用、禁用、安装和删除自定义节点。
+- **模型管理**：浏览当前环境中的 checkpoint 和其他本地模型文件。
+- **模型查找**：拖入工作流后先扫描缺失模型，再决定如何补齐。
+- **下载中心**：在启动器内跟踪排队中和已完成的下载任务。
 
 ---
 
