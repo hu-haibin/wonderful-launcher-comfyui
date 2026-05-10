@@ -36,6 +36,7 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ## Recent Highlights
 
+- **Smoother Image to Photoshop handoff**: Image Workspace can now send results straight to Photoshop, automatically create a new document when none is open, and keep the result surface intact while showing send status.
 - **Live image generation progress**: image generation now surfaces queue, status, and progress feedback while a job is running.
 - **Stronger AI diagnosis**: the Assistant can work from launcher logs, startup failures, task terminal evidence, and selected-environment state before suggesting repairs.
 - **Local personalization controls**: when enabled, local preferences and project hints can make replies feel more familiar without changing permissions, billing, or safety rules.
@@ -59,12 +60,19 @@ Fresh real-app captures from the current WinUI public build:
   <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder download center" width="32%" />
 </p>
 
+<p align="center">
+  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace with Photoshop send feedback" width="48%" />
+  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop receiving an image sent from ModelFinder" width="48%" />
+</p>
+
 - **Home**: start ComfyUI from the main launch surface and keep the launcher centered on the primary workflow.
 - **Environment**: inspect Python, PyTorch, ComfyUI, disk usage, and installed packages in one place.
 - **Plugin Manager**: enable, disable, install, and remove custom nodes from a dedicated plugin view.
 - **Model Manager**: browse local checkpoints and other model files across the active environment.
 - **Model Finder**: drop a workflow to scan for missing model references before execution.
 - **Download Center**: track queued and completed downloads from the launcher.
+- **Image Workspace**: generate, transform, and upscale images with visible credits, live progress, and direct Photoshop handoff.
+- **Photoshop Handoff**: send a generated image into Photoshop without manually preparing a document first.
 
 ---
 
@@ -77,7 +85,7 @@ Fresh real-app captures from the current WinUI public build:
 | **Workflows** | Analyze workflow files, detect missing models, and resolve downloadable candidates from supported catalogs |
 | **Plugins** | Install custom nodes from Git URLs, manage plugin dependencies, bulk enable or disable plugins |
 | **Models** | Browse local model libraries, detect duplicates across packages, and manage downloads |
-| **Image** | Generate images from prompts, follow live status/progress, and inspect generated outputs |
+| **Image** | Generate images from prompts, follow live status/progress, inspect generated outputs, and send results to Photoshop |
 | **AI Assistant** | Read launcher evidence, explain failures, and execute approved repair actions inside the launcher |
 | **Downloads** | Queue, track, pause, resume, and manage model downloads |
 

@@ -36,6 +36,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ## 近期亮点
 
+- **更顺的 Image 到 Photoshop 交接**：图片工作台现在可以直接把结果送进 Photoshop，没开文档时会自动新建文档，而且发送过程中会保留结果界面并给出明确状态反馈。
 - **图片生成实时进度**：图片生成过程中会显示排队、状态和进度反馈，不再只让用户干等。
 - **更强的 AI 诊断**：AI 助手会结合启动器日志、启动失败信息、任务终端证据和当前环境状态，再给出修复建议。
 - **本地个性化控制**：开启后，本地偏好和项目提示可以让回复更贴近使用习惯，但不会改变权限、计费或安全规则。
@@ -59,12 +60,19 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
   <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder 下载中心页面" width="32%" />
 </p>
 
+<p align="center">
+  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder 图片工作台与 Photoshop 发送反馈" width="48%" />
+  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop 接收到 ModelFinder 发送图片后的结果" width="48%" />
+</p>
+
 - **首页启动面板**：在主界面选择环境并启动 ComfyUI。
 - **运行环境**：集中查看 Python、PyTorch、ComfyUI、磁盘占用和已安装包。
 - **插件管理**：在独立页面里启用、禁用、安装和删除自定义节点。
 - **模型管理**：浏览当前环境中的 checkpoint 和其他本地模型文件。
 - **模型查找**：拖入工作流后先扫描缺失模型，再决定如何补齐。
 - **下载中心**：在启动器内跟踪排队中和已完成的下载任务。
+- **图片工作台**：在同一页里完成生图、改图、放大，并看到清晰的积分与进度反馈。
+- **Photoshop 交接**：把生成结果直接送进 Photoshop，不需要你先手动建空白文档。
 
 ---
 
@@ -77,7 +85,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 | **工作流** | 分析工作流文件，识别缺失模型，并从支持的目录中匹配候选下载项 |
 | **插件** | 从 Git URL 安装自定义节点，管理插件依赖，批量启用或禁用插件 |
 | **模型** | 浏览本地模型库，检测跨包重复文件，管理下载任务 |
-| **图片** | 通过提示词生成图片，查看实时状态/进度，并检查生成结果 |
+| **图片** | 通过提示词生成图片，查看实时状态/进度，检查生成结果，并把结果直接发送到 Photoshop |
 | **AI 助手** | 读取启动器证据、解释报错，并在授权后执行支持的修复动作 |
 | **下载** | 排队、跟踪、暂停、恢复和管理模型下载 |
 
