@@ -124,17 +124,43 @@ Important boundaries:
 
 ## Quick Start
 
-### First Launch
+### Install ModelFinder
 
-1. Download the latest **Setup Installer** or **Portable ZIP** from [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-2. Start ModelFinder
-3. Either deploy a new ComfyUI environment or add an existing one
-4. Click **Start** on the Home page to launch ComfyUI
+1. Open [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+2. Download the latest **Setup Installer** asset
+3. Run the installer and open ModelFinder
+
+> [!WARNING]
+> Download the **Setup Installer** from the release assets. Do **not** download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
 
 > [!TIP]
 > Python and .NET do not need to be installed separately for normal use.
 
-### Existing Installs
+<p align="center">
+  <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder first-run home screen with Import ComfyUI and Deploy ComfyUI actions" width="80%" />
+</p>
+
+### Import an existing ComfyUI
+
+1. Open ModelFinder and stay on the Home page
+2. Click **Import ComfyUI**
+3. Pick your existing ComfyUI folder
+4. After the import succeeds, click **Start** to launch ComfyUI
+
+The safest folder choices are:
+
+- the folder that directly contains `main.py`
+- the portable parent folder if it contains a `ComfyUI` subfolder
+
+Do **not** select these by mistake:
+
+- `models`
+- `custom_nodes`
+- `output`
+- `python_embeded`
+- a workflow-only folder
+
+### Existing installs
 
 ModelFinder can work with:
 
@@ -143,6 +169,12 @@ ModelFinder can work with:
 - ComfyUI Desktop environments imported through your `Documents\\ComfyUI` folder
 
 ModelFinder is meant to manage and inspect these environments, not overwrite them blindly.
+
+### Common import and launch confusion
+
+- **Wrong folder selected**: if ModelFinder says the selected folder is missing `main.py`, you picked the wrong directory. Go back and select the real ComfyUI root instead.
+- **Imported successfully, but launch still failed**: first check the app window title bar at the very top. If it already shows a resolved path such as `...\\ComfyUI_windows_portable\\ComfyUI`, ModelFinder already found your runtime. That is usually **not** a wrong-folder problem. Then check the log panel on the Home page for runtime errors such as missing `dll`, `torch`, `roc_sdk`, or other dependency failures.
+- **Still unsure which folder to import**: import the folder that contains `main.py`, or the parent portable folder that contains a `ComfyUI` subfolder.
 
 ---
 
@@ -168,7 +200,7 @@ No. For standard use, ModelFinder manages the ComfyUI Python environment for you
 <details>
 <summary><b>Can it manage my existing ComfyUI install?</b></summary>
 
-Yes. You can add an existing ComfyUI folder and let ModelFinder manage it alongside new environments.
+Yes. Click **Import ComfyUI** on the Home page, select the folder that contains `main.py` or the portable parent folder that contains a `ComfyUI` subfolder, and let ModelFinder manage it alongside new environments.
 
 </details>
 

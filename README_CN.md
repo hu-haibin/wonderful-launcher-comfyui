@@ -124,15 +124,41 @@ AI 助手集成在桌面端聊天面板里。
 
 ## 快速开始
 
-### 首次使用
+### 安装 ModelFinder
 
-1. 从 [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) 下载最新 **Setup 安装包** 或 **便携 ZIP**
-2. 启动 ModelFinder
-3. 选择部署新的 ComfyUI 环境，或导入已有环境
-4. 在首页点击 **启动**，运行 ComfyUI
+1. 打开 [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+2. 下载最新的 **Setup 安装包**
+3. 运行安装包并打开 ModelFinder
+
+> [!WARNING]
+> 请下载 release 资产里的 **Setup 安装包**。不要下载 GitHub 自动生成的 `Source code.zip` 或 `Source code.tar.gz`，那是源码压缩包，不能直接运行。
 
 > [!TIP]
 > 正常使用时，不需要你额外安装 Python 或 .NET。
+
+<p align="center">
+  <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder 首次打开后的首页，包含 导入 ComfyUI 和 部署 ComfyUI 按钮" width="80%" />
+</p>
+
+### 导入已有 ComfyUI
+
+1. 打开 ModelFinder，停留在首页
+2. 点击 **导入 ComfyUI**
+3. 选择你现有的 ComfyUI 目录
+4. 导入成功后，在首页点击 **启动**
+
+最稳的选择方式是：
+
+- 直接选择 **包含 `main.py`** 的那个目录
+- 如果你用的是便携包，也可以选择它的上层目录，只要里面有一个 `ComfyUI` 子文件夹
+
+这些目录不要误选：
+
+- `models`
+- `custom_nodes`
+- `output`
+- `python_embeded`
+- 只有工作流文件的目录
 
 ### 已有环境
 
@@ -143,6 +169,12 @@ ModelFinder 可以管理这些场景：
 - 通过 `Documents\\ComfyUI` 导入的 ComfyUI Desktop 环境
 
 它的定位是管理和诊断这些环境，不是无提示地覆盖你的原有文件。
+
+### 常见的导入与启动混淆
+
+- **选错目录**：如果 ModelFinder 提示找不到 `main.py`，说明你选错了目录，重新选择真正的 ComfyUI 根目录即可。
+- **导入成功，但启动还是失败**：请先看**应用窗口最上方的标题栏**。如果标题栏里已经显示出类似 `...\\ComfyUI_windows_portable\\ComfyUI` 这样的路径，说明 ModelFinder 已经找到你的 ComfyUI 运行时了。这种情况通常**不是目录选错**，而是启动环境本身有问题。接着请看首页下方的日志区域，确认是否有 `dll`、`torch`、`roc_sdk` 等依赖报错。
+- **还是不确定该选哪个目录**：优先选择包含 `main.py` 的目录，或者包含 `ComfyUI` 子文件夹的便携包上层目录。
 
 ---
 
@@ -168,7 +200,7 @@ ModelFinder 可以管理这些场景：
 <details>
 <summary><b>可以接管我现有的 ComfyUI 吗？</b></summary>
 
-可以。你可以添加已有的 ComfyUI 文件夹，让它和新环境一起被管理。
+可以。你只需要在首页点击 **导入 ComfyUI**，选择包含 `main.py` 的目录，或包含 `ComfyUI` 子文件夹的便携包上层目录，就可以把它纳入 ModelFinder 管理。
 
 </details>
 
@@ -199,7 +231,7 @@ ModelFinder 可以管理这些场景：
 
 这个仓库主要用于：
 
-- 发布 Windows 安装包与便携包
+- 发布 Windows 安装包
 - 版本更新说明与 release 历史（见 [release-notes/](release-notes/)）
 - 承担公开版本的问题反馈
 
