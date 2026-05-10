@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**All Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**Download**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**What's New in 2.0.4**](release-notes/2.0.4.en.md) · [**All Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
 </div>
 
@@ -34,10 +34,24 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## Recent Highlights
+## What's New in 2.0.4
 
-- **Smoother Image to Photoshop handoff**: Image Workspace can now send results straight to Photoshop, automatically create a new document when none is open, and keep the result surface intact while showing send status.
-- **Live image generation progress**: image generation now surfaces queue, status, and progress feedback while a job is running.
+Released on May 10, 2026. [Read the full 2.0.4 release notes](release-notes/2.0.4.en.md).
+
+- **One-click Photoshop handoff**: `Send to Photoshop` is now the default path from generated images.
+- **No empty-document trap**: if Photoshop is connected but no document is open, ModelFinder now creates a new document automatically before importing the image.
+- **Clearer send feedback**: the result stays visible while the workspace and viewer show sending, success, or recovery status instead of dropping into a destructive error state.
+
+<p align="center">
+  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace with Photoshop send feedback" width="48%" />
+  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop receiving an image sent from ModelFinder" width="48%" />
+</p>
+
+---
+
+## Recent Product Highlights
+
+- **Live image generation progress**: image generation surfaces queue, status, and progress feedback while a job is running.
 - **Stronger AI diagnosis**: the Assistant can work from launcher logs, startup failures, task terminal evidence, and selected-environment state before suggesting repairs.
 - **Local personalization controls**: when enabled, local preferences and project hints can make replies feel more familiar without changing permissions, billing, or safety rules.
 - **Safer update handling**: update checks are designed to avoid confusing downgrade or migration prompts when the installed build is already current or newer.
@@ -46,7 +60,7 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ## Feature Gallery
 
-Fresh real-app captures from the current WinUI public build:
+Fresh real-app captures from the current WinUI public build's core surfaces. Image Workspace screenshots appear in the 2.0.4 section above.
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="32%" />
@@ -60,19 +74,12 @@ Fresh real-app captures from the current WinUI public build:
   <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder download center" width="32%" />
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace with Photoshop send feedback" width="48%" />
-  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop receiving an image sent from ModelFinder" width="48%" />
-</p>
-
 - **Home**: start ComfyUI from the main launch surface and keep the launcher centered on the primary workflow.
 - **Environment**: inspect Python, PyTorch, ComfyUI, disk usage, and installed packages in one place.
 - **Plugin Manager**: enable, disable, install, and remove custom nodes from a dedicated plugin view.
 - **Model Manager**: browse local checkpoints and other model files across the active environment.
 - **Model Finder**: drop a workflow to scan for missing model references before execution.
 - **Download Center**: track queued and completed downloads from the launcher.
-- **Image Workspace**: generate, transform, and upscale images with visible credits, live progress, and direct Photoshop handoff.
-- **Photoshop Handoff**: send a generated image into Photoshop without manually preparing a document first.
 
 ---
 
@@ -193,7 +200,7 @@ Not currently. This release repository is for Windows builds.
 This repository hosts:
 
 - compiled Windows releases
-- release notes and release history
+- [versioned release notes](release-notes/) and release history
 - issue tracking for public builds
 
 ModelFinder itself is a closed-source desktop product built around the ComfyUI ecosystem.

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# ModelFinder for ComfyUI
+# ModelFinder for ComfyUI（Windows 版）
 
 ### 一个面向 Windows 的 ComfyUI 启动、管理、诊断与修复工具。
 
@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**所有版本**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**反馈问题**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**下载**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**2.0.4 更新说明**](release-notes/2.0.4.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**反馈问题**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
 </div>
 
@@ -34,9 +34,23 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 近期亮点
+## 2.0.4 更新了什么
 
-- **更顺的 Image 到 Photoshop 交接**：图片工作台现在可以直接把结果送进 Photoshop，没开文档时会自动新建文档，而且发送过程中会保留结果界面并给出明确状态反馈。
+发布于 2026 年 5 月 10 日。[查看完整 2.0.4 更新说明](release-notes/2.0.4.zh-CN.md)。
+
+- **一键送进 Photoshop**：生图结果上的默认主动作现在就是 `Send to Photoshop`。
+- **不再卡在“PS 里还没开文档”**：如果 Photoshop 已连接但当前没有打开文档，ModelFinder 会先自动新建文档，再把图片送进去。
+- **发送反馈更清楚**：发送时结果图不会被报错状态直接清掉，工作台和查看器会保留图片，并显示发送中、成功或恢复提示。
+
+<p align="center">
+  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder 图片工作台与 Photoshop 发送反馈" width="48%" />
+  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop 接收到 ModelFinder 发送图片后的结果" width="48%" />
+</p>
+
+---
+
+## 近期产品亮点
+
 - **图片生成实时进度**：图片生成过程中会显示排队、状态和进度反馈，不再只让用户干等。
 - **更强的 AI 诊断**：AI 助手会结合启动器日志、启动失败信息、任务终端证据和当前环境状态，再给出修复建议。
 - **本地个性化控制**：开启后，本地偏好和项目提示可以让回复更贴近使用习惯，但不会改变权限、计费或安全规则。
@@ -46,7 +60,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ## 功能图集
 
-下面这组截图来自当前 WinUI 公共构建的真实桌面运行界面：
+下面这组截图展示的是当前 WinUI 公共构建里最核心的几个主界面；图片工作台截图已经放在上面的 2.0.4 更新区域。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="32%" />
@@ -60,19 +74,12 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
   <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder 下载中心页面" width="32%" />
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder 图片工作台与 Photoshop 发送反馈" width="48%" />
-  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop 接收到 ModelFinder 发送图片后的结果" width="48%" />
-</p>
-
 - **首页启动面板**：在主界面选择环境并启动 ComfyUI。
 - **运行环境**：集中查看 Python、PyTorch、ComfyUI、磁盘占用和已安装包。
 - **插件管理**：在独立页面里启用、禁用、安装和删除自定义节点。
 - **模型管理**：浏览当前环境中的 checkpoint 和其他本地模型文件。
 - **模型查找**：拖入工作流后先扫描缺失模型，再决定如何补齐。
 - **下载中心**：在启动器内跟踪排队中和已完成的下载任务。
-- **图片工作台**：在同一页里完成生图、改图、放大，并看到清晰的积分与进度反馈。
-- **Photoshop 交接**：把生成结果直接送进 Photoshop，不需要你先手动建空白文档。
 
 ---
 
@@ -193,7 +200,7 @@ ModelFinder 可以管理这些场景：
 这个仓库主要用于：
 
 - 发布 Windows 安装包与便携包
-- 保存 release 历史
+- 版本更新说明与 release 历史（见 [release-notes/](release-notes/)）
 - 承担公开版本的问题反馈
 
 ModelFinder 本身是围绕 ComfyUI 生态构建的闭源桌面产品。
