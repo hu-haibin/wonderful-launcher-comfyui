@@ -6,11 +6,11 @@
 
 ### 一个面向 Windows 的 ComfyUI 启动、管理、诊断与修复工具。
 
-[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=最新版本)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
-[![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=最新版本)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
+[![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
+[![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**2.0.4 更新说明**](release-notes/2.0.4.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**反馈问题**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.5 更新说明**](release-notes/2.0.5.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,17 +34,22 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.4 更新了什么
+## 2.0.5 更新了什么
 
-发布于 2026 年 5 月 10 日。[查看完整 2.0.4 更新说明](release-notes/2.0.4.zh-CN.md)。
+发布于 2026 年 5 月 11 日。[查看完整 2.0.5 更新说明](release-notes/2.0.5.zh-CN.md)。
 
-- **一键送进 Photoshop**：生图结果上的默认主动作现在就是 `Send to Photoshop`。
-- **不再卡在“PS 里还没开文档”**：如果 Photoshop 已连接但当前没有打开文档，ModelFinder 会先自动新建文档，再把图片送进去。
-- **发送反馈更清楚**：发送时结果图不会被报错状态直接清掉，工作台和查看器会保留图片，并显示发送中、成功或恢复提示。
+- **浅色主题对齐官网配色**：WinUI 外壳现在在首页、浏览器、图像、工具和设置里统一使用 Wonderful Launcher 网站配色。
+- **启动和 WebView 细节修正**：标题栏恢复 32 px，内置文档保持可读，启动/取消状态在浅色主题下也能保留正确外壳。
+- **交互面国际化补齐**：图像工作台弹出层、确认框、AI 助手入口、任务终端和设置页都经过随机主题/语言切换检查。
+- **浅色模式下日志依然清楚**：启动日志和任务终端保留高对比日志画布，外围控件跟随浅色主题。
 
 <p align="center">
-  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder 图片工作台与 Photoshop 发送反馈" width="48%" />
-  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop 接收到 ModelFinder 发送图片后的结果" width="48%" />
+  <img src="assets/screenshots/2.0.5-light-startup-console.png" alt="ModelFinder 浅色主题启动日志" width="88%" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/2.0.5-light-docs-webview-zh.png" alt="ModelFinder 浅色主题内置文档 WebView" width="48%" />
+  <img src="assets/screenshots/2.0.5-light-image-style-zh.png" alt="ModelFinder 图像工作台浅色主题风格菜单" width="48%" />
 </p>
 
 ---
@@ -60,7 +65,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ## 功能图集
 
-下面这组截图展示的是当前 WinUI 公共构建里最核心的几个主界面；图片工作台截图已经放在上面的 2.0.4 更新区域。
+下面这组截图展示的是当前 WinUI 公共构建里最核心的几个主界面；浅色主题截图已经放在上面的 2.0.5 更新区域。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="32%" />
@@ -126,7 +131,7 @@ AI 助手集成在桌面端聊天面板里。
 
 ### 安装 ModelFinder
 
-1. 打开 [Releases](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+1. 打开 [Releases](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 2. 下载最新的 **Setup 安装包**
 3. 运行安装包并打开 ModelFinder
 
