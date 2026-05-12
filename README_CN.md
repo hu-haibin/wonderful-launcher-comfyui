@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.5 更新说明**](release-notes/2.0.5.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.6 更新说明**](release-notes/2.0.6.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,22 +34,18 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.5 更新了什么
+## 2.0.6 更新了什么
 
-发布于 2026 年 5 月 11 日。[查看完整 2.0.5 更新说明](release-notes/2.0.5.zh-CN.md)。
+发布于 2026 年 5 月 13 日。[查看完整 2.0.6 更新说明](release-notes/2.0.6.zh-CN.md)。
 
-- **浅色主题对齐官网配色**：WinUI 外壳现在在首页、浏览器、图像、工具和设置里统一使用 Wonderful Launcher 网站配色。
-- **启动和 WebView 细节修正**：标题栏恢复 32 px，内置文档保持可读，启动/取消状态在浅色主题下也能保留正确外壳。
-- **交互面国际化补齐**：图像工作台弹出层、确认框、AI 助手入口、任务终端和设置页都经过随机主题/语言切换检查。
-- **浅色模式下日志依然清楚**：启动日志和任务终端保留高对比日志画布，外围控件跟随浅色主题。
-
-<p align="center">
-  <img src="assets/screenshots/2.0.5-light-startup-console.png" alt="ModelFinder 浅色主题启动日志" width="88%" />
-</p>
+- **AI 助手动作回到启动器链路**：启动/停止 ComfyUI、安装/卸载插件和运行状态检查都会通过启动器后端作用在当前选中的 ComfyUI 包上。
+- **运行环境页补齐 Avalonia 时代常用能力**：WinUI 现在支持更稳的依赖管理、受保护依赖拦截、拖入安装、Python 头文件、ComfyUI 内核切换和 PyTorch 内核切换。
+- **不会再把旧版本当更新推回来**：当本机已经是 2.0.6 时，更新检查会忽略 2.0.5 这类旧 release，不再出现反向升级提示。
+- **WebView 与侧边面板更稳定**：AI 助手面板展开时不会再把内嵌 ComfyUI 工作区强行挤到难用的尺寸。
 
 <p align="center">
-  <img src="assets/screenshots/2.0.5-light-docs-webview-zh.png" alt="ModelFinder 浅色主题内置文档 WebView" width="48%" />
-  <img src="assets/screenshots/2.0.5-light-image-style-zh.png" alt="ModelFinder 图像工作台浅色主题风格菜单" width="48%" />
+  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="48%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="48%" />
 </p>
 
 ---
@@ -65,7 +61,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ## 功能图集
 
-下面这组截图展示的是当前 WinUI 公共构建里最核心的几个主界面；浅色主题截图已经放在上面的 2.0.5 更新区域。
+下面这组截图展示的是当前 WinUI 公共构建里最核心的几个主界面。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="32%" />

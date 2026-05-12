@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.5**](release-notes/2.0.5.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.6**](release-notes/2.0.6.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,22 +34,18 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.5
+## What's New in 2.0.6
 
-Released on May 11, 2026. [Read the full 2.0.5 release notes](release-notes/2.0.5.en.md).
+Released on May 13, 2026. [Read the full 2.0.6 release notes](release-notes/2.0.6.en.md).
 
-- **Light theme aligned with the website**: the WinUI shell now follows the Wonderful Launcher web palette across Home, Browser, Image, Tools, and Settings.
-- **Startup and WebView fixes**: the 32 px title bar is back, embedded docs stay readable, and launch/cancel states keep the right light-theme chrome.
-- **Localized interactive surfaces**: Image Workspace flyouts, dialogs, Agent entry points, task terminal surfaces, and settings panels were checked after random theme and language switches.
-- **Readable logs in light mode**: startup and task terminals keep a high-contrast log canvas while surrounding controls follow the light theme.
-
-<p align="center">
-  <img src="assets/screenshots/2.0.5-light-startup-console.png" alt="ModelFinder light theme startup console with readable logs" width="88%" />
-</p>
+- **Assistant actions now stay tied to the launcher**: Agent start/stop, plugin install, plugin uninstall, and runtime checks use the selected ComfyUI package through launcher backend services.
+- **Environment management catches up with Avalonia-era workflows**: the WinUI environment page adds safer dependency management, protected package guards, drag-and-drop installs, Python dev headers, and core/PyTorch switching.
+- **No more stale downgrade prompt**: update checks now ignore older public releases when the installed build is already newer, so a 2.0.6 build will not offer 2.0.5 as an update.
+- **WebView and side panel behavior is calmer**: the assistant panel no longer forces the embedded ComfyUI workspace into an awkward resized layout.
 
 <p align="center">
-  <img src="assets/screenshots/2.0.5-light-docs-webview-zh.png" alt="ModelFinder embedded documentation WebView in light theme" width="48%" />
-  <img src="assets/screenshots/2.0.5-light-image-style-zh.png" alt="ModelFinder image workspace light theme style flyout" width="48%" />
+  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="48%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="48%" />
 </p>
 
 ---
@@ -65,7 +61,7 @@ Released on May 11, 2026. [Read the full 2.0.5 release notes](release-notes/2.0.
 
 ## Feature Gallery
 
-Fresh real-app captures from the current WinUI public build's core surfaces. Light-theme screenshots appear in the 2.0.5 section above.
+Fresh real-app captures from the current WinUI public build's core surfaces.
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="32%" />
