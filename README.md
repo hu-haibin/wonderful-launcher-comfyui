@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.8**](release-notes/2.0.8.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.9**](release-notes/2.0.9.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.8
+## What's New in 2.0.9
 
-Released on May 13, 2026. [Read the full 2.0.8 release notes](release-notes/2.0.8.en.md).
+Released on May 13, 2026. [Read the full 2.0.9 release notes](release-notes/2.0.9.en.md).
 
-- **Installer no longer strands users at a .NET runtime dialog**: the Setup Installer now carries Microsoft .NET Desktop Runtime 10.x (x64), installs it automatically when missing, and opens the official download page only if automatic installation fails.
-- **WinUI release hardening remains in place**: the app still avoids the .NET 10 / CsWinRT self-contained startup crash path by using a framework-dependent payload with bundled Windows App SDK runtime.
-- **Startup repair and theme fixes from 2.0.7 are included**: AI dependency/PyTorch repair, post-repair environment refresh, and WinUI theme/localization fixes remain part of this build.
-- **Release skill and script guardrails were tightened**: future release checks now treat `scripts/publish-release.ps1` as the installer contract and require runtime prerequisites to preserve the previous user experience.
+- **Self-contained installer restored**: the Setup Installer carries the app runtime payload again, so normal installs should not require a separate Microsoft .NET Desktop Runtime install.
+- **Runtime prerequisite prompts removed from the normal installer path**: the public installer no longer bundles or launches a .NET Desktop Runtime prerequisite flow.
+- **Release assets stay installer-only**: the public release contains the Setup Installer and `SHA256SUMS.txt`, with no portable zip for normal distribution.
+- **Release guardrails were tightened**: tests and workflow guidance now block packaging-shape changes unless they are explicitly approved.
 
 <p align="center">
   <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="48%" />
@@ -135,7 +135,7 @@ Important boundaries:
 > Download the **Setup Installer** from the release assets. Do **not** download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
 
 > [!TIP]
-> ModelFinder manages the ComfyUI Python environment for you. The Setup Installer checks for Microsoft .NET Desktop Runtime 10.x and will tell you if that Windows runtime needs to be installed first.
+> ModelFinder manages the ComfyUI Python environment for you. The Setup Installer is self-contained for normal desktop app runtime needs, so you do not need to install Microsoft .NET Desktop Runtime separately.
 
 <p align="center">
   <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder first-run home screen with Import ComfyUI and Deploy ComfyUI actions" width="80%" />
