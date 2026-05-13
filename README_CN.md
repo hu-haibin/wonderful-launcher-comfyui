@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.6 更新说明**](release-notes/2.0.6.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.7 更新说明**](release-notes/2.0.7.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.6 更新了什么
+## 2.0.7 更新了什么
 
-发布于 2026 年 5 月 13 日。[查看完整 2.0.6 更新说明](release-notes/2.0.6.zh-CN.md)。
+发布于 2026 年 5 月 13 日。[查看完整 2.0.7 更新说明](release-notes/2.0.7.zh-CN.md)。
 
-- **AI 助手动作回到启动器链路**：启动/停止 ComfyUI、安装/卸载插件和运行状态检查都会通过启动器后端作用在当前选中的 ComfyUI 包上。
-- **运行环境页补齐 Avalonia 时代常用能力**：WinUI 现在支持更稳的依赖管理、受保护依赖拦截、拖入安装、Python 头文件、ComfyUI 内核切换和 PyTorch 内核切换。
-- **不会再把旧版本当更新推回来**：当本机已经是 2.0.6 时，更新检查会忽略 2.0.5 这类旧 release，不再出现反向升级提示。
-- **WebView 与侧边面板更稳定**：AI 助手面板展开时不会再把内嵌 ComfyUI 工作区强行挤到难用的尺寸。
+- **启动修复可以闭环**：AI 助手现在可以恢复缺失的 ComfyUI 核心依赖、安装合适的 PyTorch 运行时，并把用户带回首页重新启动 ComfyUI。
+- **主题和语言切换更干净**：WinUI 页面、功能卡片、AI 助手回复、图片工具、WebView 表面和小状态标签，在切换主题或语言后会更一致地更新颜色和文案。
+- **针对 .NET 10 / WinUI 的发版启动更稳**：公开包避开了 self-contained WinRT projection 启动崩溃路径，安装器会在继续安装前检查 Microsoft .NET Desktop Runtime 10.x。
+- **AI 修复后环境状态会刷新**：由 AI 助手触发的依赖和 PyTorch 修复会通知运行环境页，减少手动切页或重开的成本。
 
 <p align="center">
   <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="48%" />
@@ -135,7 +135,7 @@ AI 助手集成在桌面端聊天面板里。
 > 请下载 release 资产里的 **Setup 安装包**。不要下载 GitHub 自动生成的 `Source code.zip` 或 `Source code.tar.gz`，那是源码压缩包，不能直接运行。
 
 > [!TIP]
-> 正常使用时，不需要你额外安装 Python 或 .NET。
+> ComfyUI 的 Python 环境由 ModelFinder 管理。Setup 安装包会检查 Microsoft .NET Desktop Runtime 10.x；如果系统缺少这个 Windows 运行时，安装器会提示先安装。
 
 <p align="center">
   <img src="assets/screenshots/home-live-startup-logs.png" alt="ModelFinder 首次打开后的首页，包含 导入 ComfyUI 和 部署 ComfyUI 按钮" width="80%" />
