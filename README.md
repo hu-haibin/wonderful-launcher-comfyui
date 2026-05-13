@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.7**](release-notes/2.0.7.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.8**](release-notes/2.0.8.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.7
+## What's New in 2.0.8
 
-Released on May 13, 2026. [Read the full 2.0.7 release notes](release-notes/2.0.7.en.md).
+Released on May 13, 2026. [Read the full 2.0.8 release notes](release-notes/2.0.8.en.md).
 
-- **Startup repair can finish the loop**: the AI Assistant can restore missing ComfyUI core dependencies, install the right PyTorch runtime, and hand you back to the Home page so ComfyUI can start again.
-- **Theme and language switching is cleaner**: WinUI pages, cards, assistant replies, image tools, WebView surfaces, and small status labels now update colors and copy more consistently after theme or language changes.
-- **Release startup is hardened for .NET 10 / WinUI**: the public package now avoids the self-contained WinRT projection crash path and the installer checks for Microsoft .NET Desktop Runtime 10.x before setup continues.
-- **Environment state refreshes after repairs**: dependency and PyTorch repairs triggered by the Assistant now notify the Environment page so package/runtime state can update without a manual detour.
+- **Installer no longer strands users at a .NET runtime dialog**: the Setup Installer now carries Microsoft .NET Desktop Runtime 10.x (x64), installs it automatically when missing, and opens the official download page only if automatic installation fails.
+- **WinUI release hardening remains in place**: the app still avoids the .NET 10 / CsWinRT self-contained startup crash path by using a framework-dependent payload with bundled Windows App SDK runtime.
+- **Startup repair and theme fixes from 2.0.7 are included**: AI dependency/PyTorch repair, post-repair environment refresh, and WinUI theme/localization fixes remain part of this build.
+- **Release skill and script guardrails were tightened**: future release checks now treat `scripts/publish-release.ps1` as the installer contract and require runtime prerequisites to preserve the previous user experience.
 
 <p align="center">
   <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="48%" />

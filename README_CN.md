@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.7 更新说明**](release-notes/2.0.7.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.8 更新说明**](release-notes/2.0.8.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.7 更新了什么
+## 2.0.8 更新了什么
 
-发布于 2026 年 5 月 13 日。[查看完整 2.0.7 更新说明](release-notes/2.0.7.zh-CN.md)。
+发布于 2026 年 5 月 13 日。[查看完整 2.0.8 更新说明](release-notes/2.0.8.zh-CN.md)。
 
-- **启动修复可以闭环**：AI 助手现在可以恢复缺失的 ComfyUI 核心依赖、安装合适的 PyTorch 运行时，并把用户带回首页重新启动 ComfyUI。
-- **主题和语言切换更干净**：WinUI 页面、功能卡片、AI 助手回复、图片工具、WebView 表面和小状态标签，在切换主题或语言后会更一致地更新颜色和文案。
-- **针对 .NET 10 / WinUI 的发版启动更稳**：公开包避开了 self-contained WinRT projection 启动崩溃路径，安装器会在继续安装前检查 Microsoft .NET Desktop Runtime 10.x。
-- **AI 修复后环境状态会刷新**：由 AI 助手触发的依赖和 PyTorch 修复会通知运行环境页，减少手动切页或重开的成本。
+- **安装器不再把用户卡在 .NET 运行时弹窗**：Setup 安装包现在内置 Microsoft .NET Desktop Runtime 10.x (x64)，缺失时会自动安装；只有自动安装失败时才会打开官方下载页。
+- **WinUI 发版启动加固仍然保留**：应用继续使用 framework-dependent 形态避开 .NET 10 / CsWinRT self-contained 启动崩溃路径，同时随包携带 Windows App SDK runtime。
+- **2.0.7 的启动修复和主题修复都在**：AI 依赖/PyTorch 修复、修复后环境刷新、WinUI 主题和国际化修复都包含在这个版本里。
+- **发版 skill 和脚本守卫已补强**：后续 release 会把 `scripts/publish-release.ps1` 当作安装器契约，并要求运行时前置条件不破坏旧版的用户无感体验。
 
 <p align="center">
   <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="48%" />
