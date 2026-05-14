@@ -10,7 +10,7 @@
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.cumulative_downloads&style=for-the-badge&logo=github&label=下载量)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.9 更新说明**](release-notes/2.0.9.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.10 更新说明**](release-notes/2.0.10.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.9 更新了什么
+## 2.0.10 更新了什么
 
-发布于 2026 年 5 月 13 日。[查看完整 2.0.9 更新说明](release-notes/2.0.9.zh-CN.md)。
+发布于 2026 年 5 月 14 日。[查看完整 2.0.10 更新说明](release-notes/2.0.10.zh-CN.md)。
 
-- **恢复 self-contained 安装包**：Setup 安装包重新携带应用运行所需负载，正常安装不再要求用户单独安装 Microsoft .NET Desktop Runtime。
-- **移除正常安装链路里的运行时前置弹窗**：公开发布的安装包不再内置或触发 .NET Desktop Runtime 前置安装流程。
-- **发布资产继续保持安装器-only**：公开 release 只包含 Setup 安装包和 `SHA256SUMS.txt`，正常分发不发布便携 zip。
-- **发版守卫已补强**：测试和 workflow 规则现在会阻止未获明确确认的打包形态变更。
+- **Agent 和图片生成转化埋点**：桌面端现在会记录登录用户的 Agent 使用与图片生成关键漏斗事件。
+- **WinUI 与 Avalonia 分开统计**：桌面遥测会带上 UI 家族标记，方便分别观察两个客户端的使用和转化。
+- **任务终端输出更稳定**：WinUI 任务终端改为向 xterm bridge 转发原始 PTY 字节，进度和非 ASCII 输出更可靠。
+- **遥测隐私加固**：诊断值中的 Windows 本地路径片段会在离开客户端前脱敏。
 
 <p align="center">
   <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="48%" />
