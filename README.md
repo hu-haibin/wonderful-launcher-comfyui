@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.10**](release-notes/2.0.10.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.11**](release-notes/2.0.11.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,18 +34,17 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.10
+## What's New in 2.0.11
 
-Released on May 14, 2026. [Read the full 2.0.10 release notes](release-notes/2.0.10.en.md).
+Released on May 16, 2026. [Read the full 2.0.11 release notes](release-notes/2.0.11.en.md).
 
-- **Agent and Image conversion telemetry**: the desktop app now reports key funnel events for signed-in Agent usage and Image generation.
-- **WinUI and Avalonia telemetry split**: desktop events include a UI-family tag so adoption and conversion can be compared per client.
-- **Task terminal output is more reliable**: WinUI task terminals forward raw PTY bytes to the xterm bridge for cleaner progress and non-ASCII output.
-- **Telemetry privacy hardening**: diagnostic values redact embedded Windows paths before leaving the client.
+- **Runtime logs arrive sooner**: the task terminal now keeps early ComfyUI startup output even when it arrives before the terminal window is fully open.
+- **Cleaner terminal output**: launcher status lines and raw runtime bytes are handled separately, reducing missing or messy progress text.
+- **Less confusing stop states**: stopping or canceling ComfyUI is less likely to show a contradictory completed/canceled result.
+- **Clearer desktop copy**: more Agent, Image, Photoshop, update, and close-flow messages use proper localized text.
 
 <p align="center">
-  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="48%" />
-  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="48%" />
+  <img src="assets/screenshots/2.0.11-home-smoke.png" alt="ModelFinder 2.0.11 home screen" width="80%" />
 </p>
 
 ---

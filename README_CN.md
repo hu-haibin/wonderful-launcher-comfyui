@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.10 更新说明**](release-notes/2.0.10.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.11 更新说明**](release-notes/2.0.11.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,18 +34,17 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.10 更新了什么
+## 2.0.11 更新了什么
 
-发布于 2026 年 5 月 14 日。[查看完整 2.0.10 更新说明](release-notes/2.0.10.zh-CN.md)。
+发布于 2026 年 5 月 16 日。[查看完整 2.0.11 更新说明](release-notes/2.0.11.zh-CN.md)。
 
-- **Agent 和图片生成转化埋点**：桌面端现在会记录登录用户的 Agent 使用与图片生成关键漏斗事件。
-- **WinUI 与 Avalonia 分开统计**：桌面遥测会带上 UI 家族标记，方便分别观察两个客户端的使用和转化。
-- **任务终端输出更稳定**：WinUI 任务终端改为向 xterm bridge 转发原始 PTY 字节，进度和非 ASCII 输出更可靠。
-- **遥测隐私加固**：诊断值中的 Windows 本地路径片段会在离开客户端前脱敏。
+- **启动日志更早进入任务终端**：即使 ComfyUI 的早期输出先于任务终端窗口到达，也会被保留下来并回放。
+- **终端输出更干净**：启动器状态行和原始运行时字节分开处理，减少进度文本缺失或显示混乱。
+- **停止状态更清楚**：停止或取消 ComfyUI 时，不容易再看到“已完成”和“已取消”互相打架的结果。
+- **桌面文案更清楚**：更多 Agent、图片、Photoshop、更新和关闭流程提示已使用正确的中英文文案。
 
 <p align="center">
-  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder 运行环境页面" width="48%" />
-  <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="48%" />
+  <img src="assets/screenshots/2.0.11-home-smoke.png" alt="ModelFinder 2.0.11 首页界面" width="80%" />
 </p>
 
 ---
