@@ -25,14 +25,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER: hu-haibin
-          REPO: ModelFinder-Releases
+          REPO: wonderful-launcher-comfyui
           STATS_FILE: stats/downloads.json
         run: |
           $headers = @{
             Accept = "application/vnd.github+json"
             Authorization = "Bearer $env:GITHUB_TOKEN"
             "X-GitHub-Api-Version" = "2022-11-28"
-            "User-Agent" = "ModelFinder-Releases-download-stats"
+            "User-Agent" = "wonderful-launcher-comfyui-download-stats"
           }
 
           $perPage = 100
@@ -41,7 +41,8 @@ jobs:
 
           while ($true) {
             $uri = "https://api.github.com/repos/$env:OWNER/$env:REPO/releases?per_page=$perPage&page=$page"
-            $batch = @(Invoke-RestMethod -Uri $uri -Headers $headers)
+            $response = Invoke-RestMethod -Uri $uri -Headers $headers
+            $batch = @($response | ForEach-Object { $_ })
             if ($batch.Count -eq 0) {
               break
             }
@@ -55,41 +56,76 @@ jobs:
             $page += 1
           }
 
-          $currentTotal = 0
+          $currentAssetTotal = 0
+          $currentProductTotal = 0
+          $currentChecksumTotal = 0
           $assetCount = 0
+          $productAssetCount = 0
+          $checksumAssetCount = 0
 
           foreach ($release in $releases) {
             foreach ($asset in $release.assets) {
-              $currentTotal += [int]$asset.download_count
+              $downloadCount = [int]$asset.download_count
+              $name = [string]$asset.name
+
+              $currentAssetTotal += $downloadCount
               $assetCount += 1
+
+              if ($name -match '(?i)(sha256|checksum)') {
+                $currentChecksumTotal += $downloadCount
+                $checksumAssetCount += 1
+              } elseif ($name -match '(?i)\.(exe|zip|msi)$') {
+                $currentProductTotal += $downloadCount
+                $productAssetCount += 1
+              }
             }
           }
 
           $state = @{
-            cumulative_downloads = $currentTotal
-            last_seen_current_total = $currentTotal
+            cumulative_asset_downloads = $currentAssetTotal
+            cumulative_product_downloads = $currentProductTotal
+            last_seen_asset_total = $currentAssetTotal
+            last_seen_product_total = $currentProductTotal
           }
 
           if (Test-Path $env:STATS_FILE) {
             $state = Get-Content $env:STATS_FILE -Raw | ConvertFrom-Json -AsHashtable
           }
 
-          $previousCurrent = [int]($state.last_seen_current_total ?? 0)
-          $previousCumulative = [int]($state.cumulative_downloads ?? 0)
-          $delta = $currentTotal - $previousCurrent
+          $previousAssetCurrent = [int]($state.last_seen_asset_total ?? $state.last_seen_current_total ?? $currentAssetTotal)
+          $previousAssetCumulative = [int]($state.cumulative_asset_downloads ?? $state.cumulative_downloads ?? $currentAssetTotal)
+          $assetDelta = $currentAssetTotal - $previousAssetCurrent
 
-          if ($delta -lt 0) {
-            $delta = 0
+          if ($assetDelta -lt 0) {
+            $assetDelta = 0
+          }
+
+          $previousProductCurrent = [int]($state.last_seen_product_total ?? $state.current_product_downloads ?? $currentProductTotal)
+          $previousProductCumulative = [int]($state.cumulative_product_downloads ?? $currentProductTotal)
+          $productDelta = $currentProductTotal - $previousProductCurrent
+
+          if ($productDelta -lt 0) {
+            $productDelta = 0
           }
 
           $updatedState = [ordered]@{
-            cumulative_downloads = $previousCumulative + $delta
-            last_seen_current_total = $currentTotal
-            current_total_downloads = $currentTotal
+            current_product_downloads = $currentProductTotal
+            cumulative_product_downloads = $previousProductCumulative + $productDelta
+            current_asset_downloads = $currentAssetTotal
+            cumulative_asset_downloads = $previousAssetCumulative + $assetDelta
+            cumulative_downloads = $previousAssetCumulative + $assetDelta
+            current_checksum_downloads = $currentChecksumTotal
+            last_seen_product_total = $currentProductTotal
+            last_seen_asset_total = $currentAssetTotal
+            last_seen_current_total = $currentAssetTotal
+            current_total_downloads = $currentAssetTotal
             release_count = $releases.Count
             asset_count = $assetCount
+            product_asset_count = $productAssetCount
+            checksum_asset_count = $checksumAssetCount
             updated_at = [DateTime]::UtcNow.ToString("o")
             source = "github-releases-assets"
+            notes = "Product downloads count release assets ending in .exe, .zip, or .msi and exclude checksum assets."
           }
 
           $updatedState | ConvertTo-Json | Set-Content -Path $env:STATS_FILE -Encoding utf8
