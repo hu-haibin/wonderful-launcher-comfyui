@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.11 更新说明**](release-notes/2.0.11.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.12 更新说明**](release-notes/2.0.12.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,17 +34,17 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.11 更新了什么
+## 2.0.12 更新了什么
 
-发布于 2026 年 5 月 16 日。[查看完整 2.0.11 更新说明](release-notes/2.0.11.zh-CN.md)。
+发布于 2026 年 5 月 18 日。[查看完整 2.0.12 更新说明](release-notes/2.0.12.zh-CN.md)。
 
-- **启动日志更早进入任务终端**：即使 ComfyUI 的早期输出先于任务终端窗口到达，也会被保留下来并回放。
-- **终端输出更干净**：启动器状态行和原始运行时字节分开处理，减少进度文本缺失或显示混乱。
-- **停止状态更清楚**：停止或取消 ComfyUI 时，不容易再看到“已完成”和“已取消”互相打架的结果。
-- **桌面文案更清楚**：更多 Agent、图片、Photoshop、更新和关闭流程提示已使用正确的中英文文案。
+- **Agent 修复接管更直接**：启动失败会带着启动器证据进入 Agent 修复路径。
+- **修复过程更容易看懂**：Agent 面板会说明它正在检查、修改和验证什么。
+- **UI 刷新不容易拖死工具链**：环境刷新和上下文刷新过慢时会安全超时，让 Agent 继续推进。
+- **依赖修复不再被过度限制**：PyTorch 相关包可以被有意的修复流程替换，同时 `pip` 仍保持保护。
 
 <p align="center">
-  <img src="assets/screenshots/2.0.11-home-smoke.png" alt="ModelFinder 2.0.11 首页界面" width="80%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="80%" />
 </p>
 
 ---

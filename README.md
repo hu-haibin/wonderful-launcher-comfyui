@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.11**](release-notes/2.0.11.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.12**](release-notes/2.0.12.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,17 +34,17 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.11
+## What's New in 2.0.12
 
-Released on May 16, 2026. [Read the full 2.0.11 release notes](release-notes/2.0.11.en.md).
+Released on May 18, 2026. [Read the full 2.0.12 release notes](release-notes/2.0.12.en.md).
 
-- **Runtime logs arrive sooner**: the task terminal now keeps early ComfyUI startup output even when it arrives before the terminal window is fully open.
-- **Cleaner terminal output**: launcher status lines and raw runtime bytes are handled separately, reducing missing or messy progress text.
-- **Less confusing stop states**: stopping or canceling ComfyUI is less likely to show a contradictory completed/canceled result.
-- **Clearer desktop copy**: more Agent, Image, Photoshop, update, and close-flow messages use proper localized text.
+- **Agent repair handoff is more direct**: startup failures now flow into the Agent repair path with launcher evidence attached.
+- **Repair progress is easier to follow**: the Agent panel explains what it is checking, changing, and validating during a repair.
+- **UI refreshes are less likely to stall tools**: slow environment or context refreshes time out safely so the Agent can continue.
+- **Dependency repair is less boxed in**: PyTorch-related packages can be replaced by intentional repair flows while `pip` remains protected.
 
 <p align="center">
-  <img src="assets/screenshots/2.0.11-home-smoke.png" alt="ModelFinder 2.0.11 home screen" width="80%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="80%" />
 </p>
 
 ---
