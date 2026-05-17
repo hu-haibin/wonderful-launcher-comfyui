@@ -9,11 +9,11 @@
   "last_seen_asset_total": 1379,
   "last_seen_current_total": 1379,
   "current_total_downloads": 1379,
-  "release_count": 15,
-  "asset_count": 33,
-  "product_asset_count": 18,
-  "checksum_asset_count": 15,
-  "updated_at": "2026-05-17T18:40:33.1357919Z",
+  "release_count": 16,
+  "asset_count": 35,
+  "product_asset_count": 19,
+  "checksum_asset_count": 16,
+  "updated_at": "2026-05-17T19:47:10.7309723Z",
   "source": "github-releases-assets",
   "notes": "Product downloads count release assets ending in .exe, .zip, or .msi and exclude checksum assets."
 }
