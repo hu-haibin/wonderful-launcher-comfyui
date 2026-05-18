@@ -13,7 +13,7 @@
   "asset_count": 35,
   "product_asset_count": 19,
   "checksum_asset_count": 16,
-  "updated_at": "2026-05-18T20:07:45.7419717Z",
+  "updated_at": "2026-05-18T21:23:01.5883791Z",
   "source": "github-releases-assets",
   "notes": "Product downloads count release assets ending in .exe, .zip, or .msi and exclude checksum assets."
 }
