@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.12**](release-notes/2.0.12.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.13**](release-notes/2.0.13.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.12
+## What's New in 2.0.13
 
-Released on May 18, 2026. [Read the full 2.0.12 release notes](release-notes/2.0.12.en.md).
+Released on May 19, 2026. [Read the full 2.0.13 release notes](release-notes/2.0.13.en.md).
 
-- **Agent repair handoff is more direct**: startup failures now flow into the Agent repair path with launcher evidence attached.
-- **Repair progress is easier to follow**: the Agent panel explains what it is checking, changing, and validating during a repair.
-- **UI refreshes are less likely to stall tools**: slow environment or context refreshes time out safely so the Agent can continue.
-- **Dependency repair is less boxed in**: PyTorch-related packages can be replaced by intentional repair flows while `pip` remains protected.
+- **Tools now show only wired actions**: placeholder cards for Batch Analysis, Bulk Download, and AI Auto-Fix were removed until those flows are ready.
+- **Deploy and import paths are clearer**: Import remains visible when existing ComfyUI instances are found, and release selection text is localized.
+- **Window chrome and navigation feel steadier**: the title bar shows the app version, theme brushes refresh in place, and bottom-bar hover sizing is more consistent.
+- **Release loading is lighter**: GitHub release metadata is cached and mirror fallback avoids repeated API calls.
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="80%" />

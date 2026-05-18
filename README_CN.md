@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.12 更新说明**](release-notes/2.0.12.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.13 更新说明**](release-notes/2.0.13.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,14 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.12 更新了什么
+## 2.0.13 更新了什么
 
-发布于 2026 年 5 月 18 日。[查看完整 2.0.12 更新说明](release-notes/2.0.12.zh-CN.md)。
+发布于 2026 年 5 月 19 日。[查看完整 2.0.13 更新说明](release-notes/2.0.13.zh-CN.md)。
 
-- **Agent 修复接管更直接**：启动失败会带着启动器证据进入 Agent 修复路径。
-- **修复过程更容易看懂**：Agent 面板会说明它正在检查、修改和验证什么。
-- **UI 刷新不容易拖死工具链**：环境刷新和上下文刷新过慢时会安全超时，让 Agent 继续推进。
-- **依赖修复不再被过度限制**：PyTorch 相关包可以被有意的修复流程替换，同时 `pip` 仍保持保护。
+- **工具页只保留已接通入口**：移除了“批量分析”“批量下载”“AI 自动修复”三个占位卡片，等流程真正可用后再展示。
+- **部署和导入路径更清楚**：检测到已有 ComfyUI 实例时仍保留导入入口，版本选择相关回退文案也已本地化。
+- **窗口和导航更稳**：标题栏显示应用版本，主题色可在当前界面直接刷新，底栏按钮 hover 尺寸更一致。
+- **Release 加载更轻**：GitHub release 元数据会被缓存，并通过镜像回退减少重复 API 请求。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="80%" />
