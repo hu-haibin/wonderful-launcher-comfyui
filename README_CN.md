@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.13 更新说明**](release-notes/2.0.13.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.14 更新说明**](release-notes/2.0.14.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,15 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.13 更新了什么
+## 2.0.14 更新了什么
 
-发布于 2026 年 5 月 19 日。[查看完整 2.0.13 更新说明](release-notes/2.0.13.zh-CN.md)。
+发布于 2026 年 5 月 19 日。[查看完整 2.0.14 更新说明](release-notes/2.0.14.zh-CN.md)。
 
-- **工具页只保留已接通入口**：移除了“批量分析”“批量下载”“AI 自动修复”三个占位卡片，等流程真正可用后再展示。
-- **部署和导入路径更清楚**：检测到已有 ComfyUI 实例时仍保留导入入口，版本选择相关回退文案也已本地化。
-- **窗口和导航更稳**：标题栏显示应用版本，主题色可在当前界面直接刷新，底栏按钮 hover 尺寸更一致。
-- **Release 加载更轻**：GitHub release 元数据会被缓存，并通过镜像回退减少重复 API 请求。
+- **未响应诊断更强**：新增后台 watchdog，即使 UI 线程完全卡住，也能记录并上报便于聚合统计的 `ui_thread_unresponsive` 事件。
+- **运行时停止流程更稳**：插件修复和 Agent 依赖安装会正确把启动器从旧的 Running/workspace 状态收回来。
+- **部署完成少点一步**：内联部署完成后会自动注册新包并启动 ComfyUI，不再回到欢迎页让用户再点一次启动。
+- **任务终端证据更清楚**：插件安装会记录终端会话和子进程结果，非零退出码会显示为警告而不是误报成功。
+- **图片上传更稳**：大尺寸参考图上传前会自动压缩，减少 413 请求体过大的失败。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="80%" />
@@ -53,6 +54,7 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 - **图片生成实时进度**：图片生成过程中会显示排队、状态和进度反馈，不再只让用户干等。
 - **更强的 AI 诊断**：AI 助手会结合启动器日志、启动失败信息、任务终端证据和当前环境状态，再给出修复建议。
+- **更完整的挂死和终端证据**：启动器会记录 UI 未响应事件和任务终端结果，便于统计现场问题出现次数。
 - **本地个性化控制**：开启后，本地偏好和项目提示可以让回复更贴近使用习惯，但不会改变权限、计费或安全规则。
 - **更稳的更新判断**：更新检查会避免在当前安装版本已经是最新或更新时，出现误导性的降级/迁移提示。
 

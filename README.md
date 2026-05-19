@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.13**](release-notes/2.0.13.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.14**](release-notes/2.0.14.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,14 +34,15 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.13
+## What's New in 2.0.14
 
-Released on May 19, 2026. [Read the full 2.0.13 release notes](release-notes/2.0.13.en.md).
+Released on May 19, 2026. [Read the full 2.0.14 release notes](release-notes/2.0.14.en.md).
 
-- **Tools now show only wired actions**: placeholder cards for Batch Analysis, Bulk Download, and AI Auto-Fix were removed until those flows are ready.
-- **Deploy and import paths are clearer**: Import remains visible when existing ComfyUI instances are found, and release selection text is localized.
-- **Window chrome and navigation feel steadier**: the title bar shows the app version, theme brushes refresh in place, and bottom-bar hover sizing is more consistent.
-- **Release loading is lighter**: GitHub release metadata is cached and mirror fallback avoids repeated API calls.
+- **UI hang diagnostics are stronger**: a background watchdog can now record full UI freezes and send aggregate-friendly `ui_thread_unresponsive` telemetry.
+- **Runtime stop flows recover cleanly**: plugin repair and Agent dependency tools now move the launcher out of stale Running/workspace states when ComfyUI is stopped.
+- **Deployment finishes with fewer clicks**: inline deployment now registers the new package and starts ComfyUI automatically after completion.
+- **Task terminal evidence is clearer**: plugin install sessions record terminal outcomes, and non-zero subprocess exits are shown as warnings instead of false success.
+- **Image uploads are safer**: large reference images are compressed before upload to avoid 413 request-size failures.
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="80%" />
@@ -53,6 +54,7 @@ Released on May 19, 2026. [Read the full 2.0.13 release notes](release-notes/2.0
 
 - **Live image generation progress**: image generation surfaces queue, status, and progress feedback while a job is running.
 - **Stronger AI diagnosis**: the Assistant can work from launcher logs, startup failures, task terminal evidence, and selected-environment state before suggesting repairs.
+- **Better hang and terminal evidence**: the launcher records UI unresponsive events and task-terminal outcomes so repeated field issues can be counted and diagnosed.
 - **Local personalization controls**: when enabled, local preferences and project hints can make replies feel more familiar without changing permissions, billing, or safety rules.
 - **Safer update handling**: update checks are designed to avoid confusing downgrade or migration prompts when the installed build is already current or newer.
 
