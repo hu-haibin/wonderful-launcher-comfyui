@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.14**](release-notes/2.0.14.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**What's New in 2.0.15**](release-notes/2.0.15.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,15 +34,15 @@ The goal is simple: spend less time fixing setup and more time running workflows
 
 ---
 
-## What's New in 2.0.14
+## What's New in 2.0.15
 
-Released on May 19, 2026. [Read the full 2.0.14 release notes](release-notes/2.0.14.en.md).
+Released on May 21, 2026. [Read the full 2.0.15 release notes](release-notes/2.0.15.en.md).
 
-- **UI hang diagnostics are stronger**: a background watchdog can now record full UI freezes and send aggregate-friendly `ui_thread_unresponsive` telemetry.
-- **Runtime stop flows recover cleanly**: plugin repair and Agent dependency tools now move the launcher out of stale Running/workspace states when ComfyUI is stopped.
-- **Deployment finishes with fewer clicks**: inline deployment now registers the new package and starts ComfyUI automatically after completion.
-- **Task terminal evidence is clearer**: plugin install sessions record terminal outcomes, and non-zero subprocess exits are shown as warnings instead of false success.
-- **Image uploads are safer**: large reference images are compressed before upload to avoid 413 request-size failures.
+- **Missing-node repair is now snapshot-bound**: the Assistant installs from the same detected plan even when ComfyUI must be stopped or restarted.
+- **Repair status is more structured**: Agent tools report attempted action, reason, snapshot id, terminal job id, retryability, and recommended next action.
+- **Agent and manual app operations are isolated**: environment write operations are coordinated so repairs, plugin installs, runtime controls, and environment switches do not run over each other.
+- **Context collection no longer flashes**: quick environment reads stay silent, and slower reads show a delayed inline status.
+- **Feedback now supports redacted session replay**: allowed Agent sessions can sync privacy-filtered conversation messages, tool sequence, repair timeline, task type, and outcome.
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder home launch surface" width="80%" />

@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.14 更新说明**](release-notes/2.0.14.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.15 更新说明**](release-notes/2.0.15.zh-CN.md) · [**所有版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -34,15 +34,15 @@ ModelFinder 是一个面向 ComfyUI 生态的 Windows 桌面工具。
 
 ---
 
-## 2.0.14 更新了什么
+## 2.0.15 更新了什么
 
-发布于 2026 年 5 月 19 日。[查看完整 2.0.14 更新说明](release-notes/2.0.14.zh-CN.md)。
+发布于 2026 年 5 月 21 日。[查看完整 2.0.15 更新说明](release-notes/2.0.15.zh-CN.md)。
 
-- **未响应诊断更强**：新增后台 watchdog，即使 UI 线程完全卡住，也能记录并上报便于聚合统计的 `ui_thread_unresponsive` 事件。
-- **运行时停止流程更稳**：插件修复和 Agent 依赖安装会正确把启动器从旧的 Running/workspace 状态收回来。
-- **部署完成少点一步**：内联部署完成后会自动注册新包并启动 ComfyUI，不再回到欢迎页让用户再点一次启动。
-- **任务终端证据更清楚**：插件安装会记录终端会话和子进程结果，非零退出码会显示为警告而不是误报成功。
-- **图片上传更稳**：大尺寸参考图上传前会自动压缩，减少 413 请求体过大的失败。
+- **缺失节点修复绑定检测快照**：即使需要停止或重启 ComfyUI，AI 助手也会按同一个检测计划继续安装。
+- **修复状态更结构化**：Agent 工具会返回是否已尝试、原因、snapshot id、终端 job id、是否可重试和推荐下一步。
+- **Agent 和用户写操作互相隔离**：环境写操作会统一协调，修复、插件安装、启动/停止/重启和环境切换不会互相覆盖。
+- **环境读取不再闪烁**：快速读取保持静默，耗时较长时才显示延迟的行内状态。
+- **反馈支持脱敏会话复盘**：在允许上传时，Agent 会同步脱敏后的对话、工具链、修复 timeline、任务类型和结果。
 
 <p align="center">
   <img src="assets/screenshots/feature-home.png" alt="ModelFinder 首页启动界面" width="80%" />
