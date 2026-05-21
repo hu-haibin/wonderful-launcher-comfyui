@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.15 Notes**](release-notes/2.0.15.en.md) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.15 Notes**](release-notes/2.0.15.en.md) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -53,6 +53,32 @@ This release focuses on making the AI repair flow more trustworthy.
 <p align="center">
   <img src="assets/screenshots/2.0.15-agent-panel.png" alt="ModelFinder 2.0.15 AI Assistant panel" width="82%" />
 </p>
+
+---
+
+## 2.0 Release Archive
+
+GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.14 release pages were removed after 2.0.15 so users do not accidentally install a superseded build or the 2.0.7/2.0.8 packaging regression.
+
+| Version | Date | Status | Summary |
+|---------|------|--------|---------|
+| 2.0.0 | May 7, 2026 | Removed from Releases | First 2.0 commercial-credit build; superseded by startup, update, and localization fixes. |
+| 2.0.1 | May 8, 2026 | Removed from Releases | Fixed WinUI startup false failures, ComfyUI Desktop path handling, and startup log recovery. |
+| 2.0.2 | May 9, 2026 | Removed from Releases | Added startup auto-update handling and restored core Chinese UI selection. |
+| 2.0.3 | May 9, 2026 | Removed from Releases | Localized major WinUI feature pages and refreshed release presentation. |
+| 2.0.4 | May 10, 2026 | Removed from Releases | Improved Image Workspace to Photoshop handoff and verified both Photoshop import branches. |
+| 2.0.5 | May 11, 2026 | Removed from Releases | Reworked the WinUI light theme, theme switching, and localized Image Workspace controls. |
+| 2.0.6 | May 13, 2026 | Removed from Releases | Routed Agent actions through the selected runtime and reduced stale downgrade prompts. |
+| 2.0.7 | May 13, 2026 | Removed from Releases | Packaging regression: framework-dependent installer could block on a .NET Desktop Runtime prompt. |
+| 2.0.8 | May 13, 2026 | Tag only | Attempted runtime-prerequisite repair for 2.0.7; no public GitHub Release remains. |
+| 2.0.9 | May 13, 2026 | Removed from Releases | Corrected the packaging regression by restoring the self-contained public installer. |
+| 2.0.10 | May 14, 2026 | Removed from Releases | Added Agent/Image conversion telemetry and task-terminal stability improvements. |
+| 2.0.11 | May 16, 2026 | Removed from Releases | Preserved early ComfyUI output and cleaned up task-terminal, stop, and localized message states. |
+| 2.0.12 | May 18, 2026 | Removed from Releases | Improved Agent repair handoff, repair progress, refresh timeout behavior, and sanitized feedback context. |
+| 2.0.13 | May 19, 2026 | Removed from Releases | Removed unfinished Tools placeholders and improved deployment/import selection and release caching. |
+| 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
+
+For normal installation, use the latest release only.
 
 ---
 
@@ -196,7 +222,8 @@ Not currently. This release repository publishes Windows builds.
 This repository hosts:
 
 - compiled Windows installer releases
-- [versioned release notes](release-notes/)
+- full notes for the current release and the 1.5.3 stable line
+- the compact 2.0 archive above for internal release history
 - public issue tracking for released builds
 
 ModelFinder is a closed-source desktop product built around the ComfyUI ecosystem.
