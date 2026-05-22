@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.15 Notes**](release-notes/2.0.15.en.md) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.16 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.16) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -31,27 +31,27 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 - ask the AI Assistant to explain and run approved repair steps
 
 <p align="center">
-  <img src="assets/screenshots/2.0.15-home.png" alt="ModelFinder 2.0.15 home screen" width="82%" />
+  <img src="assets/screenshots/2.0.15-home.png" alt="ModelFinder home screen" width="82%" />
 </p>
 
 ---
 
-## What's New in 2.0.15
+## What's New in 2.0.16
 
-Released on May 21, 2026. [Read the full 2.0.15 release notes](release-notes/2.0.15.en.md).
+Released on May 23, 2026. [Open the 2.0.16 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.16).
 
-This release focuses on making the AI repair flow more trustworthy.
+This release focuses on making WinUI startup, runtime recovery, and Agent-assisted repair more stable.
 
 | Area | What changed |
 |------|--------------|
-| **Missing-node repair** | The Assistant now binds install actions to the same missing-node snapshot it detected, even if ComfyUI must stop or restart before installation. |
-| **Repair visibility** | Tool results now include attempted action, reason, snapshot id, terminal job id, retryability, and recommended next action. |
-| **Task isolation** | Agent write operations and manual user operations are coordinated so plugin installs, runtime controls, and environment switches do not run over each other. |
-| **Less UI noise** | Fast context reads stay silent; slower environment reads show a delayed inline status instead of a flashing overlay. |
-| **Feedback loop** | If enabled, redacted Agent sessions can sync conversation replay, tool sequence, repair timeline, task type, and outcome for debugging and regression tests. |
+| **Startup recovery** | The AI Assistant receives clearer startup-failure evidence, so recovery prompts are less likely to lose the real failure context. |
+| **Runtime convergence** | Home launch state and WebView restart paths now converge more reliably after runtime start, stop, and restart events. |
+| **Plugin repair** | Plugin-install restart verification now has a longer window for slow environments, reducing false timeout failures. |
+| **Package cleanup** | Batch uninstall sizing is more consistent, with a delete-all plugins action for faster cleanup. |
+| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with the full Release test suite plus an isolated startup smoke. |
 
 <p align="center">
-  <img src="assets/screenshots/2.0.15-agent-panel.png" alt="ModelFinder 2.0.15 AI Assistant panel" width="82%" />
+  <img src="assets/screenshots/2.0.15-agent-panel.png" alt="ModelFinder AI Assistant panel" width="82%" />
 </p>
 
 ---
@@ -77,6 +77,7 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.12 | May 18, 2026 | Removed from Releases | Improved Agent repair handoff, repair progress, refresh timeout behavior, and sanitized feedback context. |
 | 2.0.13 | May 19, 2026 | Removed from Releases | Removed unfinished Tools placeholders and improved deployment/import selection and release caching. |
 | 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
+| 2.0.15 | May 21, 2026 | Superseded by 2.0.16 | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
 
 For normal installation, use the latest release only.
 
