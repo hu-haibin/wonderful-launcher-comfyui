@@ -48,7 +48,14 @@ This release focuses on making WinUI startup, runtime recovery, and Agent-assist
 | **Runtime convergence** | Home launch state and WebView restart paths now converge more reliably after runtime start, stop, and restart events. |
 | **Plugin repair** | Plugin-install restart verification now has a longer window for slow environments, reducing false timeout failures. |
 | **Package cleanup** | Batch uninstall sizing is more consistent, with a delete-all plugins action for faster cleanup. |
+| **Online Image workspace** | The new Image page has real-machine smoke coverage for R2-backed retrieval, img2img references, multi-result runs, restart recovery, and non-destructive local history. |
 | **Release reliability** | The public installer is built as a self-contained WinUI package and validated with the full Release test suite plus an isolated startup smoke. |
+
+<p align="center">
+  <img src="assets/screenshots/2.0.16-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
+  <img src="assets/screenshots/2.0.16-image-new-recovery.png" alt="Image workspace after restarting with recovered cloud results" width="32%" />
+  <img src="assets/screenshots/2.0.16-image-new-close-guard.png" alt="Image workspace close guard explaining cloud recovery" width="32%" />
+</p>
 
 <p align="center">
   <img src="assets/screenshots/2.0.15-agent-panel.png" alt="ModelFinder AI Assistant panel" width="82%" />
