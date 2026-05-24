@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.16 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.16) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.17 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.17) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,25 +36,25 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.16
+## What's New in 2.0.17
 
-Released on May 23, 2026. [Open the 2.0.16 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.16).
+Released on May 25, 2026. [Open the 2.0.17 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.17).
 
-This release focuses on making WinUI startup, runtime recovery, and Agent-assisted repair more stable.
+This release focuses on making online Image generation recoverable even when a long task outlives the desktop session.
 
 | Area | What changed |
 |------|--------------|
-| **Startup recovery** | The AI Assistant receives clearer startup-failure evidence, so recovery prompts are less likely to lose the real failure context. |
-| **Runtime convergence** | Home launch state and WebView restart paths now converge more reliably after runtime start, stop, and restart events. |
-| **Plugin repair** | Plugin-install restart verification now has a longer window for slow environments, reducing false timeout failures. |
-| **Package cleanup** | Batch uninstall sizing is more consistent, with a delete-all plugins action for faster cleanup. |
-| **Online Image workspace** | The new Image page has real-machine smoke coverage for R2-backed retrieval, img2img references, multi-result runs, restart recovery, and non-destructive local history. |
-| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with the full Release test suite plus an isolated startup smoke. |
+| **Image task recovery** | Long 4K tasks are tracked as server-side tasks, so reopening the desktop can recover completed results instead of losing them after a timeout. |
+| **Cloud result mirror** | Completed images can be mirrored through R2 and surfaced from the cloud task list, reducing dependence on temporary upstream URLs. |
+| **Worker fallback** | A Cloudflare Worker polling fallback can finish task rows even when the desktop is closed, with safe per-task refund handling on failures. |
+| **Local history safety** | The Image rail now paginates local thumbnails and stops auto-pruning paid image files when the history grows. |
+| **Image workspace smoke** | Real-machine coverage includes 1K txt2img, img2img references, four-result generation, 4K restart recovery, theme/language checks, and close-guard behavior. |
+| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with web tests, the full Release test suite, publish smoke, and isolated startup smoke. |
 
 <p align="center">
-  <img src="assets/screenshots/2.0.16-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
-  <img src="assets/screenshots/2.0.16-image-new-recovery.png" alt="Image workspace after restarting with recovered cloud results" width="32%" />
-  <img src="assets/screenshots/2.0.16-image-new-close-guard.png" alt="Image workspace close guard explaining cloud recovery" width="32%" />
+  <img src="assets/screenshots/2.0.17-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
+  <img src="assets/screenshots/2.0.17-image-new-recovery.png" alt="Image workspace after restarting with recovered cloud results" width="32%" />
+  <img src="assets/screenshots/2.0.17-image-new-close-guard.png" alt="Image workspace close guard explaining cloud recovery" width="32%" />
 </p>
 
 <p align="center">
@@ -85,6 +85,7 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.13 | May 19, 2026 | Removed from Releases | Removed unfinished Tools placeholders and improved deployment/import selection and release caching. |
 | 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
 | 2.0.15 | May 21, 2026 | Superseded by 2.0.16 | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
+| 2.0.16 | May 23, 2026 | Superseded by 2.0.17 | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
 
 For normal installation, use the latest release only.
 
