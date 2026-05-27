@@ -49,7 +49,7 @@ This release fixes completed Image results that could fail to save locally when 
 | **History recovery** | Local history saves preserve the cloud task id and authenticated task-download path, so cloud-task rail downloads and retry saves use the same recovery path. |
 | **Settings handoff** | Update notifications now open Settings directly on the app update controls, and local archive import keeps the deploy path validation flow intact. |
 | **Image smoke proof** | A signed-in test-account 1K txt2img run charged the expected 2 credits, completed, and saved to local Image history through the new code path. |
-| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with focused release tests, publish smoke, and isolated startup smoke. |
+| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with focused release tests, installer upgrade smoke, publish smoke, and isolated startup smoke. |
 
 <p align="center">
   <img src="assets/screenshots/2.0.17-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
