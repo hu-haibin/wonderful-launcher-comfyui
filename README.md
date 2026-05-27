@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.17 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.17) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.19 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.19) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,20 +36,20 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.17
+## What's New in 2.0.19
 
-Released on May 25, 2026. [Open the 2.0.17 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.17).
+Released on May 27, 2026. [Open the 2.0.19 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.19).
 
-This release focuses on making online Image generation recoverable even when a long task outlives the desktop session.
+This release fixes completed Image results that could fail to save locally when the direct result URL was unreachable from the desktop, and tightens the WinUI settings handoff paths touched during the release pass.
 
 | Area | What changed |
 |------|--------------|
-| **Image task recovery** | Long 4K tasks are tracked as server-side tasks, so reopening the desktop can recover completed results instead of losing them after a timeout. |
-| **Cloud result mirror** | Completed images can be mirrored through R2 and surfaced from the cloud task list, reducing dependence on temporary upstream URLs. |
-| **Worker fallback** | A Cloudflare Worker polling fallback can finish task rows even when the desktop is closed, with safe per-task refund handling on failures. |
-| **Local history safety** | The Image rail now paginates local thumbnails and stops auto-pruning paid image files when the history grows. |
-| **Image workspace smoke** | Real-machine coverage includes 1K txt2img, img2img references, four-result generation, 4K restart recovery, theme/language checks, and close-guard behavior. |
-| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with web tests, the full Release test suite, publish smoke, and isolated startup smoke. |
+| **Image result saving** | The new Image page now retries completed-task downloads through an authenticated server fallback when direct CDN or upstream downloads fail. |
+| **Task ownership guard** | The fallback route checks desktop auth, task ownership, completion state, image content type, and expired upstream URLs before streaming bytes back to the app. |
+| **History recovery** | Local history saves preserve the cloud task id and authenticated task-download path, so cloud-task rail downloads and retry saves use the same recovery path. |
+| **Settings handoff** | Update notifications now open Settings directly on the app update controls, and local archive import keeps the deploy path validation flow intact. |
+| **Image smoke proof** | A signed-in test-account 1K txt2img run charged the expected 2 credits, completed, and saved to local Image history through the new code path. |
+| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with focused release tests, publish smoke, and isolated startup smoke. |
 
 <p align="center">
   <img src="assets/screenshots/2.0.17-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
@@ -86,6 +86,8 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
 | 2.0.15 | May 21, 2026 | Superseded by 2.0.16 | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
 | 2.0.16 | May 23, 2026 | Superseded by 2.0.17 | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
+| 2.0.17 | May 25, 2026 | Superseded by 2.0.18 | Added recoverable online Image tasks, cloud result mirroring, Worker polling fallback, local history pagination, and broader Image smoke coverage. |
+| 2.0.18 | May 25, 2026 | Superseded by 2.0.19 | Improved desktop sign-in fallback, credit checkout flow, low-credit Image package selection, Image funnel telemetry, update proxy downloads, and Photoshop gating. |
 
 For normal installation, use the latest release only.
 
