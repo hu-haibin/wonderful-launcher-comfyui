@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.19 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.19) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.21 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.21) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,20 +36,20 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.19
+## What's New in 2.0.21
 
-Released on May 27, 2026. [Open the 2.0.19 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.19).
+Released on May 31, 2026. [Open the 2.0.21 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.21).
 
-This release fixes completed Image results that could fail to save locally when the direct result URL was unreachable from the desktop, and tightens the WinUI settings handoff paths touched during the release pass.
+This release is an Image-page stability hotfix after the Banana Pro and reference-image workflow updates. It removes a WinUI crash path found during release smoke, keeps the public installer self-contained, and re-validates the real online Image path.
 
 | Area | What changed |
 |------|--------------|
-| **Image result saving** | The new Image page now retries completed-task downloads through an authenticated server fallback when direct CDN or upstream downloads fail. |
-| **Task ownership guard** | The fallback route checks desktop auth, task ownership, completion state, image content type, and expired upstream URLs before streaming bytes back to the app. |
-| **History recovery** | Local history saves preserve the cloud task id and authenticated task-download path, so cloud-task rail downloads and retry saves use the same recovery path. |
-| **Settings handoff** | Update notifications now open Settings directly on the app update controls, and local archive import keeps the deploy path validation flow intact. |
-| **Image smoke proof** | A signed-in test-account 1K txt2img run charged the expected 2 credits, completed, and saved to local Image history through the new code path. |
-| **Release reliability** | The public installer is built as a self-contained WinUI package and validated with focused release tests, installer upgrade smoke, publish smoke, and isolated startup smoke. |
+| **Image crash hotfix** | Removed the long prompt tooltip from history rail thumbnails. Prompt actions remain available through the viewer and context menu, avoiding a native WinUI crash when the rail rebuilds after using a history image as a reference. |
+| **Regression guard** | Added a release-readiness source test so the risky thumbnail tooltip path cannot return silently. |
+| **Real Image smoke** | Verified a signed-in GPT Image 2 1K img2img run with one reference image. The task completed, saved to local history, and charged the expected 3 credits. |
+| **Published app smoke** | Verified the published watchdog entry launches `ModelFinder.App.exe` from a clean isolated profile and closes without WER crashes. |
+| **Installer upgrade smoke** | Verified a temporary `2.0.20 -> 2.0.21` installer upgrade, then restored the real HKCU uninstall key and desktop shortcut. |
+| **Release reliability** | The public installer remains a self-contained WinUI package with installer-only release assets. |
 
 <p align="center">
   <img src="assets/screenshots/2.0.17-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
@@ -88,6 +88,8 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.16 | May 23, 2026 | Superseded by 2.0.17 | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
 | 2.0.17 | May 25, 2026 | Superseded by 2.0.18 | Added recoverable online Image tasks, cloud result mirroring, Worker polling fallback, local history pagination, and broader Image smoke coverage. |
 | 2.0.18 | May 25, 2026 | Superseded by 2.0.19 | Improved desktop sign-in fallback, credit checkout flow, low-credit Image package selection, Image funnel telemetry, update proxy downloads, and Photoshop gating. |
+| 2.0.19 | May 27, 2026 | Superseded by 2.0.20 | Added authenticated Image result download fallback, task ownership checks, history recovery metadata, and release-path settings handoff fixes. |
+| 2.0.20 | May 28, 2026 | Superseded by 2.0.21 | Routed update downloads through the Wonderful Launcher proxy/CDN, added update source controls, improved update cancellation, and pre-uploaded Image references. |
 
 For normal installation, use the latest release only.
 
