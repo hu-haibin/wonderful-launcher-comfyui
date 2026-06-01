@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.21 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.21) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.22 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.22) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,36 +36,32 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.21
+## What's New in 2.0.22
 
-Released on May 31, 2026. [Open the 2.0.21 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.21).
+Released on June 1, 2026. [Open the 2.0.22 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.22).
 
-This release is an Image-page stability hotfix after the Banana Pro and reference-image workflow updates. It removes a WinUI crash path found during release smoke, keeps the public installer self-contained, and re-validates the real online Image path.
+This release is a workflow download reliability update. It fixes workflow-derived model downloads that need to land under ComfyUI `custom_nodes` instead of the normal `models` tree, while keeping the public installer self-contained and installer-only.
 
 | Area | What changed |
 |------|--------------|
-| **Image crash hotfix** | Removed the long prompt tooltip from history rail thumbnails. Prompt actions remain available through the viewer and context menu, avoiding a native WinUI crash when the rail rebuilds after using a history image as a reference. |
-| **Regression guard** | Added a release-readiness source test so the risky thumbnail tooltip path cannot return silently. |
-| **Real Image smoke** | Verified a signed-in GPT Image 2 1K img2img run with one reference image. The task completed, saved to local history, and charged the expected 3 credits. |
-| **Published app smoke** | Verified the published watchdog entry launches `ModelFinder.App.exe` from a clean isolated profile and closes without WER crashes. |
-| **Installer upgrade smoke** | Verified a temporary `2.0.20 -> 2.0.21` installer upgrade, then restored the real HKCU uninstall key and desktop shortcut. |
-| **Release reliability** | The public installer remains a self-contained WinUI package with installer-only release assets. |
+| **Custom-node model targets** | Cloud catalog entries can resolve safe `custom_nodes/...` save paths, with traversal and rooted-path guards before anything is written. |
+| **Missing-model downloads** | WebView bulk download planning now installs matched workflow assets under either `models` or `custom_nodes`, so custom-node assets land where the node expects them. |
+| **Resolver coverage** | Added regression tests for custom-node targets, `models/` prefix normalization, and unsafe custom-node path rejection. |
+| **Test environment hardening** | Avalonia mixed UI/non-UI tests now pump initialized dispatcher work more reliably. |
+| **Release validation** | Full Release test suite passed with 2,193 tests. The published root smoke launched `ModelFinder.App.exe` from an isolated profile with 0 error/fatal/unhandled log entries. |
+| **Release assets** | The public download shape remains the setup installer plus `SHA256SUMS.txt`; no portable package was added. |
 
 <p align="center">
-  <img src="assets/screenshots/2.0.17-image-new-count4.png" alt="Image workspace showing four generated results" width="32%" />
-  <img src="assets/screenshots/2.0.17-image-new-recovery.png" alt="Image workspace after restarting with recovered cloud results" width="32%" />
-  <img src="assets/screenshots/2.0.17-image-new-close-guard.png" alt="Image workspace close guard explaining cloud recovery" width="32%" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/2.0.15-agent-panel.png" alt="ModelFinder AI Assistant panel" width="82%" />
+  <img src="assets/screenshots/feature-model-finder.png" alt="Workflow missing-model finder" width="32%" />
+  <img src="assets/screenshots/2.0.22-download-flyout.png" alt="Download flyout with completed model tasks" width="32%" />
+  <img src="assets/screenshots/embedded-webview-workspace.png" alt="Embedded ComfyUI WebView workspace" width="32%" />
 </p>
 
 ---
 
 ## 2.0 Release Archive
 
-GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.14 release pages were removed after 2.0.15 so users do not accidentally install a superseded build or the 2.0.7/2.0.8 packaging regression.
+GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.21 release pages were removed after 2.0.22 so users do not accidentally install a superseded build or the 2.0.7/2.0.8 packaging regression.
 
 | Version | Date | Status | Summary |
 |---------|------|--------|---------|
@@ -84,12 +80,13 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.12 | May 18, 2026 | Removed from Releases | Improved Agent repair handoff, repair progress, refresh timeout behavior, and sanitized feedback context. |
 | 2.0.13 | May 19, 2026 | Removed from Releases | Removed unfinished Tools placeholders and improved deployment/import selection and release caching. |
 | 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
-| 2.0.15 | May 21, 2026 | Superseded by 2.0.16 | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
-| 2.0.16 | May 23, 2026 | Superseded by 2.0.17 | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
-| 2.0.17 | May 25, 2026 | Superseded by 2.0.18 | Added recoverable online Image tasks, cloud result mirroring, Worker polling fallback, local history pagination, and broader Image smoke coverage. |
-| 2.0.18 | May 25, 2026 | Superseded by 2.0.19 | Improved desktop sign-in fallback, credit checkout flow, low-credit Image package selection, Image funnel telemetry, update proxy downloads, and Photoshop gating. |
-| 2.0.19 | May 27, 2026 | Superseded by 2.0.20 | Added authenticated Image result download fallback, task ownership checks, history recovery metadata, and release-path settings handoff fixes. |
-| 2.0.20 | May 28, 2026 | Superseded by 2.0.21 | Routed update downloads through the Wonderful Launcher proxy/CDN, added update source controls, improved update cancellation, and pre-uploaded Image references. |
+| 2.0.15 | May 21, 2026 | Removed from Releases | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
+| 2.0.16 | May 23, 2026 | Removed from Releases | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
+| 2.0.17 | May 25, 2026 | Removed from Releases | Added recoverable online Image tasks, cloud result mirroring, Worker polling fallback, local history pagination, and broader Image smoke coverage. |
+| 2.0.18 | May 25, 2026 | Removed from Releases | Improved desktop sign-in fallback, credit checkout flow, low-credit Image package selection, Image funnel telemetry, update proxy downloads, and Photoshop gating. |
+| 2.0.19 | May 27, 2026 | Removed from Releases | Added authenticated Image result download fallback, task ownership checks, history recovery metadata, and release-path settings handoff fixes. |
+| 2.0.20 | May 28, 2026 | Removed from Releases | Routed update downloads through the Wonderful Launcher proxy/CDN, added update source controls, improved update cancellation, and pre-uploaded Image references. |
+| 2.0.21 | May 31, 2026 | Removed from Releases | Removed an Image history thumbnail tooltip crash path, added a regression guard, and revalidated the real online Image path. |
 
 For normal installation, use the latest release only.
 
@@ -119,8 +116,8 @@ For normal installation, use the latest release only.
 
 <p align="center">
   <img src="assets/screenshots/feature-model-manager.png" alt="ModelFinder model manager" width="32%" />
-  <img src="assets/screenshots/feature-download-center.png" alt="ModelFinder download center" width="32%" />
-  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace" width="32%" />
+  <img src="assets/screenshots/2.0.22-download-flyout.png" alt="ModelFinder download flyout" width="32%" />
+  <img src="assets/screenshots/2.0.22-image-workspace.png" alt="ModelFinder image workspace" width="32%" />
 </p>
 
 ---
