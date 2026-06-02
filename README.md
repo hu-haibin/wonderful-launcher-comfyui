@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.23 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.23) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.24 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.24) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,25 +36,23 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.23
+## What's New in 2.0.24
 
-Released on June 2, 2026. [Open the 2.0.23 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.23).
+Released on June 2, 2026. [Open the 2.0.24 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.24).
 
-This release polishes the WinUI desktop experience after the 2.0.22 custom-node download update. It brings ComfyUI WebView image drops closer to browser behavior, keeps launcher flyouts above the embedded workspace, and tightens Image, Agent, and missing-node recovery interactions.
+This hotfix replaces the 2.0.23 WebView hosting path after real Windows 10 and Windows 11 testing. It keeps the stable WinUI XAML WebView interaction surface, restores ComfyUI workflow and image drops through a coordinate-aware drop bridge, and prevents users from downloading the superseded 2.0.x builds.
 
 | Area | What changed |
 |------|--------------|
-| **ComfyUI WebView image drops** | Dropping an image into a Load Image node now replaces that node's image, while dropping onto empty canvas can create a new Load Image node, matching normal browser ComfyUI behavior more closely. |
-| **Download flyout behavior** | The download flyout stays above the embedded WebView, and completed download rows now prioritize opening the model's folder instead of a low-value delete action. |
-| **Agent title-bar UX** | Agent access moved into the title bar, title chrome follows theme changes more consistently, and the Agent history flyout layout was tightened so rows and delete actions no longer crowd each other. |
-| **Image page actions** | Image result actions were refined, prompt hover buttons no longer cover the prompt text, dynamic text refreshes on language changes, and old/new Image action menus share localized labels. |
-| **Missing-node recovery** | Missing-node install verification was refined to reduce false "still missing" messaging after plugins register correctly on restart. |
-| **Release validation** | Release build passed with 0 warnings. Focused UX/recovery tests passed 164 tests; the full Release suite passed 2,196 tests; published-root smoke launched `ModelFinder.App.exe` from an isolated profile with 0 error/fatal/unhandled log entries. |
+| **WinUI ComfyUI WebView** | XAML WebView2 is now the default workspace host again so node clicks, canvas pan/drag, and zoom stay stable on Windows 11. The native HWND host remains available only as the diagnostic `MODELFINDER_WINUI_WEBVIEW_HOST=native` path. |
+| **Workspace file drops** | Local workflow and image drops are bridged from the launcher into ComfyUI with the original drop coordinates. Dragging an image onto a `Load Image` node replaces that node; dragging onto empty canvas creates a new image node. |
+| **Real-machine validation** | Windows 10 and Windows 11 were both tested for workflow drops, image drops, `Load Image` replacement, and normal ComfyUI workspace interaction. |
+| **Release validation** | Full Release test suite passed 2,196 tests. Published-root smoke launched `ModelFinder.App.exe` from an isolated profile with 0 error/fatal/unhandled log entries. |
 | **Release assets** | The public download shape remains the setup installer plus `SHA256SUMS.txt`; no portable package was added. |
 
 <p align="center">
   <img src="assets/screenshots/feature-model-finder.png" alt="Workflow missing-model finder" width="32%" />
-  <img src="assets/screenshots/2.0.23-download-flyout.png" alt="Download flyout with completed model tasks" width="32%" />
+  <img src="assets/screenshots/feature-plugin-manager.png" alt="Custom node and plugin management" width="32%" />
   <img src="assets/screenshots/embedded-webview-workspace.png" alt="Embedded ComfyUI WebView workspace" width="32%" />
 </p>
 
@@ -62,7 +60,7 @@ This release polishes the WinUI desktop experience after the 2.0.22 custom-node 
 
 ## 2.0 Release Archive
 
-GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.22 release pages were removed after 2.0.23 so users do not accidentally install a superseded build or the 2.0.7/2.0.8 packaging regression.
+GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.23 release pages were removed after 2.0.24 so users do not accidentally install a superseded build, the 2.0.7/2.0.8 packaging regression, or the 2.0.23 WinUI WebView hosting regression.
 
 | Version | Date | Status | Summary |
 |---------|------|--------|---------|
@@ -89,6 +87,7 @@ GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 th
 | 2.0.20 | May 28, 2026 | Removed from Releases | Routed update downloads through the Wonderful Launcher proxy/CDN, added update source controls, improved update cancellation, and pre-uploaded Image references. |
 | 2.0.21 | May 31, 2026 | Removed from Releases | Removed an Image history thumbnail tooltip crash path, added a regression guard, and revalidated the real online Image path. |
 | 2.0.22 | June 1, 2026 | Removed from Releases | Fixed workflow-derived model downloads that need to land under ComfyUI `custom_nodes`, with resolver guards and Release test coverage. |
+| 2.0.23 | June 2, 2026 | Removed from Releases | Restored Win10 ComfyUI image drops through a native WebView host, but was superseded after Win11 real-machine testing showed that path could break ComfyUI workspace interaction. |
 
 For normal installation, use the latest release only.
 
@@ -118,8 +117,8 @@ For normal installation, use the latest release only.
 
 <p align="center">
   <img src="assets/screenshots/feature-model-manager.png" alt="ModelFinder model manager" width="32%" />
-  <img src="assets/screenshots/2.0.23-download-flyout.png" alt="ModelFinder download flyout" width="32%" />
-  <img src="assets/screenshots/2.0.23-image-workspace.png" alt="ModelFinder image workspace" width="32%" />
+  <img src="assets/screenshots/embedded-webview-workspace.png" alt="Embedded ComfyUI WebView workspace" width="32%" />
+  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace" width="32%" />
 </p>
 
 ---
