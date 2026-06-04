@@ -27,7 +27,7 @@
   "checksum_asset_count": 27,
   "visible_checksum_asset_count": 3,
   "archived_checksum_asset_count": 24,
-  "updated_at": "2026-06-04T17:26:45.6647137Z",
+  "updated_at": "2026-06-04T19:35:09.9637315Z",
   "source": "github-releases-assets-plus-archive",
   "notes": "Product downloads count visible release assets ending in .exe, .zip, or .msi plus archived downloads from deleted releases. Checksum assets are excluded from product downloads."
 }
