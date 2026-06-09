@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.24 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.24) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.26 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -36,19 +36,19 @@ ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can
 
 ---
 
-## What's New in 2.0.24
+## What's New in 2.0.26
 
-Released on June 2, 2026. [Open the 2.0.24 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.24).
+Released on June 9, 2026. [Open the 2.0.26 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26).
 
-This hotfix replaces the 2.0.23 WebView hosting path after real Windows 10 and Windows 11 testing. It keeps the stable WinUI XAML WebView interaction surface, restores ComfyUI workflow and image drops through a coordinate-aware drop bridge, and prevents users from downloading the superseded 2.0.x builds.
+This WinUI release tightens the assistant, image workspace, and supportability paths that users actually hit during day-to-day ComfyUI maintenance. The goal is not a flashy new surface; it is a cleaner repair flow, fewer wrong turns, and better evidence when Photoshop handoff or dependency-file installs fail on a real machine.
 
 | Area | What changed |
 |------|--------------|
-| **WinUI ComfyUI WebView** | XAML WebView2 is now the default workspace host again so node clicks, canvas pan/drag, and zoom stay stable on Windows 11. The native HWND host remains available only as the diagnostic `MODELFINDER_WINUI_WEBVIEW_HOST=native` path. |
-| **Workspace file drops** | Local workflow and image drops are bridged from the launcher into ComfyUI with the original drop coordinates. Dragging an image onto a `Load Image` node replaces that node; dragging onto empty canvas creates a new image node. |
-| **Real-machine validation** | Windows 10 and Windows 11 were both tested for workflow drops, image drops, `Load Image` replacement, and normal ComfyUI workspace interaction. |
-| **Release validation** | Full Release test suite passed 2,196 tests. Published-root smoke launched `ModelFinder.App.exe` from an isolated profile with 0 error/fatal/unhandled log entries. |
-| **Release assets** | The public download shape remains the setup installer plus `SHA256SUMS.txt`; no portable package was added. |
+| **Agent repair reliability** | Fixed stale pending WinUI sign-in recovery, aligned WinUI Agent callback wiring and tool routing with the safer desktop platform behavior, and routed official `ComfyUI-Manager` installs through the dedicated launcher path instead of weak repository guessing. |
+| **Image workspace polish** | Tightened the newer image composer flow, aligned image viewer actions across shells, and cleaned up package/action wording so the WinUI image workspace feels more consistent during generation, browsing, and reuse. |
+| **Diagnostics you can actually query** | WinUI now records dedicated telemetry and local app-log evidence for Photoshop send/import attempts and dependency-file drag/drop installs, so “it opened Photoshop but didn’t send” and “dragged requirements, nothing happened” are no longer silent support dead ends. |
+| **Release cleanup** | Hid the unfinished workflow templates shortcut from the WinUI home surface until that browser is ready for public release. |
+| **Release validation** | WinUI build passed, the formal `publish-release.ps1` WinUI release script produced the public installer, and an isolated published-root smoke launched the packaged app with 0 `ERR`/`FTL` log lines in the app log tail. |
 
 <p align="center">
   <img src="assets/screenshots/feature-model-finder.png" alt="Workflow missing-model finder" width="32%" />
@@ -60,10 +60,12 @@ This hotfix replaces the 2.0.23 WebView hosting path after real Windows 10 and W
 
 ## 2.0 Release Archive
 
-GitHub Releases are curated for safe public downloads. The intermediate 2.0.0 through 2.0.23 release pages were removed after 2.0.24 so users do not accidentally install a superseded build, the 2.0.7/2.0.8 packaging regression, or the 2.0.23 WinUI WebView hosting regression.
+GitHub Releases are curated for safe public downloads. Older 2.0.x builds may be removed after a newer stable release lands, especially when a newer installer replaces a packaging or UX regression. Use the latest release for normal installation; the table below exists to explain what changed, not to encourage random version hopping.
 
 | Version | Date | Status | Summary |
 |---------|------|--------|---------|
+| 2.0.25 | June 4, 2026 | Published previous release | Improved WinUI and Avalonia sign-in gating, image workspace behavior, and launch/runtime polish while desktop versioning moved to 2.0.26. |
+| 2.0.24 | June 2, 2026 | Published previous release | Replaced the 2.0.23 WinUI WebView hosting path after Windows 10/11 testing, restored coordinate-aware workspace drops, and kept the public asset shape installer-only. |
 | 2.0.0 | May 7, 2026 | Removed from Releases | First 2.0 commercial-credit build; superseded by startup, update, and localization fixes. |
 | 2.0.1 | May 8, 2026 | Removed from Releases | Fixed WinUI startup false failures, ComfyUI Desktop path handling, and startup log recovery. |
 | 2.0.2 | May 9, 2026 | Removed from Releases | Added startup auto-update handling and restored core Chinese UI selection. |
