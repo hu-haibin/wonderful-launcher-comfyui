@@ -4,165 +4,92 @@
 
 # ModelFinder for ComfyUI on Windows
 
-### A desktop control center for installing, launching, repairing, and managing ComfyUI.
+### Install, launch, repair, and manage ComfyUI from one desktop app.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.26 Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26) · [**2.0 Archive**](#20-release-archive) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**2.0.26 Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
 ---
 
-## Why ModelFinder
+## Why people use ModelFinder
 
-ComfyUI is powerful, but Windows setup and maintenance can become messy: Python versions, PyTorch builds, custom nodes, plugin dependencies, workflow assets, model downloads, and launch logs all live in different places.
+ComfyUI is powerful, but Windows maintenance is usually spread across too many places: Python, PyTorch, custom nodes, missing models, startup logs, downloads, and half-finished repair attempts.
 
-ModelFinder brings those jobs into one desktop app so ordinary ComfyUI users can:
+ModelFinder brings those jobs into one desktop workflow so you can:
 
-- deploy or import a ComfyUI environment
-- start, stop, and inspect the current runtime
-- install custom nodes and plugin dependencies
-- scan workflows for missing models or nodes
-- manage local model files and download tasks
-- diagnose launch failures from real launcher evidence
-- ask the AI Assistant to explain and run approved repair steps
+- deploy a fresh ComfyUI environment or import an existing one
+- start, stop, and inspect the runtime without hunting for batch files
+- install custom nodes and dependencies from the launcher
+- find missing workflow models and nodes faster
+- manage downloads, packages, and environment state in one place
+- use an approval-based AI Assistant to explain and run supported repair steps
 
 <p align="center">
-  <img src="assets/screenshots/2.0.15-home.png" alt="ModelFinder home screen" width="82%" />
+  <img src="assets/screenshots/2.0.15-home.png" alt="ModelFinder home screen" width="84%" />
 </p>
 
 ---
 
-## What's New in 2.0.26
+## What you can do today
 
-Released on June 9, 2026. [Open the 2.0.26 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26).
+| Workflow | What ModelFinder gives you |
+|----------|----------------------------|
+| **Install or import ComfyUI** | Attach an existing install or deploy a new one without guessing which folder is the real root. |
+| **Launch and inspect runtime** | Start ComfyUI, open the built-in workspace, and inspect live startup logs from the same app. |
+| **Manage custom nodes** | Install plugins, run dependency installs, remove broken nodes, and verify whether a node is really available. |
+| **Find missing workflow assets** | Scan a workflow for missing nodes or models and jump to the most relevant repair/download path. |
+| **Use the image workspace** | Generate images, reuse previous results, send images to Photoshop, and keep history inside the launcher. |
+| **Ask the AI Assistant to repair** | Let the assistant explain startup failures, dependency errors, and missing-node problems, then approve supported repair actions when needed. |
 
-This WinUI release tightens the assistant, image workspace, and supportability paths that users actually hit during day-to-day ComfyUI maintenance. The goal is not a flashy new surface; it is a cleaner repair flow, fewer wrong turns, and better evidence when Photoshop handoff or dependency-file installs fail on a real machine.
+---
 
-| Area | What changed |
-|------|--------------|
-| **Agent repair reliability** | Fixed stale pending WinUI sign-in recovery, aligned WinUI Agent callback wiring and tool routing with the safer desktop platform behavior, and routed official `ComfyUI-Manager` installs through the dedicated launcher path instead of weak repository guessing. |
-| **Image workspace polish** | Tightened the newer image composer flow, aligned image viewer actions across shells, and cleaned up package/action wording so the WinUI image workspace feels more consistent during generation, browsing, and reuse. |
-| **Diagnostics you can actually query** | WinUI now records dedicated telemetry and local app-log evidence for Photoshop send/import attempts and dependency-file drag/drop installs, so “it opened Photoshop but didn’t send” and “dragged requirements, nothing happened” are no longer silent support dead ends. |
-| **Release cleanup** | Hid the unfinished workflow templates shortcut from the WinUI home surface until that browser is ready for public release. |
-| **Release validation** | WinUI build passed, the formal `publish-release.ps1` WinUI release script produced the public installer, and an isolated published-root smoke launched the packaged app with 0 `ERR`/`FTL` log lines in the app log tail. |
+## What's new in 2.0.26
+
+Released on June 9, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.26).
+
+This release is about making the WinUI desktop build feel more dependable in real use, especially around Agent repair, image workspace behavior, and support diagnostics.
+
+- **Cleaner Agent repair flow**: WinUI sign-in recovery is less likely to get stuck in a dead pending state, desktop Agent routing is stricter, and official `ComfyUI-Manager` installs now go through the dedicated launcher path.
+- **More polished image workspace**: the newer image composer flow is tighter, and image viewer actions behave more consistently across desktop shells.
+- **Real evidence for support issues**: Photoshop send/import attempts and dependency-file drag/drop installs now leave dedicated telemetry and local app-log evidence instead of failing silently.
+- **Less unfinished UI noise**: the not-ready workflow templates shortcut is hidden from the WinUI home surface for now.
+
+---
+
+## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/feature-model-finder.png" alt="Workflow missing-model finder" width="32%" />
-  <img src="assets/screenshots/feature-plugin-manager.png" alt="Custom node and plugin management" width="32%" />
-  <img src="assets/screenshots/embedded-webview-workspace.png" alt="Embedded ComfyUI WebView workspace" width="32%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home surface" width="32%" />
+  <img src="assets/screenshots/feature-plugin-manager.png" alt="Plugin manager" width="32%" />
+  <img src="assets/screenshots/feature-model-finder.png" alt="Workflow model finder" width="32%" />
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/feature-environment.png" alt="Environment management" width="32%" />
+  <img src="assets/screenshots/feature-image-workspace.png" alt="Image workspace" width="32%" />
+  <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop handoff" width="32%" />
 </p>
 
 ---
 
-## 2.0 Release Archive
-
-GitHub Releases are curated for safe public downloads. Older 2.0.x builds may be removed after a newer stable release lands, especially when a newer installer replaces a packaging or UX regression. Use the latest release for normal installation; the table below exists to explain what changed, not to encourage random version hopping.
-
-| Version | Date | Status | Summary |
-|---------|------|--------|---------|
-| 2.0.25 | June 4, 2026 | Published previous release | Improved WinUI and Avalonia sign-in gating, image workspace behavior, and launch/runtime polish while desktop versioning moved to 2.0.26. |
-| 2.0.24 | June 2, 2026 | Published previous release | Replaced the 2.0.23 WinUI WebView hosting path after Windows 10/11 testing, restored coordinate-aware workspace drops, and kept the public asset shape installer-only. |
-| 2.0.0 | May 7, 2026 | Removed from Releases | First 2.0 commercial-credit build; superseded by startup, update, and localization fixes. |
-| 2.0.1 | May 8, 2026 | Removed from Releases | Fixed WinUI startup false failures, ComfyUI Desktop path handling, and startup log recovery. |
-| 2.0.2 | May 9, 2026 | Removed from Releases | Added startup auto-update handling and restored core Chinese UI selection. |
-| 2.0.3 | May 9, 2026 | Removed from Releases | Localized major WinUI feature pages and refreshed release presentation. |
-| 2.0.4 | May 10, 2026 | Removed from Releases | Improved Image Workspace to Photoshop handoff and verified both Photoshop import branches. |
-| 2.0.5 | May 11, 2026 | Removed from Releases | Reworked the WinUI light theme, theme switching, and localized Image Workspace controls. |
-| 2.0.6 | May 13, 2026 | Removed from Releases | Routed Agent actions through the selected runtime and reduced stale downgrade prompts. |
-| 2.0.7 | May 13, 2026 | Removed from Releases | Packaging regression: framework-dependent installer could block on a .NET Desktop Runtime prompt. |
-| 2.0.8 | May 13, 2026 | Tag only | Attempted runtime-prerequisite repair for 2.0.7; no public GitHub Release remains. |
-| 2.0.9 | May 13, 2026 | Removed from Releases | Corrected the packaging regression by restoring the self-contained public installer. |
-| 2.0.10 | May 14, 2026 | Removed from Releases | Added Agent/Image conversion telemetry and task-terminal stability improvements. |
-| 2.0.11 | May 16, 2026 | Removed from Releases | Preserved early ComfyUI output and cleaned up task-terminal, stop, and localized message states. |
-| 2.0.12 | May 18, 2026 | Removed from Releases | Improved Agent repair handoff, repair progress, refresh timeout behavior, and sanitized feedback context. |
-| 2.0.13 | May 19, 2026 | Removed from Releases | Removed unfinished Tools placeholders and improved deployment/import selection and release caching. |
-| 2.0.14 | May 19, 2026 | Removed from Releases | Hotfix for task-terminal evidence, plugin install state, deployment completion, and large reference-image upload. |
-| 2.0.15 | May 21, 2026 | Removed from Releases | Improved missing-node repair handoff, task isolation, delayed context status, and redacted Agent feedback evidence. |
-| 2.0.16 | May 23, 2026 | Removed from Releases | Improved startup recovery, runtime convergence, plugin repair verification, package cleanup, and initial Image workspace smoke coverage. |
-| 2.0.17 | May 25, 2026 | Removed from Releases | Added recoverable online Image tasks, cloud result mirroring, Worker polling fallback, local history pagination, and broader Image smoke coverage. |
-| 2.0.18 | May 25, 2026 | Removed from Releases | Improved desktop sign-in fallback, credit checkout flow, low-credit Image package selection, Image funnel telemetry, update proxy downloads, and Photoshop gating. |
-| 2.0.19 | May 27, 2026 | Removed from Releases | Added authenticated Image result download fallback, task ownership checks, history recovery metadata, and release-path settings handoff fixes. |
-| 2.0.20 | May 28, 2026 | Removed from Releases | Routed update downloads through the Wonderful Launcher proxy/CDN, added update source controls, improved update cancellation, and pre-uploaded Image references. |
-| 2.0.21 | May 31, 2026 | Removed from Releases | Removed an Image history thumbnail tooltip crash path, added a regression guard, and revalidated the real online Image path. |
-| 2.0.22 | June 1, 2026 | Removed from Releases | Fixed workflow-derived model downloads that need to land under ComfyUI `custom_nodes`, with resolver guards and Release test coverage. |
-| 2.0.23 | June 2, 2026 | Removed from Releases | Restored Win10 ComfyUI image drops through a native WebView host, but was superseded after Win11 real-machine testing showed that path could break ComfyUI workspace interaction. |
-
-For normal installation, use the latest release only.
-
----
-
-## Core Workflows
-
-| Workflow | What ModelFinder provides |
-|----------|---------------------------|
-| **Install or import ComfyUI** | Deploy a new environment or attach an existing ComfyUI folder without guessing which subfolder to choose. |
-| **Launch and inspect runtime** | Start/stop ComfyUI, view live logs, open the built-in workspace, and check runtime state from the Home page. |
-| **Repair custom nodes** | Detect missing nodes, install ComfyUI-Manager when needed, create terminal tasks, restart, and verify registration. |
-| **Manage plugins** | Install custom nodes from Git URLs, enable/disable plugins, remove plugins, and run dependency installs. |
-| **Find missing models** | Drop a workflow file, detect missing model references, and match downloadable candidates from supported catalogs. |
-| **Manage downloads** | Queue, track, pause, resume, and review model download tasks inside the launcher. |
-| **Use AI assistance** | Ask for diagnosis, approve repair tools, and keep multi-step repair evidence in one conversation. |
-
----
-
-## Feature Gallery
-
-<p align="center">
-  <img src="assets/screenshots/feature-environment.png" alt="ModelFinder environment page" width="32%" />
-  <img src="assets/screenshots/feature-plugin-manager.png" alt="ModelFinder plugin manager" width="32%" />
-  <img src="assets/screenshots/feature-model-finder.png" alt="ModelFinder workflow model finder" width="32%" />
-</p>
-
-<p align="center">
-  <img src="assets/screenshots/feature-model-manager.png" alt="ModelFinder model manager" width="32%" />
-  <img src="assets/screenshots/embedded-webview-workspace.png" alt="Embedded ComfyUI WebView workspace" width="32%" />
-  <img src="assets/screenshots/feature-image-workspace.png" alt="ModelFinder image workspace" width="32%" />
-</p>
-
----
-
-## AI Assistant Boundaries
-
-The Assistant is built into the desktop app, but it is not a free-form shell.
-
-It can:
-
-- read launcher-collected logs and selected-environment state
-- explain startup failures, dependency errors, and plugin failures
-- inspect missing-node and missing-model evidence
-- call supported launcher tools after approval
-- create task-terminal jobs for long-running installs
-- continue repair flows in the same conversation
-- use local preferences and project hints when personalization is enabled
-
-It does not:
-
-- bypass user approval for write or repair actions
-- change billing or credit rules
-- upload local personalization memory as default cloud content
-- send full terminal logs, system prompts, workflow files, tokens, or raw environment dumps as feedback data
-
-AI features require sign-in and are credit-based. Current billing rules live on the official service, not in this release repository.
-
----
-
-## Quick Start
+## Quick start
 
 ### Install
 
 1. Open the [latest GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest).
 2. Download `ModelFinderLauncher-Setup-v*.exe`.
-3. Run the installer and open ModelFinder.
+3. Run the installer and launch ModelFinder.
 
 > [!WARNING]
 > Download the **Setup Installer** from the release assets. Do **not** download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
 
 > [!TIP]
-> The normal installer is self-contained for desktop runtime needs. You do not need to install Microsoft .NET Desktop Runtime separately.
+> The public installer is self-contained for normal desktop runtime needs. You do not need to install Microsoft .NET Desktop Runtime separately.
 
 ### Import an existing ComfyUI
 
@@ -181,13 +108,17 @@ Avoid selecting these folders by mistake:
 
 ---
 
-## Current Product Notes
+## Recent release history
 
-- **Platform**: Windows 10 / 11
-- **Release type**: public Windows installer
-- **Cloud-backed features**: AI Assistant and some workflow matching features require sign-in and server-side services
-- **Local data**: launcher configuration, logs, package state, and optional personalization data stay on the local machine unless a feature explicitly sends a request to the service
-- **Prereleases**: beta builds, if available, are marked separately in GitHub Releases
+For ordinary users, the latest release is the only recommended download. Older versions may be hidden or removed when a newer stable installer replaces them.
+
+| Version | Date | Summary |
+|---------|------|---------|
+| **2.0.26** | June 9, 2026 | WinUI reliability release for Agent repair, image workspace polish, and support observability. |
+| **2.0.25** | June 4, 2026 | Improved desktop sign-in gating, image behavior, and launch/runtime polish. |
+| **2.0.24** | June 2, 2026 | Restored the stable WinUI workspace WebView path and coordinate-aware workspace file drops. |
+
+See the [GitHub Releases page](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) for full notes.
 
 ---
 
@@ -196,7 +127,7 @@ Avoid selecting these folders by mistake:
 <details>
 <summary><b>Do I need to install Python first?</b></summary>
 
-No. For standard use, ModelFinder manages the ComfyUI Python environment for you.
+No. In the normal path, ModelFinder manages the ComfyUI Python environment for you.
 
 </details>
 
@@ -210,38 +141,38 @@ Yes. Use **Import ComfyUI** and select the folder that contains `main.py`, or th
 <details>
 <summary><b>Does it support custom nodes?</b></summary>
 
-Yes. You can install custom nodes from Git URLs, manage dependencies, enable or disable plugins, and use Agent-assisted missing-node repair.
+Yes. You can install custom nodes, run dependency installs, manage plugin state, and use the assistant for supported repair steps.
 
 </details>
 
 <details>
 <summary><b>Does the AI Assistant run actions automatically?</b></summary>
 
-It can run supported repair tools only after approval for write or repair actions.
+Write or repair actions still require approval. The assistant helps with diagnosis and can run supported launcher tools after you approve them.
 
 </details>
 
 <details>
 <summary><b>Is macOS or Linux supported?</b></summary>
 
-Not currently. This release repository publishes Windows builds.
+Not currently. This repository publishes Windows desktop builds.
 
 </details>
 
 ---
 
-## About This Repository
+## About this repository
 
-This repository hosts:
+This repository is the public release home for ModelFinder:
 
-- compiled Windows installer releases
-- full notes for the current release and the 1.5.3 stable line
-- the compact 2.0 archive above for internal release history
+- Windows installer downloads
+- current release notes
+- release screenshots
 - public issue tracking for released builds
 
 ModelFinder is a closed-source desktop product built around the ComfyUI ecosystem.
 
-ComfyUI is an independent open-source project:
+ComfyUI itself is an independent open-source project:
 
 - ComfyUI: https://github.com/comfyanonymous/ComfyUI
 
