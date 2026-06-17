@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**2.0.27 Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.27) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**2.0.28 Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.28) · [**All Releases**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -48,16 +48,16 @@ ModelFinder brings those jobs into one desktop workflow so you can:
 
 ---
 
-## What's new in 2.0.27
+## What's new in 2.0.28
 
-Released on June 16, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.27).
+Released on June 17, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.28).
 
-This release moves the public Windows desktop build to the Avalonia shell while preserving the normal ModelFinder installer and upgrade path for existing WinUI users.
+This release polishes the new Avalonia desktop shell and makes the AI Assistant feel less jumpy during ComfyUI diagnosis and repair.
 
-- **Automatic WinUI-to-Avalonia upgrade**: the installer keeps the stable ModelFinder identity, install location, and setup filename so current users can update without choosing a different app.
-- **Stronger Image and credit flow**: low-balance prompts now use the in-app package picker, the generation controls are clearer, and Image actions stay inside the desktop workflow.
-- **Workspace repair stays in context**: missing nodes, missing models, plugin import failures, and repair entry points are surfaced closer to the active ComfyUI workspace.
-- **Release-day validation**: the 2.0.26 WinUI installer was smoke-tested upgrading to the 2.0.27 Avalonia installer with the pending installer applied and the upgraded app relaunched.
+- **Clearer AI Assistant entry**: the empty assistant state now uses one context-aware diagnosis action instead of three overlapping prompts.
+- **Less repair drift**: pasted ComfyUI startup logs no longer inherit an older plugin repair target, and normal startup lines are less likely to be misclassified as plugin import failures.
+- **Lighter approval UX**: repair permissions are handled in the assistant panel with simpler session-level choices instead of a large blocking dialog.
+- **Sharper workspace gates**: missing-model downloads and model search now guide signed-out users to sign in instead of showing misleading zero-download states.
 
 ---
 
@@ -114,9 +114,9 @@ For ordinary users, the latest release is the only recommended download. Older v
 
 | Version | Date | Summary |
 |---------|------|---------|
+| **2.0.28** | June 17, 2026 | Avalonia polish release for AI Assistant entry prompts, log-triage drift guards, simplified approvals, and signed-in model lookup gates. |
 | **2.0.27** | June 16, 2026 | Avalonia public release with WinUI-to-Avalonia upgrade continuity, Image credit flow polish, and workspace repair improvements. |
 | **2.0.26** | June 9, 2026 | WinUI reliability release for Agent repair, image workspace polish, and support observability. |
-| **2.0.25** | June 4, 2026 | Improved desktop sign-in gating, image behavior, and launch/runtime polish. |
 
 See the [GitHub Releases page](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases) for full notes.
 
