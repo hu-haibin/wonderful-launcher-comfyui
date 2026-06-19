@@ -2,9 +2,9 @@
 
 <div align="center">
 
-# ModelFinder for ComfyUI on Windows
+# Wonderful Launcher for ComfyUI on Windows
 
-### A desktop control center for installing, launching, repairing, and using ComfyUI on Windows.
+### Wonderful Launcher is the public brand. The current desktop app name is still ModelFinder.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
@@ -21,7 +21,7 @@
 - **Recommended for most users**: [ModelFinder 2.0.31](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31)
 - **Public stable fallback**: [ModelFinder 2.0.26](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.26)
 
-We keep this release repo focused on the current safe download path. Transitional or regression-prone releases may be hidden from the Releases page once a newer installer replaces them.
+Wonderful Launcher is the external product brand today. Downloaded installers and the desktop app may still show the current app name, `ModelFinder`, during this transition period.
 
 <p align="center">
   <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder home screen" width="84%" />
@@ -29,11 +29,11 @@ We keep this release repo focused on the current safe download path. Transitiona
 
 ---
 
-## Why ModelFinder exists
+## Why Wonderful Launcher exists
 
 ComfyUI on Windows often turns into a maintenance puzzle: Python, PyTorch, custom nodes, missing models, startup logs, downloads, and half-finished repair attempts all live in different places.
 
-ModelFinder brings those jobs into one desktop workflow so you can:
+Wonderful Launcher brings those jobs into one desktop workflow through the current ModelFinder desktop app so you can:
 
 - install a fresh ComfyUI environment or import an existing one
 - launch, stop, and inspect the runtime without hunting for scripts
@@ -167,14 +167,14 @@ Not currently. This repository publishes Windows desktop builds.
 
 ## About this repository
 
-This repository is the public release home for ModelFinder:
+This repository is the public release home for Wonderful Launcher and its current ModelFinder desktop app:
 
 - Windows installer downloads
 - current release notes
 - release screenshots
 - public issue tracking for released builds
 
-ModelFinder is a closed-source desktop product built around the ComfyUI ecosystem.
+Wonderful Launcher is the public product brand. The current downloadable Windows desktop application is still named ModelFinder.
 
 ComfyUI itself is an independent open-source project:
 
@@ -184,6 +184,6 @@ ComfyUI itself is an independent open-source project:
 
 <div align="center">
 
-**ModelFinder**: a Windows control center for ComfyUI environments.
+**Wonderful Launcher**: a Windows control center for ComfyUI environments, currently delivered through the ModelFinder desktop app.
 
 </div>
