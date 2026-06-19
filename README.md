@@ -24,7 +24,7 @@
 We keep this release repo focused on the current safe download path. Transitional or regression-prone releases may be hidden from the Releases page once a newer installer replaces them.
 
 <p align="center">
-  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home screen" width="84%" />
+  <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder home screen" width="84%" />
 </p>
 
 ---
@@ -82,7 +82,7 @@ This release stabilizes the Avalonia image workspace so longer-running image job
 <p align="center">
   <img src="assets/screenshots/feature-image-workspace.png" alt="Image workspace" width="32%" />
   <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop handoff" width="32%" />
-  <img src="assets/screenshots/2.0.15-home.png" alt="Launcher overview" width="32%" />
+  <img src="assets/screenshots/feature-model-manager.png" alt="Model manager" width="32%" />
 </p>
 
 ---
