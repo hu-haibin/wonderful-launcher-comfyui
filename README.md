@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**2.0.30 Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.30) · [**All Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**2.0.31 Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31) · [**All Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
 </div>
 
@@ -48,16 +48,17 @@ ModelFinder brings those jobs into one desktop workflow so you can:
 
 ---
 
-## What's new in 2.0.30
+## What's new in 2.0.31
 
-Released on June 18, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.30).
+Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31).
 
-This hotfix repairs the installer transition from the first Avalonia builds back into the single public ModelFinder install identity.
+This release focuses on the Avalonia image workspace so longer-running image jobs do not block the next creative step.
 
-- **Single visible app identity**: the installer now cleans old `ModelFinder Avalonia` shortcuts, Start Menu entries, and uninstall registration after upgrade.
-- **Safer install-path selection**: machines that only have the legacy Avalonia install path are upgraded in place instead of getting a second visible ModelFinder install.
-- **Future installer update hardening**: silent installer handoff now passes the current install directory explicitly so future updates do not drift to a different path.
-- **No branding change in this hotfix**: `Avalonia` remains an internal framework detail. A future Wonderful Launcher rename/data migration will be handled separately.
+- **Parallel image turns**: you can continue drafting and sending the next image request while earlier jobs are still queued or generating.
+- **Reference/history parity**: the left `input` rail behaves more like the main history rail, including file viewing, drag reuse, and context actions.
+- **Less broken drag-and-drop**: the larger reference drop zone is restored so dragging images back into the composer works more like the older flow.
+- **Clearer in-card generation states**: loading placeholders now use the workflow-template sweep border and status is attached to the card itself instead of a floating global strip.
+- **Keyboard and regenerate fixes**: Enter-to-send and the `Generate again` context action both recover from recent regressions.
 
 ---
 
@@ -114,6 +115,7 @@ For ordinary users, the latest release is the only recommended download. Older v
 
 | Version | Date | Summary |
 |---------|------|---------|
+| **2.0.31** | June 19, 2026 | Avalonia image workspace release with parallel turns, stronger loading placeholders, drag/drop recovery, and Enter/regenerate fixes. |
 | **2.0.30** | June 18, 2026 | Installer hotfix that repairs legacy Avalonia install-path drift and cleans old `ModelFinder Avalonia` visible entries. |
 | **2.0.29** | June 17, 2026 | Avalonia workflow polish release with visible update progress, clickable workflow templates, animated previews, and lighter deploy-page selection styling. |
 | **2.0.28** | June 17, 2026 | Avalonia polish release for AI Assistant entry prompts, log-triage drift guards, simplified approvals, and signed-in model lookup gates. |
