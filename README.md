@@ -4,47 +4,56 @@
 
 # ModelFinder for ComfyUI on Windows
 
-### Install, launch, repair, and manage ComfyUI from one desktop app.
+### A desktop control center for installing, launching, repairing, and using ComfyUI on Windows.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**2.0.31 Release Notes**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31) · [**All Releases**](https://github.com/hu-haibin/ModelFinder-Releases/releases) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
 
 </div>
 
 ---
 
-## Why people use ModelFinder
+## Download recommendation
 
-ComfyUI is powerful, but Windows maintenance is usually spread across too many places: Python, PyTorch, custom nodes, missing models, startup logs, downloads, and half-finished repair attempts.
+- **Recommended for most users**: [ModelFinder 2.0.31](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31)
+- **Public stable fallback**: [ModelFinder 2.0.26](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.26)
 
-ModelFinder brings those jobs into one desktop workflow so you can:
-
-- deploy a fresh ComfyUI environment or import an existing one
-- start, stop, and inspect the runtime without hunting for batch files
-- install custom nodes and dependencies from the launcher
-- find missing workflow models and nodes faster
-- manage downloads, packages, and environment state in one place
-- use an approval-based AI Assistant to explain and run supported repair steps
+We keep this release repo focused on the current safe download path. Transitional or regression-prone releases may be hidden from the Releases page once a newer installer replaces them.
 
 <p align="center">
-  <img src="assets/screenshots/2.0.15-home.png" alt="ModelFinder home screen" width="84%" />
+  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home screen" width="84%" />
 </p>
 
 ---
 
-## What you can do today
+## Why ModelFinder exists
 
-| Workflow | What ModelFinder gives you |
-|----------|----------------------------|
-| **Install or import ComfyUI** | Attach an existing install or deploy a new one without guessing which folder is the real root. |
-| **Launch and inspect runtime** | Start ComfyUI, open the built-in workspace, and inspect live startup logs from the same app. |
-| **Manage custom nodes** | Install plugins, run dependency installs, remove broken nodes, and verify whether a node is really available. |
-| **Find missing workflow assets** | Scan a workflow for missing nodes or models and jump to the most relevant repair/download path. |
-| **Use the image workspace** | Generate images, reuse previous results, send images to Photoshop, and keep history inside the launcher. |
-| **Ask the AI Assistant to repair** | Let the assistant explain startup failures, dependency errors, and missing-node problems, then approve supported repair actions when needed. |
+ComfyUI on Windows often turns into a maintenance puzzle: Python, PyTorch, custom nodes, missing models, startup logs, downloads, and half-finished repair attempts all live in different places.
+
+ModelFinder brings those jobs into one desktop workflow so you can:
+
+- install a fresh ComfyUI environment or import an existing one
+- launch, stop, and inspect the runtime without hunting for scripts
+- manage custom nodes and dependency installs from one app
+- find missing workflow models and nodes faster
+- generate images, reuse history, and keep reference material nearby
+- use an approval-based AI Assistant for supported diagnosis and repair steps
+
+---
+
+## Core workflows
+
+| Workflow | What you get |
+|----------|--------------|
+| **Install or import ComfyUI** | Attach an existing install or deploy a new one without guessing the real root folder. |
+| **Launch and inspect runtime** | Start ComfyUI, open the built-in workspace, and inspect startup logs from the same app. |
+| **Manage custom nodes** | Install plugins, run dependency installs, remove broken nodes, and verify whether a node is truly available. |
+| **Find missing workflow assets** | Scan workflows for missing models or nodes and jump to the nearest repair or download path. |
+| **Use the image workspace** | Generate images, reuse previous results, drag history back into the composer, and send images to Photoshop. |
+| **Ask the AI Assistant to help** | Let the assistant explain startup failures, dependency errors, and missing-node problems, then approve supported actions when needed. |
 
 ---
 
@@ -52,28 +61,28 @@ ModelFinder brings those jobs into one desktop workflow so you can:
 
 Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31).
 
-This release focuses on the Avalonia image workspace so longer-running image jobs do not block the next creative step.
+This release stabilizes the Avalonia image workspace so longer-running image jobs no longer interrupt the next creative step.
 
-- **Parallel image turns**: you can continue drafting and sending the next image request while earlier jobs are still queued or generating.
-- **Reference/history parity**: the left `input` rail behaves more like the main history rail, including file viewing, drag reuse, and context actions.
-- **Less broken drag-and-drop**: the larger reference drop zone is restored so dragging images back into the composer works more like the older flow.
-- **Clearer in-card generation states**: loading placeholders now use the workflow-template sweep border and status is attached to the card itself instead of a floating global strip.
-- **Keyboard and regenerate fixes**: Enter-to-send and the `Generate again` context action both recover from recent regressions.
+- **Parallel image turns**: you can draft and send the next image request while earlier jobs are still queued or generating.
+- **Reference and history parity**: the left `input` rail now behaves more like the main history rail, including viewing, drag reuse, and context actions.
+- **Recovered drag-and-drop**: the larger reference drop zone is back, so dragging images into the composer works closer to the older flow.
+- **Clearer loading placeholders**: generation state now lives on the card itself with the workflow-template sweep border instead of a floating global banner.
+- **Recent regressions fixed**: Enter-to-send and `Generate again` both recover from the broken behavior seen in earlier Avalonia releases.
 
 ---
 
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/feature-home.png" alt="ModelFinder home surface" width="32%" />
   <img src="assets/screenshots/feature-plugin-manager.png" alt="Plugin manager" width="32%" />
   <img src="assets/screenshots/feature-model-finder.png" alt="Workflow model finder" width="32%" />
+  <img src="assets/screenshots/feature-environment.png" alt="Environment management" width="32%" />
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/feature-environment.png" alt="Environment management" width="32%" />
   <img src="assets/screenshots/feature-image-workspace.png" alt="Image workspace" width="32%" />
   <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop handoff" width="32%" />
+  <img src="assets/screenshots/2.0.15-home.png" alt="Launcher overview" width="32%" />
 </p>
 
 ---
@@ -87,7 +96,7 @@ This release focuses on the Avalonia image workspace so longer-running image job
 3. Run the installer and launch ModelFinder.
 
 > [!WARNING]
-> Download the **Setup Installer** from the release assets. Do **not** download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
+> Download the **Setup Installer** from the release assets. Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
 
 > [!TIP]
 > The public installer is self-contained for normal desktop runtime needs. You do not need to install Microsoft .NET Desktop Runtime separately.
@@ -109,20 +118,11 @@ Avoid selecting these folders by mistake:
 
 ---
 
-## Recent release history
+## Release policy
 
-For ordinary users, the latest release is the only recommended download. Older versions may be hidden or removed when a newer stable installer replaces them.
-
-| Version | Date | Summary |
-|---------|------|---------|
-| **2.0.31** | June 19, 2026 | Avalonia image workspace release with parallel turns, stronger loading placeholders, drag/drop recovery, and Enter/regenerate fixes. |
-| **2.0.30** | June 18, 2026 | Installer hotfix that repairs legacy Avalonia install-path drift and cleans old `ModelFinder Avalonia` visible entries. |
-| **2.0.29** | June 17, 2026 | Avalonia workflow polish release with visible update progress, clickable workflow templates, animated previews, and lighter deploy-page selection styling. |
-| **2.0.28** | June 17, 2026 | Avalonia polish release for AI Assistant entry prompts, log-triage drift guards, simplified approvals, and signed-in model lookup gates. |
-| **2.0.27** | June 16, 2026 | Avalonia public release with WinUI-to-Avalonia upgrade continuity, Image credit flow polish, and workspace repair improvements. |
-| **2.0.26** | June 9, 2026 | WinUI reliability release for Agent repair, image workspace polish, and support observability. |
-
-See the [GitHub Releases page](https://github.com/hu-haibin/ModelFinder-Releases/releases) for full notes.
+- The homepage README is for the current recommended download path, not for preserving every historical note.
+- The GitHub Releases page should stay sparse: latest release first, plus only deliberate fallback versions.
+- Tags can remain for engineering traceability even when a noisy or buggy release entry is removed from the public Releases page.
 
 ---
 
