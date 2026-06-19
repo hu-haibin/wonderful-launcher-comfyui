@@ -6,11 +6,11 @@
 
 ### `Wonderful Launcher` 是对外品牌名，当前桌面应用本体暂时仍叫 `ModelFinder`。
 
-[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=最新版本)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-[![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
-[![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=最新版本)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
+[![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
+[![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载最新安装包**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**官网**](https://wonderfullauncher.com/) · [**文档**](https://wonderfullauncher.com/docs) · [**故障排查**](https://wonderfullauncher.com/troubleshooting) · [**当前版本**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31) · [**反馈问题**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**下载最新安装包**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**官网**](https://wonderfullauncher.com/) · [**文档**](https://wonderfullauncher.com/docs) · [**故障排查**](https://wonderfullauncher.com/troubleshooting) · [**当前版本**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## 下载建议
 
-- **普通用户推荐**：[ModelFinder 2.0.31](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31)
-- **公开稳定回退版本**：[ModelFinder 2.0.26](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.26)
+- **普通用户推荐**：[Wonderful Launcher 2.0.32](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32)
+- **公开稳定回退版本**：[ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 现在对外产品品牌统一按 `Wonderful Launcher` 表达，但下载后的安装包、程序窗口和部分界面在过渡期内仍可能显示当前应用名 `ModelFinder`。
 
@@ -57,17 +57,20 @@ Wonderful Launcher 的目标，是通过当前的 ModelFinder 桌面应用，把
 
 ---
 
-## 2.0.31 更新了什么
+## 2.0.32 更新了什么
 
-发布于 2026 年 6 月 19 日。[查看完整 GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31)。
+发布于 2026 年 6 月 19 日。[查看完整 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32)。
 
-这个版本重点是把 Avalonia 图片工作区从“能用”拉回到“适合持续创作”。
+这个版本重点是把公开安装表面切到 `Wonderful Launcher`，同时保留旧 `2.0.x` 的原地升级路径，不把用户拆成两个并列安装。
 
-- **支持并行追加生图轮次**：前一轮还在排队或生成时，你可以继续编辑并发送下一轮图片请求。
-- **参考图和历史图区交互更一致**：左侧 `input` 栏现在更接近右侧历史栏，支持查看、拖回和上下文操作。
-- **拖拽回填恢复**：更大的参考图区命中范围回来了，把图片拖回输入区的体验更接近旧版本。
-- **生成占位更清楚**：状态附着在卡片本身，复用工作流模板的描边流光动画，不再靠漂浮的全局横条提示。
-- **修掉最近回归**：回车发送和“再生成一张”都修回来了，不再延续前几个 Avalonia 版本的问题。
+- **安装包文件名更新**：公开下载的 setup 安装器现在是 `WonderfulLauncher-Setup-v2.0.32.exe`。
+- **升级链路保持原地迁移**：已有 `2.0.x` 用户仍可直接升级，不会因为改名被拆成一个新的并列安装。
+- **Windows 安装表面更统一**：安装器面向用户显示的产品名改为 `Wonderful Launcher`，重装时也会顺手清理旧的 `ModelFinder` 快捷方式痕迹。
+- **全新安装默认目录更新**：新安装默认落在 `%LocalAppData%\\Wonderful Launcher`，但已有安装升级时仍优先沿用原路径。
+- **2.0.31 的图片工作区修复继续保留**：并行生图、多轮追加、拖拽恢复、参考图/历史图复用、卡片内生成占位，这些能力都包含在本版内。
+
+> [!NOTE]
+> 这是一次过渡版改名。安装器和安装表面已经切到 `Wonderful Launcher`，但任务栏、进程名或部分系统级标识里，仍可能暂时看到 `ModelFinder` 或 `mf`。
 
 ---
 
@@ -91,9 +94,9 @@ Wonderful Launcher 的目标，是通过当前的 ModelFinder 桌面应用，把
 
 ### 安装
 
-1. 打开 [最新 GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)。
-2. 下载 `ModelFinderLauncher-Setup-v*.exe`。
-3. 运行安装包并启动 ModelFinder。
+1. 打开 [最新 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)。
+2. 下载 `WonderfulLauncher-Setup-v*.exe`。
+3. 运行安装包并启动 Wonderful Launcher。
 
 > [!WARNING]
 > 请下载 release 资产里的 **Setup 安装包**。不要下载 GitHub 自动生成的 `Source code.zip` 或 `Source code.tar.gz`，那是源码压缩包，不能直接运行。
@@ -127,6 +130,13 @@ Wonderful Launcher 的目标，是通过当前的 ModelFinder 桌面应用，把
 ---
 
 ## 常见问题
+
+<details>
+<summary><b>为什么有些 Windows 位置里还是会看到 ModelFinder 或 mf？</b></summary>
+
+`2.0.32` 先切的是公开安装器和安装表面的品牌。为了兼容已有升级链路，这一版还保留了一部分内部标识，所以任务栏、进程相关位置里暂时仍可能显示 `ModelFinder` 或 `mf`。
+
+</details>
 
 <details>
 <summary><b>需要先安装 Python 吗？</b></summary>

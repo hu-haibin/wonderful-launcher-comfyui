@@ -6,11 +6,11 @@
 
 ### Wonderful Launcher is the public brand. The current desktop app name is still ModelFinder.
 
-[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/ModelFinder-Releases?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
-[![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2FModelFinder-Releases%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/ModelFinder-Releases/releases)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
+[![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31) · [**Report Issues**](https://github.com/hu-haibin/ModelFinder-Releases/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download recommendation
 
-- **Recommended for most users**: [ModelFinder 2.0.31](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31)
-- **Public stable fallback**: [ModelFinder 2.0.26](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.26)
+- **Recommended for most users**: [Wonderful Launcher 2.0.32](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32)
+- **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 Wonderful Launcher is the external product brand today. Downloaded installers and the desktop app may still show the current app name, `ModelFinder`, during this transition period.
 
@@ -57,17 +57,20 @@ Wonderful Launcher brings those jobs into one desktop workflow through the curre
 
 ---
 
-## What's new in 2.0.31
+## What's new in 2.0.32
 
-Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/tag/v2.0.31).
+Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32).
 
-This release stabilizes the Avalonia image workspace so longer-running image jobs no longer interrupt the next creative step.
+This release turns the public install surface into Wonderful Launcher while preserving the proven in-place upgrade path from older `2.0.x` ModelFinder installs.
 
-- **Parallel image turns**: you can draft and send the next image request while earlier jobs are still queued or generating.
-- **Reference and history parity**: the left `input` rail now behaves more like the main history rail, including viewing, drag reuse, and context actions.
-- **Recovered drag-and-drop**: the larger reference drop zone is back, so dragging images into the composer works closer to the older flow.
-- **Clearer loading placeholders**: generation state now lives on the card itself with the workflow-template sweep border instead of a floating global banner.
-- **Recent regressions fixed**: Enter-to-send and `Generate again` both recover from the broken behavior seen in earlier Avalonia releases.
+- **New installer name**: the public setup file is now `WonderfulLauncher-Setup-v2.0.32.exe`.
+- **Upgrade path kept intact**: existing `2.0.x` installs can still upgrade in place instead of splitting into a second side-by-side app.
+- **Cleaner Windows surface**: the installer now writes `Wonderful Launcher` as the install-facing product name and cleans older `ModelFinder` shortcut entries during reinstall.
+- **Fresh-install default path updated**: new installs now default to `%LocalAppData%\\Wonderful Launcher`, while upgrades keep the previous install root when one already exists.
+- **Image workspace improvements from 2.0.31 remain included**: parallel image turns, restored drag-and-drop, stronger reference/history reuse, and card-level generation placeholders are all part of this build.
+
+> [!NOTE]
+> This is a transition release. Some internal identifiers may still show `ModelFinder` or `mf` in places such as the taskbar or process-level diagnostics while the public installer and install surface already use `Wonderful Launcher`.
 
 ---
 
@@ -91,9 +94,9 @@ This release stabilizes the Avalonia image workspace so longer-running image job
 
 ### Install
 
-1. Open the [latest GitHub Release](https://github.com/hu-haibin/ModelFinder-Releases/releases/latest).
-2. Download `ModelFinderLauncher-Setup-v*.exe`.
-3. Run the installer and launch ModelFinder.
+1. Open the [latest GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest).
+2. Download `WonderfulLauncher-Setup-v*.exe`.
+3. Run the installer and launch Wonderful Launcher.
 
 > [!WARNING]
 > Download the **Setup Installer** from the release assets. Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable desktop builds.
@@ -127,6 +130,13 @@ Avoid selecting these folders by mistake:
 ---
 
 ## FAQ
+
+<details>
+<summary><b>Why do I still see ModelFinder or mf in some Windows places?</b></summary>
+
+`2.0.32` updates the public installer and install-facing brand first. Some internal identifiers are intentionally kept for compatibility during the first migration step, so taskbar or process-related surfaces can still show `ModelFinder` or `mf` for now.
+
+</details>
 
 <details>
 <summary><b>Do I need to install Python first?</b></summary>
