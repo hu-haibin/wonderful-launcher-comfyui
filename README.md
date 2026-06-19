@@ -4,13 +4,13 @@
 
 # Wonderful Launcher for ComfyUI on Windows
 
-### Wonderful Launcher is the public brand. The current desktop app name is still ModelFinder.
+### Wonderful Launcher is the desktop product name. ModelFinder remains only in compatibility-sensitive internal identifiers.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.33) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,10 +18,10 @@
 
 ## Download recommendation
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.32](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32)
+- **Recommended for most users**: [Wonderful Launcher 2.0.33](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.33)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
-Wonderful Launcher is the external product brand today. Downloaded installers and the desktop app may still show the current app name, `ModelFinder`, during this transition period.
+Wonderful Launcher is the product and desktop app name. Internal paths, process names, AppIds, logs, or migration markers may still use `ModelFinder` where changing them would break existing installs.
 
 <p align="center">
   <img src="assets/screenshots/home-launch-surface.png" alt="ModelFinder home screen" width="84%" />
@@ -33,7 +33,7 @@ Wonderful Launcher is the external product brand today. Downloaded installers an
 
 ComfyUI on Windows often turns into a maintenance puzzle: Python, PyTorch, custom nodes, missing models, startup logs, downloads, and half-finished repair attempts all live in different places.
 
-Wonderful Launcher brings those jobs into one desktop workflow through the current ModelFinder desktop app so you can:
+Wonderful Launcher brings those jobs into one desktop workflow so you can:
 
 - install a fresh ComfyUI environment or import an existing one
 - launch, stop, and inspect the runtime without hunting for scripts
@@ -57,17 +57,17 @@ Wonderful Launcher brings those jobs into one desktop workflow through the curre
 
 ---
 
-## What's new in 2.0.32
+## What's new in 2.0.33
 
-Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.32).
+Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.33).
 
-This release turns the public install surface into Wonderful Launcher while preserving the proven in-place upgrade path from older `2.0.x` ModelFinder installs.
+This release focuses on Avalonia mainline polish and release-readiness fixes while preserving the in-place upgrade path from older `2.0.x` ModelFinder installs.
 
-- **New installer name**: the public setup file is now `WonderfulLauncher-Setup-v2.0.32.exe`.
-- **Upgrade path kept intact**: existing `2.0.x` installs can still upgrade in place instead of splitting into a second side-by-side app.
-- **Cleaner Windows surface**: the installer now writes `Wonderful Launcher` as the install-facing product name and cleans older `ModelFinder` shortcut entries during reinstall.
-- **Fresh-install default path updated**: new installs now default to `%LocalAppData%\\Wonderful Launcher`, while upgrades keep the previous install root when one already exists.
-- **Image workspace improvements from 2.0.31 remain included**: parallel image turns, restored drag-and-drop, stronger reference/history reuse, and card-level generation placeholders are all part of this build.
+- **Smoother startup flow**: workflow templates remain visible while ComfyUI starts, then the launcher switches to the workspace when the backend is ready.
+- **Clearer workspace recovery**: missing-node and missing-model notifications use more direct actions and explanations.
+- **Better model-finding guidance**: static analysis and live workspace detection are distinguished more clearly.
+- **More complete language switching**: additional Avalonia surfaces refresh when the title-bar language changes.
+- **Release diagnostics hardened**: installer and update diagnostics were improved while retaining the public setup filename `WonderfulLauncher-Setup-v2.0.33.exe`.
 
 > [!NOTE]
 > This is a transition release. Some internal identifiers may still show `ModelFinder` or `mf` in places such as the taskbar or process-level diagnostics while the public installer and install surface already use `Wonderful Launcher`.
@@ -106,7 +106,7 @@ This release turns the public install surface into Wonderful Launcher while pres
 
 ### Import an existing ComfyUI
 
-1. Open ModelFinder on the Home page.
+1. Open Wonderful Launcher on the Home page.
 2. Click **Import ComfyUI**.
 3. Select the folder that contains `main.py`, or the portable parent folder that contains a `ComfyUI` subfolder.
 4. Start ComfyUI from the Home page.
@@ -134,14 +134,14 @@ Avoid selecting these folders by mistake:
 <details>
 <summary><b>Why do I still see ModelFinder or mf in some Windows places?</b></summary>
 
-`2.0.32` updates the public installer and install-facing brand first. Some internal identifiers are intentionally kept for compatibility during the first migration step, so taskbar or process-related surfaces can still show `ModelFinder` or `mf` for now.
+Wonderful Launcher is the user-facing product name. Some internal identifiers intentionally remain `ModelFinder` or `mf` to preserve installed paths, update compatibility, logs, and Windows identity.
 
 </details>
 
 <details>
 <summary><b>Do I need to install Python first?</b></summary>
 
-No. In the normal path, ModelFinder manages the ComfyUI Python environment for you.
+No. In the normal path, Wonderful Launcher manages the ComfyUI Python environment for you.
 
 </details>
 
