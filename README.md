@@ -75,14 +75,14 @@ This release stabilizes the Avalonia image workspace so longer-running image job
 
 <p align="center">
   <img src="assets/screenshots/feature-plugin-manager.png" alt="Plugin manager" width="32%" />
-  <img src="assets/screenshots/feature-model-finder.png" alt="Workflow model finder" width="32%" />
+  <img src="assets/screenshots/feature-model-manager.png" alt="Model manager" width="32%" />
   <img src="assets/screenshots/feature-environment.png" alt="Environment management" width="32%" />
 </p>
 
 <p align="center">
   <img src="assets/screenshots/feature-image-workspace.png" alt="Image workspace" width="32%" />
   <img src="assets/screenshots/feature-image-photoshop-send.png" alt="Photoshop handoff" width="32%" />
-  <img src="assets/screenshots/feature-model-manager.png" alt="Model manager" width="32%" />
+  <img src="assets/screenshots/home-live-startup-logs.png" alt="Startup logs and launch status" width="32%" />
 </p>
 
 ---
