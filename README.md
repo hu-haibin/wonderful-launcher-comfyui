@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.35) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## Download recommendation
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.35](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.35)
+- **Recommended for most users**: [Wonderful Launcher 2.0.37](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 Wonderful Launcher is the product and desktop app name. Internal paths, process names, AppIds, logs, or migration markers may still use `ModelFinder` where changing them would break existing installs.
@@ -57,20 +57,19 @@ Wonderful Launcher brings those jobs into one desktop workflow so you can:
 
 ---
 
-## What's new in 2.0.35
+## What's new in 2.0.37
 
-Released on June 19, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.35).
+Released on June 20, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37).
 
-This release closes out the Avalonia mainline update path with stronger updater hygiene and clearer Wonderful Launcher branding while preserving the in-place upgrade path from older `2.0.x` ModelFinder installs.
+This release tightens the Agent and workspace experience after the new Agent Access rollout.
 
-- **Cleaner update downloads**: automatic update packages now use the managed local update cache instead of leaving installers in the user's Downloads folder.
-- **Safer updater cleanup**: completed installer and extracted package files are cleaned up after successful handoff while pending updates remain protected.
-- **More consistent public branding**: Avalonia launch/update surfaces and release assets continue the transition to `Wonderful Launcher`.
-- **Upgrade path verified**: the Windows `2.0.32` to `2.0.35` installer-upgrade smoke path was rechecked.
-- **Release diagnostics hardened**: update cache and installer handoff coverage were expanded around `WonderfulLauncher-Setup-v2.0.35.exe`.
+- **Server-managed Agent routing**: desktop clients no longer send stale codex/MiniMax provider preferences; the cloud relay owns the current DeepSeek-first route and fallback policy.
+- **Clearer Agent status copy**: the Agent status card now reports generic server-managed routing instead of old provider names.
+- **Agent Access display alignment**: desktop and website surfaces now agree on paid Agent Access totals and remaining sessions.
+- **Workspace repair polish**: the missing-node/model notification bar keeps the main repair actions visible and avoids surprise state changes while you work.
 
 > [!NOTE]
-> This is a transition release. Some internal identifiers may still show `ModelFinder` or `mf` in places such as the taskbar or process-level diagnostics while the public installer and install surface already use `Wonderful Launcher`.
+> Some internal identifiers may still show `ModelFinder` or `mf` in places such as process-level diagnostics while the public installer and install surface use `Wonderful Launcher`.
 
 ---
 
