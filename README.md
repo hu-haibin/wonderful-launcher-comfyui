@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Latest Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Troubleshooting**](https://wonderfullauncher.com/troubleshooting) · [**Current Release**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## Download recommendation
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.37](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37)
+- **Recommended for most users**: [Wonderful Launcher 2.0.38](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 Wonderful Launcher is the product and desktop app name. Internal paths, process names, AppIds, logs, or migration markers may still use `ModelFinder` where changing them would break existing installs.
@@ -57,16 +57,17 @@ Wonderful Launcher brings those jobs into one desktop workflow so you can:
 
 ---
 
-## What's new in 2.0.37
+## What's new in 2.0.38
 
-Released on June 20, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.37).
+Released on June 21, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38).
 
-This release tightens the Agent and workspace experience after the new Agent Access rollout.
+This release focuses on Avalonia deployment polish, safer ComfyUI Desktop takeovers, and update-path compatibility.
 
-- **Server-managed Agent routing**: desktop clients no longer send stale codex/MiniMax provider preferences; the cloud relay owns the current DeepSeek-first route and fallback policy.
-- **Clearer Agent status copy**: the Agent status card now reports generic server-managed routing instead of old provider names.
-- **Agent Access display alignment**: desktop and website surfaces now agree on paid Agent Access totals and remaining sessions.
-- **Workspace repair polish**: the missing-node/model notification bar keeps the main repair actions visible and avoids surprise state changes while you work.
+- **Avalonia deployment readability**: selected drive/runtime choices in ComfyUI deployment settings now keep readable text in light and dark themes.
+- **Task terminal copy link fix**: the duplicated current/official copy buttons were merged into one reliable copy action.
+- **Safer ComfyUI Desktop core switching**: untracked desktop migration files are now detected before checkout and can be stashed instead of causing a surprise switch failure.
+- **Current release routing**: the app update service now treats `wonderful-launcher-comfyui` as the primary release repository while preserving the old `ModelFinder-Releases` fallback.
+- **Agent outcome cleanup**: cloud-side Agent quality records handle verified-fixed false positives more consistently.
 
 > [!NOTE]
 > Some internal identifiers may still show `ModelFinder` or `mf` in places such as process-level diagnostics while the public installer and install surface use `Wonderful Launcher`.
