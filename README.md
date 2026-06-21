@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.39) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,10 +18,12 @@
 
 ## Download
 
-- **Recommended installer**: [Wonderful Launcher 2.0.38](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38)
+- **Recommended installer**: [Wonderful Launcher 2.0.39](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.39)
 - **Stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 Download `WonderfulLauncher-Setup-v*.exe` from the release assets.
+
+If an older 2.0.x build says the update is downloaded but restart/update fails, download the latest installer manually and run it once. This repairs the updater handoff for future releases.
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable Windows desktop builds.
@@ -161,7 +163,7 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 Detailed version changes belong in the GitHub Release notes:
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.0.38 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.38)
+- [Wonderful Launcher 2.0.39 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.39)
 
 ---
 
