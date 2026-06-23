@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45-repair-setup) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46-repair-setup) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## Download
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.45 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45-repair-setup)
-- **Release notes**: [Wonderful Launcher 2.0.45](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45)
+- **Recommended for most users**: [Wonderful Launcher 2.0.46 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46-repair-setup)
+- **Release notes**: [Wonderful Launcher 2.0.46](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
-Open the installer release and download `WonderfulLauncher-Setup-v2.0.45.exe`.
+Open the installer release and download `WonderfulLauncher-Setup-v2.0.46.exe`.
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable Windows desktop builds.
@@ -74,16 +74,16 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's new in 2.0.45
+## What's new in 2.0.46
 
-Released on June 24, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45).
+Released on June 24, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46).
 
-This release focuses on safer Agent repair loops, more resilient Avalonia startup flows, and a cleaner upgrade path from older ModelFinder-branded installs.
+This release focuses on tightening the Agent startup-repair finish line after a successful ComfyUI restart and keeping Avalonia notifications readable after language or workspace changes.
 
-- **Agent repairs keep better evidence**: long install tasks return a running task-terminal session instead of being treated as failed, archived terminal logs remain readable after restart, and missing ComfyUI core files stop the Agent from retrying unrelated pip or PyTorch fixes.
-- **Runtime environment flow is calmer**: importing or dropping an existing ComfyUI folder respects a currently running package, startup hardware detection no longer blocks the main app flow, and ComfyUI exits are classified more clearly as normal or abnormal.
-- **Installer cleanup is stricter**: upgrading or repairing now removes old `ModelFinder` / `Uninstall ModelFinder` shortcuts that may remain inside the `Wonderful Launcher` Start Menu folder.
-- **Update recovery points to the current setup**: the update proxy and repair path are prepared for the 2.0.45 installer while keeping the self-contained Windows setup contract.
+- **Agent startup repair closes out more reliably**: a failed restart attempt no longer blocks verification when a later retry succeeds, startup repair is classified as runtime repair even when custom-node logs are involved, and successful fixes no longer keep a stale failure category.
+- **ComfyUI readiness responds faster**: backend verification now wakes on ComfyUI ready output or process exit instead of waiting only for the next timer tick, and the embedded workspace readiness check wakes on WebView/runtime state changes with polling as a fallback.
+- **Avalonia notification toasts refresh correctly**: crash/dependency notifications keep resource keys, refresh when the language changes, and move away from the embedded workspace instead of covering the active ComfyUI surface.
+- **Update recovery points to the current setup**: the update proxy and repair path are prepared for the 2.0.46 installer while keeping the self-contained Windows setup contract.
 
 ---
 
@@ -91,8 +91,8 @@ This release focuses on safer Agent repair loops, more resilient Avalonia startu
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45-repair-setup).
-2. Download `WonderfulLauncher-Setup-v2.0.45.exe`.
+1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46-repair-setup).
+2. Download `WonderfulLauncher-Setup-v2.0.46.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror.
@@ -178,8 +178,8 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 Detailed version changes belong in the GitHub Release notes:
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.0.45 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45)
-- [Wonderful Launcher 2.0.45 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.45-repair-setup)
+- [Wonderful Launcher 2.0.46 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46)
+- [Wonderful Launcher 2.0.46 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.46-repair-setup)
 
 ---
 
