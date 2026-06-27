@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## Download
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.48 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48)
-- **Release notes**: [Wonderful Launcher 2.0.48](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48)
+- **Recommended for most users**: [Wonderful Launcher 2.0.49 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
+- **Release notes**: [Wonderful Launcher 2.0.49](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
-Open the installer release and download `WonderfulLauncher-Setup-v2.0.48.exe`.
+Open the installer release and download `WonderfulLauncher-Setup-v2.0.49.exe`.
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable Windows desktop builds.
@@ -74,16 +74,16 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's new in 2.0.48
+## What's new in 2.0.49
 
-Released on June 27, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48).
+Released on June 28, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49).
 
-This release focuses on keeping the desktop Agent compatible with the current website protocol and making ComfyUI repair actions safer and easier to verify.
+This hotfix keeps desktop sign-in and Agent repair flows aligned with the current Wonderful Launcher website.
 
-- **Agent tool-loop compatibility is hardened**: desktop requests now preserve richer tool/result state for the website Agent route, reducing pure-text fallback and false "fixed" summaries.
-- **Missing-node installs are safer**: broad ComfyUI-Manager patterns such as catch-all `nodename_pattern` entries are blocked from automatic installs, so unrelated helper plugins are not cloned as workflow repairs.
-- **Plugin dependency repair protects the runtime**: broad plugin requirements that can pull packages such as `xformers`, torch-family packages, or native accelerators are constrained instead of silently mutating the selected ComfyUI runtime.
-- **Workflow import and log readability improved**: API prompt JSON imports are routed through the ComfyUI frontend when supported, startup logs keep real warning/error signals visible, and noisy WebView/UI bounds logs are throttled.
+- **Desktop sign-in now sends the app version**: the website can show a clear English update-required page for outdated desktop clients instead of letting unsupported versions continue into broken login flows.
+- **Startup repair completion is stricter**: after ComfyUI reaches verified Ready state, the Agent no longer auto-runs extra restart/start/core-repair tool names that only appear in the final summary.
+- **Release gating is hardened**: the 2.0.49 build passed the full Release test suite before packaging, including Agent startup-repair and launcher data-migration regressions.
+- **Agent Access accounting stays controlled**: this desktop build pairs with the website-side free-session reset fix so free users remain capped while paid Agent Access grants are preserved.
 
 ---
 
@@ -91,8 +91,8 @@ This release focuses on keeping the desktop Agent compatible with the current we
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48).
-2. Download `WonderfulLauncher-Setup-v2.0.48.exe`.
+1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49).
+2. Download `WonderfulLauncher-Setup-v2.0.49.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror.
@@ -178,8 +178,8 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 Detailed version changes belong in the GitHub Release notes:
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.0.48 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48)
-- [Wonderful Launcher 2.0.48 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.48)
+- [Wonderful Launcher 2.0.49 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
+- [Wonderful Launcher 2.0.49 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
 
 ---
 
