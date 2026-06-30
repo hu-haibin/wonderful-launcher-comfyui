@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## Download
 
-- **Recommended for most users**: [Wonderful Launcher 2.0.49 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
-- **Release notes**: [Wonderful Launcher 2.0.49](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
+- **Recommended for most users**: [Wonderful Launcher 2.1.0 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
+- **Release notes**: [Wonderful Launcher 2.1.0](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
-Open the installer release and download `WonderfulLauncher-Setup-v2.0.49.exe`.
+Open the installer release and download `WonderfulLauncher-Setup-v2.1.0.exe`.
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable Windows desktop builds.
@@ -52,7 +52,7 @@ Wonderful Launcher turns those scattered maintenance steps into one Windows desk
 - launch ComfyUI and read startup logs in the same app
 - find missing workflow models and put them in the right folder
 - install missing custom nodes and plugin dependencies
-- use an approval-based Agent to help diagnose and verify supported repairs
+- use launcher-native repair tasks for deterministic startup failures, with Agent kept to bounded diagnosis
 - keep image generation history, model management, and runtime settings close by
 
 The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to keep in a working state.
@@ -65,25 +65,25 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 |---------|-------------------------------|
 | You already installed ComfyUI Desktop or a portable package | Import it and manage it from one desktop surface. |
 | You want a clean ComfyUI install | Pick a disk, choose a runtime package, download, extract, and launch. |
-| ComfyUI will not start | Inspect logs, check Python/PyTorch state, and ask the Agent for supported repair steps. |
+| ComfyUI will not start | Inspect logs, approve the launcher-native repair task, install core requirements and PyTorch, then restart for verification. |
 | A workflow says models are missing | Find likely model downloads, copy links, or download into the correct folder. |
 | You already downloaded the model yourself | Drag the model file into the app and let the launcher place it where the workflow expects it. |
 | A workflow has missing nodes | Install the needed nodes and dependencies without hunting through folders manually. |
-| A plugin imports but fails at runtime | Use logs and the Agent to work through dependency conflicts and restart verification. |
+| A plugin imports but fails at runtime | Use logs, task-terminal evidence, and bounded diagnosis to work through dependency conflicts and restart verification. |
 | You want to generate and reuse images | Use the image workspace, history, reference images, and Photoshop handoff. |
 
 ---
 
-## What's new in 2.0.49
+## What's new in 2.1.0
 
-Released on June 28, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49).
+Released on June 30, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0).
 
-This hotfix keeps desktop sign-in and Agent repair flows aligned with the current Wonderful Launcher website.
+This release narrows the AI surface and moves deterministic startup recovery back into the launcher itself.
 
-- **Desktop sign-in now sends the app version**: the website can show a clear English update-required page for outdated desktop clients instead of letting unsupported versions continue into broken login flows.
-- **Startup repair completion is stricter**: after ComfyUI reaches verified Ready state, the Agent no longer auto-runs extra restart/start/core-repair tool names that only appear in the final summary.
-- **Release gating is hardened**: the 2.0.49 build passed the full Release test suite before packaging, including Agent startup-repair and launcher data-migration regressions.
-- **Agent Access accounting stays controlled**: this desktop build pairs with the website-side free-session reset fix so free users remain capped while paid Agent Access grants are preserved.
+- **Startup failure repair is deterministic**: when startup fails on core requirements or PyTorch, the launcher opens the task console, runs the approved repair, installs the compatible PyTorch runtime, and attempts restart verification.
+- **Agent no longer owns startup failure recovery**: startup and environment install failures stay in launcher-native flows instead of being routed into the AI drawer as conversational repair.
+- **Task console feedback is clearer**: install and uninstall work starts with visible progress state, and batch uninstall avoids extra pip version-check overhead.
+- **Agent direction is explicit**: the built-in Agent surface is narrowed, with future advanced AI repair intended to be extension/plugin-style instead of a core blocking dependency.
 
 ---
 
@@ -91,8 +91,8 @@ This hotfix keeps desktop sign-in and Agent repair flows aligned with the curren
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49).
-2. Download `WonderfulLauncher-Setup-v2.0.49.exe`.
+1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0).
+2. Download `WonderfulLauncher-Setup-v2.1.0.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror.
@@ -178,8 +178,8 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 Detailed version changes belong in the GitHub Release notes:
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.0.49 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
-- [Wonderful Launcher 2.0.49 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.49)
+- [Wonderful Launcher 2.1.0 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
+- [Wonderful Launcher 2.1.0 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
 
 ---
 
