@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download Installer**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## Download
 
-- **Recommended for most users**: [Wonderful Launcher 2.1.0 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
-- **Release notes**: [Wonderful Launcher 2.1.0](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
+- **Recommended for most users**: [Wonderful Launcher 2.1.1 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1)
+- **Release notes**: [Wonderful Launcher 2.1.1](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1)
 - **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
-Open the installer release and download `WonderfulLauncher-Setup-v2.1.0.exe`.
+Open the installer release and download `WonderfulLauncher-Setup-v2.1.1.exe`.
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. Those are source archives, not runnable Windows desktop builds.
@@ -74,16 +74,16 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's new in 2.1.0
+## What's new in 2.1.1
 
-Released on June 30, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0).
+Released on July 6, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1).
 
-This release narrows the AI surface and moves deterministic startup recovery back into the launcher itself.
+This small desktop update makes the title-bar language control match the language picker in Settings.
 
-- **Startup failure repair is deterministic**: when startup fails on core requirements or PyTorch, the launcher opens the task console, runs the approved repair, installs the compatible PyTorch runtime, and attempts restart verification.
-- **Agent no longer owns startup failure recovery**: startup and environment install failures stay in launcher-native flows instead of being routed into the AI drawer as conversational repair.
-- **Task console feedback is clearer**: install and uninstall work starts with visible progress state, and batch uninstall avoids extra pip version-check overhead.
-- **Agent direction is explicit**: the built-in Agent surface is narrowed, with future advanced AI repair intended to be extension/plugin-style instead of a core blocking dependency.
+- **Direct language selection in the title bar**: the language button now opens a menu instead of cycling through languages one click at a time.
+- **Consistent language choices**: Follow system, Traditional Chinese, English, Japanese, and Korean use the same localized options as Settings.
+- **Safer language switching**: title-bar labels and selected-state indicators refresh after a language change.
+- **Patch release packaging**: desktop version metadata and installer assets are updated to 2.1.1.
 
 ---
 
@@ -91,8 +91,8 @@ This release narrows the AI surface and moves deterministic startup recovery bac
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0).
-2. Download `WonderfulLauncher-Setup-v2.1.0.exe`.
+1. Open the [installer download release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1).
+2. Download `WonderfulLauncher-Setup-v2.1.1.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror.
@@ -178,8 +178,8 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 Detailed version changes belong in the GitHub Release notes:
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.0 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
-- [Wonderful Launcher 2.1.0 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.0)
+- [Wonderful Launcher 2.1.1 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1)
+- [Wonderful Launcher 2.1.1 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.1)
 
 ---
 
