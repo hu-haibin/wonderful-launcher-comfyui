@@ -20,7 +20,6 @@
 
 - **Recommended for most users**: [Wonderful Launcher 2.1.3 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.3)
 - **Release notes**: [Wonderful Launcher 2.1.3](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.3)
-- **Public stable fallback**: [ModelFinder 2.0.31](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.0.31)
 
 Open the installer release and download `WonderfulLauncher-Setup-v2.1.3.exe`.
 
@@ -174,7 +173,9 @@ Wonderful Launcher helps you install missing nodes, run dependency installs, reo
 
 ## Updates
 
-Detailed version changes belong in the GitHub Release notes:
+The GitHub Releases page keeps only the latest public installer so new users have a single download choice.
+
+Older release tags are kept for project history, but they are not recommended as public downloads unless a maintainer explicitly points you to one.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 - [Wonderful Launcher 2.1.3 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.3)
