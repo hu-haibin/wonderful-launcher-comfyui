@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download 2.1.5**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download 2.1.6**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download
 
-- **Recommended installer**: [Wonderful Launcher 2.1.5 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5)
-- **Installer file**: `WonderfulLauncher-Setup-v2.1.5.exe`
+- **Recommended installer**: [Wonderful Launcher 2.1.6 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6)
+- **Installer file**: `WonderfulLauncher-Setup-v2.1.6.exe`
 - **Checksums**: included as `SHA256SUMS.txt` in the same release
 
 > [!WARNING]
@@ -70,17 +70,17 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's New in 2.1.5
+## What's New in 2.1.6
 
-Released on July 8, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5).
+Released on July 10, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6).
 
-This release focuses on the image workspace reference-image flow. It removes a confusing false failure notification and makes reference thumbnails communicate when an image is still being prepared.
+This release makes startup and runtime diagnostics more trustworthy, especially when PyTorch, Python, or the selected GPU backend prevents ComfyUI from starting.
 
-- **No more noisy reference add toast**: adding a reference image no longer shows a disruptive success/failure notification before the image is actually ready.
-- **Clear preparing state**: reference thumbnails dim while preparing and show a centered circular `0%` indicator instead of a tiny corner dot or a linear bar.
-- **Ready references at submit time**: generation now builds a ready-reference snapshot before upload/history handling so internal pending bytes do not leak as `Reference bytes are not ready`.
-- **Preview current references**: double-click a path-backed reference thumbnail in the composer to open the image viewer.
-- **Versioned desktop package**: desktop metadata, installer assets, and checksum files are updated to 2.1.5.
+- **Clear startup failure reasons**: startup outcomes now use stable reason codes instead of leaving PyTorch or environment failures as an unclassified error.
+- **Better backend attribution**: diagnostics preserve the selected package backend and detected runtime backend, making NVIDIA, AMD, and CPU cases easier to separate.
+- **Less repeated error noise**: identical fatal diagnostics and UI-unresponsive reports are sampled at meaningful occurrence milestones instead of uploading the same signal continuously.
+- **Privacy-preserving diagnostics**: the launcher reports structured health facts, not raw startup logs, prompts, workflows, model contents, credentials, or local file contents.
+- **Versioned desktop package**: desktop metadata, installer assets, and checksum files are updated to 2.1.6.
 
 ---
 
@@ -88,8 +88,8 @@ This release focuses on the image workspace reference-image flow. It removes a c
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [2.1.5 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5).
-2. Download `WonderfulLauncher-Setup-v2.1.5.exe`.
+1. Open the [2.1.6 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6).
+2. Download `WonderfulLauncher-Setup-v2.1.6.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror for the desktop app.
@@ -150,7 +150,7 @@ Wonderful Launcher can help you:
 
 The image workspace keeps generation controls, reference thumbnails, history, and Photoshop handoff in one place.
 
-For reference images in 2.1.5:
+Reference-image behavior introduced in 2.1.5 remains available:
 
 - thumbnails appear immediately but dim while the file is still preparing
 - a centered circular `0%` indicator marks the preparing state
@@ -182,8 +182,8 @@ The GitHub Releases page keeps the current public installer so new users have a 
 Older release tags are kept for project history, but they are not recommended as public downloads unless a maintainer explicitly points you to one.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.5 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5)
-- [Wonderful Launcher 2.1.5 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.5)
+- [Wonderful Launcher 2.1.6 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6)
+- [Wonderful Launcher 2.1.6 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.6)
 
 ---
 
