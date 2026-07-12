@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download 2.1.7**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download 2.1.8**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download
 
-- **Recommended installer**: [Wonderful Launcher 2.1.7 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7)
-- **Installer file**: `WonderfulLauncher-Setup-v2.1.7.exe`
+- **Recommended installer**: [Wonderful Launcher 2.1.8 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8)
+- **Installer file**: `WonderfulLauncher-Setup-v2.1.8.exe`
 - **Checksums**: included as `SHA256SUMS.txt` in the same release
 
 > [!WARNING]
@@ -70,17 +70,17 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's New in 2.1.7
+## What's New in 2.1.8
 
-Released on July 12, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7).
+Released on July 12, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8).
 
-This release makes workflow templates more reliable from download through import into the embedded ComfyUI workspace.
+This release makes missing-node recovery more dependable and gives the bundled break-time game clearer local controls.
 
-- **Reliable template import**: template import waits for the embedded ComfyUI frontend rather than failing on a short surface-ready race.
-- **Resilient cloud templates**: online workflow downloads have a longer timeout, one safe retry, and a short-lived local cache so reopening a template does not need another network request.
-- **Stable workspace host**: the embedded WebView returns to the proven native bounds-sync path when opening or closing the workspace.
-- **Small workflow quality fixes**: the Downloads flyout can copy a source link again, and bundled-game recovery text follows the active app language.
-- **Versioned desktop package**: desktop metadata, installer assets, and checksum files are updated to 2.1.7.
+- **One-request Manager recovery**: when a missing-node repair first needs ComfyUI-Manager, the launcher installs it, restarts ComfyUI, and continues the same repair request when the workspace is ready.
+- **Safer plugin selection**: workflow-provided `cnr_id` and `aux_id` metadata now outrank ambiguous catalog aliases, reducing wrong-plugin suggestions and filtering known unsafe candidates.
+- **Privacy-bounded repair evidence**: recovery telemetry records repair choices and same-workflow recheck outcomes without uploading the workflow document itself, so recurrent node problems can be prioritized for fixes.
+- **Bundled local game polish**: the optional offline game has visible Arrow/A-D controls, an in-game language switcher and restart control, plus diagnostics if a bundled script fails.
+- **Versioned desktop package**: desktop metadata, installer assets, and checksum files are updated to 2.1.8.
 
 ---
 
@@ -88,8 +88,8 @@ This release makes workflow templates more reliable from download through import
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [2.1.7 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7).
-2. Download `WonderfulLauncher-Setup-v2.1.7.exe`.
+1. Open the [2.1.8 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8).
+2. Download `WonderfulLauncher-Setup-v2.1.8.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror for the desktop app.
@@ -182,8 +182,8 @@ The GitHub Releases page keeps the current public installer so new users have a 
 Older release tags are kept for project history, but they are not recommended as public downloads unless a maintainer explicitly points you to one.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.7 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7)
-- [Wonderful Launcher 2.1.7 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.7)
+- [Wonderful Launcher 2.1.8 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8)
+- [Wonderful Launcher 2.1.8 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.8)
 
 ---
 
