@@ -4,7 +4,7 @@
 
 # Wonderful Launcher for ComfyUI on Windows
 
-### Download ComfyUI workflows. Make them actually run.
+### You downloaded a ComfyUI workflow. Now make it actually run.
 
 [![GitHub Release](https://img.shields.io/github/v/release/hu-haibin/wonderful-launcher-comfyui?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
@@ -38,23 +38,23 @@
 
 ---
 
-## Why this exists
+## If this sounds familiar
 
-Most shared ComfyUI workflows are not one-click. They often need exact models, custom nodes, Python packages, PyTorch compatibility, folder placement, startup flags, and repair steps when the environment breaks.
+You found a workflow you want to try. You open it in ComfyUI, and suddenly there are red nodes, missing models, dependency errors, or a startup log that only says what broke after you already lost ten minutes.
 
-Wonderful Launcher puts those maintenance tasks next to your local ComfyUI runtime:
+That is the annoying part this launcher is built for. It keeps the practical cleanup work close to the ComfyUI package you are actually using:
 
-| Need | What Wonderful Launcher does |
-|------|------------------------------|
-| Use an existing ComfyUI | Import ComfyUI Desktop or a portable ComfyUI folder. |
-| Start clean | Download and deploy a fresh ComfyUI package. |
-| ComfyUI will not start | Read startup logs and run approved dependency repair tasks. |
-| Workflow is missing models | Match missing model names and download or place files into the expected folders. |
-| Workflow is missing nodes | Install custom nodes and dependencies without hunting through folders. |
-| Models live in multiple packages | Share a model directory between ComfyUI packages. |
-| Generate and reuse images | Keep image generation, references, history, and Photoshop handoff in one workspace. |
+| What you are trying to do | What the launcher helps with |
+|---------------------------|------------------------------|
+| “I already have ComfyUI somewhere.” | Import ComfyUI Desktop or a portable ComfyUI folder. |
+| “I want a clean package instead of fixing this mess.” | Download and deploy a fresh ComfyUI package. |
+| “ComfyUI does not start.” | Show the startup log and run approved dependency repair tasks. |
+| “This workflow says models are missing.” | Match model names and download or place files into the expected folders. |
+| “The workflow has missing nodes.” | Install custom nodes and dependencies without hunting through folders. |
+| “I have several ComfyUI packages but one model library.” | Share a model directory between packages. |
+| “I want to generate images and keep history nearby.” | Keep image generation, references, history, and Photoshop handoff in one workspace. |
 
-The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to keep working.
+The goal is not to replace ComfyUI. It is to remove the boring “why is this workflow not running on my machine?” work around it.
 
 ---
 
@@ -82,14 +82,14 @@ Validation for this release: full Release test suite passed, the self-contained 
 
 This repository is the public download, screenshots, and issue-tracking surface. It is not a public source-code mirror for the desktop app.
 
-### 2. Import or deploy ComfyUI
+### 2. Tell the launcher where your ComfyUI is
 
 - If you already have ComfyUI, choose **Import ComfyUI** and select the folder that contains `main.py`, or the portable parent folder that contains a `ComfyUI` subfolder.
 - If you want a clean environment, open ComfyUI settings, choose a disk and runtime package, then deploy and start it from the Home page.
 
 Avoid selecting folders such as `models`, `custom_nodes`, `output`, `python_embeded`, or a folder that only contains workflow files.
 
-### 3. Run a downloaded workflow
+### 3. Let the workflow tell you what is missing
 
 When a workflow opens with red nodes or missing assets, follow the normal repair loop:
 
