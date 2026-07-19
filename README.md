@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download 2.1.10**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download 2.1.11**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11) · [**Release Notes**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download
 
-- **Recommended installer**: [Wonderful Launcher 2.1.10 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
-- **Installer file**: `WonderfulLauncher-Setup-v2.1.10.exe`
+- **Recommended installer**: [Wonderful Launcher 2.1.11 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
+- **Installer file**: `WonderfulLauncher-Setup-v2.1.11.exe`
 - **Checksums**: included as `SHA256SUMS.txt` in the same release
 
 > [!WARNING]
@@ -70,17 +70,18 @@ The goal is not to replace ComfyUI. The goal is to make local ComfyUI easier to 
 
 ---
 
-## What's New in 2.1.10
+## What's New in 2.1.11
 
-Released on July 15, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10).
+Released on July 20, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11).
 
-This release completes the move to one Avalonia desktop client and makes the lower-left account and recharge path easier to use and measure.
+This release smooths the ComfyUI launch path and moves missing-model work into the place where users actually need it: the running ComfyUI workspace.
 
-- **Account and recharge entry**: the lower-left account menu keeps the recharge label visible. After sign-in it shows current credit information and available packs; before sign-in it takes you through the normal account gate.
-- **Checkout attribution**: account-menu views, successful sign-in from recharge, package selection, and checkout opening are attributed to this entry point, so conversion can be measured without treating a mere sign-in attempt as a purchase.
-- **One desktop mainline**: the shipped client is Avalonia-only. WinUI remains historical source history rather than a second product or release path.
-- **Photoshop plugin continuity**: the UXP plugin is bundled with the Avalonia application at `Assets/photoshop-plugin`.
-- **Release validation**: the self-contained v2.1.10 package passed the full Release test suite, an isolated update-preparation smoke, and a published-root startup smoke.
+- **Cleaner ComfyUI startup**: startup no longer blocks on a noisy Torch preflight probe. Real ComfyUI process failures still produce logs and can lead to dependency repair when the error is genuine.
+- **Missing-model flow in the workspace**: the standalone toolbox model-finder entry was removed. The WebView notification bar now opens the current missing-model result list directly, using the live ComfyUI workflow context.
+- **Less confusing model results**: the missing-model list focuses on the workflow filename, target model folder, match status, and the download action. The bulk actions are clearer: copy model names or download all available models.
+- **Simpler shared model directories**: ComfyUI settings now use a compact A → B sharing layout and show when a package is using a global shared model path.
+- **Small image workflow polish**: generated-image prompts in the conversation can be selected and copied more naturally.
+- **Release validation**: the self-contained v2.1.11 package passed the full Release test suite and a published-root startup smoke.
 
 ---
 
@@ -88,8 +89,8 @@ This release completes the move to one Avalonia desktop client and makes the low
 
 ### 1. Install Wonderful Launcher
 
-1. Open the [2.1.10 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10).
-2. Download `WonderfulLauncher-Setup-v2.1.10.exe`.
+1. Open the [2.1.11 installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11).
+2. Download `WonderfulLauncher-Setup-v2.1.11.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download and guide page. It is not a public source-code mirror for the desktop app.
@@ -182,8 +183,8 @@ The GitHub Releases page keeps the current public installer so new users have a 
 Older release tags are kept for project history, but they are not recommended as public downloads unless a maintainer explicitly points you to one.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.10 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
-- [Wonderful Launcher 2.1.10 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
+- [Wonderful Launcher 2.1.11 Release Notes](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
+- [Wonderful Launcher 2.1.11 Setup Installer](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
 
 ---
 
