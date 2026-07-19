@@ -1,4 +1,4 @@
-🌐 [English](README.md) | **简体中文** | [繁體中文](README_ZH_TW.md) | [日本語](README_JA.md) | [한국어](README_KO.md)
+🌐 [English](README.md) | **简体中文**
 
 <div align="center">
 
@@ -21,7 +21,6 @@
 - **普通用户推荐**：[Wonderful Launcher 2.1.11 Setup 安装包](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
 - **安装包文件**：`WonderfulLauncher-Setup-v2.1.11.exe`
 - **校验文件**：同一个 release 里的 `SHA256SUMS.txt`
-- **备用版本**：[2.1.10](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10) 会保留为上一个稳定 fallback
 
 > [!WARNING]
 > 不要下载 GitHub 自动生成的 `Source code.zip` 或 `Source code.tar.gz`。那些是源码压缩包，不是 Windows 安装包。
@@ -140,11 +139,10 @@ Wonderful Launcher 是对外产品名。部分内部标识会继续保留 `Model
 
 ## Release 和仓库范围
 
-GitHub Releases 页面会保持精简：最新版安装包 + 上一个稳定 fallback。旧 tag 会保留作为历史记录，但旧 release 页面可能会被清理，避免新用户下载过期构建。
+GitHub Releases 页面会保持精简：普通用户只看到最新版安装包。旧 tag 会保留作为历史记录，但旧 release 页面可能会被清理，避免新用户下载过期构建。
 
 - [最新版本](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 - [Wonderful Launcher 2.1.11](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
-- [Wonderful Launcher 2.1.10 fallback](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
 
 Release Note 以 GitHub Releases 和当前 README 的版本摘要为准。这个仓库不再保留一堆过期的逐版本 note 文件，避免普通用户翻到旧信息。
 

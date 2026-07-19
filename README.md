@@ -1,4 +1,4 @@
-🌐 **English** | [简体中文](README_CN.md) | [繁體中文](README_ZH_TW.md) | [日本語](README_JA.md) | [한국어](README_KO.md)
+🌐 **English** | [简体中文](README_CN.md)
 
 <div align="center">
 
@@ -21,7 +21,6 @@
 - **Recommended**: [Wonderful Launcher 2.1.11 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
 - **Installer file**: `WonderfulLauncher-Setup-v2.1.11.exe`
 - **Checksum file**: `SHA256SUMS.txt` in the same release
-- **Fallback**: [2.1.10](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10) is kept as the previous stable release
 
 > [!WARNING]
 > Do not download GitHub's auto-generated `Source code.zip` or `Source code.tar.gz`. They are source archives, not Windows installers.
@@ -140,11 +139,10 @@ Not currently. This repository publishes Windows desktop builds.
 
 ## Releases and repository scope
 
-The GitHub Releases page is kept intentionally sparse: the latest installer plus one previous stable fallback. Older tags are preserved for history, but older release pages may be removed so new users are not encouraged to download stale builds.
+The GitHub Releases page is kept intentionally sparse: only the latest installer is shown to normal users. Older tags are preserved for history, but older release pages may be removed so new users are not encouraged to download stale builds.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 - [Wonderful Launcher 2.1.11](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
-- [Wonderful Launcher 2.1.10 fallback](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
 
 Release notes live on GitHub Releases and the current README summary. This repository intentionally avoids a separate pile of stale per-version note files.
 
