@@ -1,4 +1,4 @@
-🌐 **English** | [简体中文](README_CN.md) | [Other languages / 其他语言](README_I18N.md)
+🌐 **English** | [简体中文](README_CN.md) | [繁體中文](README_ZH_TW.md) | [日本語](README_JA.md) | [한국어](README_KO.md)
 
 <div align="center">
 
@@ -145,5 +145,7 @@ The GitHub Releases page is kept intentionally sparse: the latest installer plus
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 - [Wonderful Launcher 2.1.11](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
 - [Wonderful Launcher 2.1.10 fallback](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
+
+Release notes live on GitHub Releases and the current README summary. This repository intentionally avoids a separate pile of stale per-version note files.
 
 This repository intentionally does not expose the full desktop source tree. Public release assets are the Windows installer and checksum file attached to GitHub Releases.

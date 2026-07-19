@@ -1,4 +1,4 @@
-🌐 [English](README.md) | **简体中文** | [其他语言](README_I18N.md)
+🌐 [English](README.md) | **简体中文** | [繁體中文](README_ZH_TW.md) | [日本語](README_JA.md) | [한국어](README_KO.md)
 
 <div align="center">
 
@@ -145,5 +145,7 @@ GitHub Releases 页面会保持精简：最新版安装包 + 上一个稳定 fal
 - [最新版本](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 - [Wonderful Launcher 2.1.11](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.11)
 - [Wonderful Launcher 2.1.10 fallback](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.10)
+
+Release Note 以 GitHub Releases 和当前 README 的版本摘要为准。这个仓库不再保留一堆过期的逐版本 note 文件，避免普通用户翻到旧信息。
 
 这个仓库不会公开完整桌面端源码。公开 release 资产是 GitHub Releases 中附带的 Windows 安装包和校验文件。
