@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download 2.1.12**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.12) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download 2.1.13**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download
 
-- **Recommended**: [Wonderful Launcher 2.1.12 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.12)
-- **Installer file**: `WonderfulLauncher-Setup-v2.1.12.exe`
+- **Recommended**: [Wonderful Launcher 2.1.13 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)
+- **Installer file**: `WonderfulLauncher-Setup-v2.1.13.exe`
 - **Checksum file**: `SHA256SUMS.txt` in the same release
 
 > [!WARNING]
@@ -57,14 +57,14 @@ The goal is not to replace ComfyUI. It is to remove the boring “why is this wo
 
 ---
 
-## What's new in 2.1.12
+## What's new in 2.1.13
 
-Released on July 20, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.12).
+Released on July 27, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13).
 
-- **Embedded game progression**: weapon gates now equip the weapon and add shared upgrade progress, so every weapon pickup can keep scaling instead of feeling like a dead roll.
-- **Less frustrating combat**: the old `R` weapon-swap design was removed, flamer was strengthened, boss hits now respect projectile pierce, and enemy pressure ramps higher.
-- **More comeback chances**: random supplies and reinforcement assists help low-count runs recover, while the card gates use clearer math labels instead of hidden question marks.
-- **Game telemetry coverage**: balance telemetry now includes random supplies, weapon upgrades, upgrade energy, squad count, peak squad, and reinforcement assists.
+- **Cleaner desktop shell**: the experimental embedded Inspiration and Canvas pages were retired from the launcher navigation, keeping the desktop app focused on ComfyUI package management, repair, models, workflows, and image work.
+- **Canvas moves forward separately**: Wonderful Canvas continues as its own web-first React workspace, which is safer to iterate and easier to embed later without bloating the desktop shell.
+- **Sharper visual polish**: shell accent colors, notification severity brushes, flyout chrome, terminal overlays, and several workspace surfaces now use the updated design tokens more consistently.
+- **Release governance cleanup**: AI-facing docs, release guardrails, and obsolete WinUI-era planning notes were consolidated so future maintenance and release checks start from current Avalonia-only facts.
 
 Validation for this release: full Release test suite passed, the self-contained installer was built by the official release script, and the published app root passed an isolated startup smoke.
 
@@ -74,8 +74,8 @@ Validation for this release: full Release test suite passed, the self-contained 
 
 ### 1. Install
 
-1. Open the [latest installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.12).
-2. Download `WonderfulLauncher-Setup-v2.1.12.exe`.
+1. Open the [latest installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13).
+2. Download `WonderfulLauncher-Setup-v2.1.13.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download, screenshots, and issue-tracking surface. It is not a public source-code mirror for the desktop app.
@@ -141,7 +141,7 @@ Not currently. This repository publishes Windows desktop builds.
 The GitHub Releases page is kept intentionally sparse: only the latest installer is shown to normal users. Older tags are preserved for history, but older release pages may be removed so new users are not encouraged to download stale builds.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.12](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.12)
+- [Wonderful Launcher 2.1.13](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)
 
 Release notes live on GitHub Releases and the current README summary. This repository intentionally avoids a separate pile of stale per-version note files.
 
