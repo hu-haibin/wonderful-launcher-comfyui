@@ -10,7 +10,7 @@
 [![产品下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=%E4%BA%A7%E5%93%81%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**下载 2.1.13**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13) · [**官网**](https://wonderfullauncher.com/) · [**文档**](https://wonderfullauncher.com/docs) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**下载 2.1.14**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14) · [**官网**](https://wonderfullauncher.com/) · [**文档**](https://wonderfullauncher.com/docs) · [**反馈问题**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## 下载
 
-- **普通用户推荐**：[Wonderful Launcher 2.1.13 Setup 安装包](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)
-- **安装包文件**：`WonderfulLauncher-Setup-v2.1.13.exe`
+- **普通用户推荐**：[Wonderful Launcher 2.1.14 Setup 安装包](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)
+- **安装包文件**：`WonderfulLauncher-Setup-v2.1.14.exe`
 - **校验文件**：同一个 release 里的 `SHA256SUMS.txt`
 
 > [!WARNING]
@@ -57,16 +57,17 @@ Wonderful Launcher 主要就是为这段折腾做的。它把这些实际维护�
 
 ---
 
-## 2.1.13 更新了什么
+## 2.1.14 更新了什么
 
-发布于 2026 年 7 月 27 日。[查看完整 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)。
+发布于 2026 年 8 月 3 日。[查看完整 GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)。
 
-- **桌面壳更干净**：实验性的内置 Inspiration 和 Canvas 页面已从启动器导航里退场，桌面端继续聚焦 ComfyUI 包管理、修复、模型、工作流和图片工作区。
-- **Canvas 独立推进**：Wonderful Canvas 继续作为 Web-first React 工作台迭代，后续更容易安全嵌入，也不会把桌面壳越堆越重。
-- **视觉细节更统一**：壳层强调色、通知状态色、弹层 chrome、终端覆盖层和多个工作区表面现在更一致地使用新版设计 token。
-- **发布治理收口**：AI 协作入口、发版规则和旧 WinUI 时代规划材料做了压缩整理，后续维护会从当前 Avalonia-only 事实出发。
+- **ComfyUI 内核切换更可靠**：切换到更高或更低版本后，启动器会先安装目标版本的 `requirements.txt`，依赖成功后才完成任务；失败和取消状态也会正确显示在任务终端里。
+- **积分估算与服务端一致**：参考图不再被客户端额外加价，只有登录账号拿到最新服务端计费数据后才显示积分估算。
+- **共享图片引擎与 Canvas Lab**：在线图片生成和节点画布开始复用同一套执行基础，减少重复生成逻辑，同时保留原有图片工作区。
+- **桌面导航继续收口**：已退役的 Workflows 页面保持移除，尚未完成的批量图片入口继续隐藏，不会暴露给普通用户。
+- **Canvas 多语言补齐**：Canvas Lab 的英文、简中、繁中、日文和韩文资源键现在保持一致。
 
-本次发版已通过完整 Release 测试、官方发布脚本打包，以及发布根目录隔离启动 smoke。
+本次发版已通过 2500 项 Release 测试、官方发布脚本打包，以及发布根目录隔离启动 smoke。
 
 ---
 
@@ -74,8 +75,8 @@ Wonderful Launcher 主要就是为这段折腾做的。它把这些实际维护�
 
 ### 1. 安装
 
-1. 打开 [最新版安装包 release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)。
-2. 下载 `WonderfulLauncher-Setup-v2.1.13.exe`。
+1. 打开 [最新版安装包 release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)。
+2. 下载 `WonderfulLauncher-Setup-v2.1.14.exe`。
 3. 运行安装包并打开 Wonderful Launcher。
 
 这个仓库是公开下载、截图和 issue 跟踪入口，不是桌面应用的公开源码镜像。
@@ -141,7 +142,7 @@ Wonderful Launcher 是对外产品名。部分内部标识会继续保留 `Model
 GitHub Releases 页面会保持精简：普通用户只看到最新版安装包。旧 tag 会保留作为历史记录，但旧 release 页面可能会被清理，避免新用户下载过期构建。
 
 - [最新版本](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.13](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.13)
+- [Wonderful Launcher 2.1.14](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)
 
 Release Note 以 GitHub Releases 和当前 README 的版本摘要为准。这个仓库不再保留一堆过期的逐版本 note 文件，避免普通用户翻到旧信息。
 
