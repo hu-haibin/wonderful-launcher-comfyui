@@ -10,7 +10,7 @@
 [![Product Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhu-haibin%2Fwonderful-launcher-comfyui%2Fmain%2Fstats%2Fdownloads.json&query=%24.current_product_downloads&style=for-the-badge&logo=github&label=Product%20Downloads)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D6?style=for-the-badge&logo=windows)](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
 
-[**Download 2.1.14**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
+[**Download 2.1.15**](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.15) · [**Official Website**](https://wonderfullauncher.com/) · [**Docs**](https://wonderfullauncher.com/docs) · [**Report Issues**](https://github.com/hu-haibin/wonderful-launcher-comfyui/issues)
 
 </div>
 
@@ -18,8 +18,8 @@
 
 ## Download
 
-- **Recommended**: [Wonderful Launcher 2.1.14 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)
-- **Installer file**: `WonderfulLauncher-Setup-v2.1.14.exe`
+- **Recommended**: [Wonderful Launcher 2.1.15 Setup](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.15)
+- **Installer file**: `WonderfulLauncher-Setup-v2.1.15.exe`
 - **Checksum file**: `SHA256SUMS.txt` in the same release
 
 > [!WARNING]
@@ -57,17 +57,16 @@ The goal is not to replace ComfyUI. It is to remove the boring “why is this wo
 
 ---
 
-## What's new in 2.1.14
+## What's new in 2.1.15
 
-Released on August 3, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14).
+Released on August 11, 2026. [Open the full GitHub Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.15).
 
-- **Reliable ComfyUI core switching**: after switching to an older or newer ComfyUI version, the launcher now installs that target version's `requirements.txt` before marking the task complete. Dependency failures and cancellations stay visible in the task terminal.
-- **Credit estimates match server pricing**: reference images no longer add a client-only surcharge, and credit estimates are shown only when the signed-in account has current server pricing data.
-- **Shared image engine and Canvas Lab**: online image generation and the node canvas now share the same execution foundation, reducing duplicated generation logic while keeping the normal image workspace intact.
-- **Focused desktop navigation**: the retired Workflows surface remains removed, and unfinished batch-image controls stay hidden until they are ready for normal use.
-- **Complete Canvas localization**: Canvas Lab resource keys now stay aligned across English, Simplified Chinese, Traditional Chinese, Japanese, and Korean.
+- **Focused desktop navigation**: Canvas Lab is no longer shown in the public navigation. The normal image workspace remains the supported generation path.
+- **More useful local model drops**: when a dropped model cannot be matched to an open workflow, the launcher now lets you choose a destination inside the active ComfyUI models directory instead of ending at a dead end.
+- **Clearer runtime actions**: ComfyUI start and stop states use distinct visual treatment so the next action is easier to read.
+- **Safer release updates**: release and installer smoke checks now verify that the published root, isolated profile, and installer handoff belong to the candidate being tested.
 
-Validation for this release: 2,500 Release tests passed, the self-contained installer was built by the official release script, and the published app root passed an isolated startup smoke.
+Validation for this release: focused workspace, localization, updater, and update-proxy tests passed before packaging. The self-contained installer and isolated published-root smoke are verified as part of this release process.
 
 ---
 
@@ -75,8 +74,8 @@ Validation for this release: 2,500 Release tests passed, the self-contained inst
 
 ### 1. Install
 
-1. Open the [latest installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14).
-2. Download `WonderfulLauncher-Setup-v2.1.14.exe`.
+1. Open the [latest installer release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.15).
+2. Download `WonderfulLauncher-Setup-v2.1.15.exe`.
 3. Run the installer and open Wonderful Launcher.
 
 This repository is the public download, screenshots, and issue-tracking surface. It is not a public source-code mirror for the desktop app.
@@ -142,7 +141,7 @@ Not currently. This repository publishes Windows desktop builds.
 The GitHub Releases page is kept intentionally sparse: only the latest installer is shown to normal users. Older tags are preserved for history, but older release pages may be removed so new users are not encouraged to download stale builds.
 
 - [Latest Release](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/latest)
-- [Wonderful Launcher 2.1.14](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.14)
+- [Wonderful Launcher 2.1.15](https://github.com/hu-haibin/wonderful-launcher-comfyui/releases/tag/v2.1.15)
 
 Release notes live on GitHub Releases and the current README summary. This repository intentionally avoids a separate pile of stale per-version note files.
 
